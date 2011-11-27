@@ -1,0 +1,20 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 02:48:53
+project --topLevelPackage esk --projectName I377-esk --java 6
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 02:48:56
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 02:48:59
+persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
+controller all --package ~.web
+web mvc all --package ~.web
+web mvc all --package ~.web
+controller all --package ~.web
+controller all --package ~.web
+web mvc all --package esk.web
+help
+controller all --package ~.web
+persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
+controller all --package ~.web
+web mvc all --package esk
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 03:40:13
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 03:43:58
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 03:44:54
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 03:48:33

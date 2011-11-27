@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>esk.entities.AdminAlluvus</class>
+        <class>esk.entities.Amet</class>
+        <class>esk.entities.AmetPiiripunkti</class>
+        <class>esk.entities.AmetVaeosa</class>
+        <class>esk.entities.Auaste</class>
+        <class>esk.entities.AuastmeMuutumine</class>
+        <class>esk.entities.IntsidendiLiik</class>
+        <class>esk.entities.Intsident</class>
+        <class>esk.entities.IsikuSeadusIntsidendi</class>
+        <class>esk.entities.IsikIntsidendi</class>
+        <class>esk.entities.Kodakondsus</class>
+        <class>esk.entities.KontaktiLiik</class>
+        <class>esk.entities.Objekt</class>
+        <class>esk.entities.ObjektiLiik</class>
+        <class>esk.entities.ObjektiSeadusIntsidendi</class>
+        <class>esk.entities.ObjektIntsidendi</class>
+        <class>esk.entities.OrgYksus</class>
+        <class>esk.entities.PiiriloiguHaldaja</class>
+        <class>esk.entities.Piiriloik</class>
+        <class>esk.entities.Piiripunkt</class>
+        <class>esk.entities.PiiripunktiAlluvus</class>
+        <class>esk.entities.PiiripunktiOrgYksus</class>
+        <class>esk.entities.Piiririkkuja</class>
+        <class>esk.entities.Piirivalvur</class>
+        <class>esk.entities.PiirivalvuriKontakt</class>
+        <class>esk.entities.PiirivalvuriSeadusIntsidendi</class>
+        <class>esk.entities.PiirivalvurIntsidendi</class>
+        <class>esk.entities.PiirivalvurPiiripunkti</class>
+        <class>esk.entities.PiirivalvurVaeosa</class>
+        <class>esk.entities.PiirivalvurVodikohal</class>
+        <class>esk.entities.RiigiAdminYksus</class>
+        <class>esk.entities.RiigiAdminYksuseLiik</class>
+        <class>esk.entities.Riik</class>
+        <class>esk.entities.Ruumiyksus</class>
+        <class>esk.entities.RuumiyksuseLiik</class>
+        <class>esk.entities.Seadus</class>
+        <class>esk.entities.SeadusePunkt</class>
+        <class>esk.entities.SeotudKontaktisik</class>
+        <class>esk.entities.SuguluseRolliLiik</class>
+        <class>esk.entities.Vaeosa</class>
+        <class>esk.entities.VaeosaAlluvus</class>
+        <class>esk.entities.Vahtkond</class>
+        <class>esk.entities.VahtkondIntsidendi</class>
+        <class>esk.entities.VahtkonnaLiige</class>
+        <class>esk.entities.VahtkonndPiiriloigul</class>
+        <class>esk.entities.VoimalikAlluvus</class>
+        <class>esk.entities.Voodikoht</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <!-- value="create" to build a new database on each run; value="update" to modify an existing database; value="create-drop" means the same as "create" but also drops tables when Hibernate closes; value="validate" makes no changes to the database -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
+            <property name="hibernate.connection.charSet" value="UTF-8"/>
+            <!-- Uncomment the following two properties for JBoss only -->
+            <!-- property name="hibernate.validator.apply_to_ddl" value="false" /-->
+            <!-- property name="hibernate.validator.autoregister_listeners" value="false" /-->
+        </properties>
+    </persistence-unit>
+</persistence>
