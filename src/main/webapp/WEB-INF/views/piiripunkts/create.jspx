@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_main_entities_Piiripunkt" modelAttribute="piiripunkt" path="/piiripunkts" render="${empty dependencies}" z="RtuqZjYyPrG6zf4umTOBYU0OJPw=">
+        <field:input field="piiripunktId" id="c_main_entities_Piiripunkt_piiripunktId" z="vLjdh+CVLES5Zgz9C204x5AaowI="/>
+        <field:datetime dateTimePattern="${piiripunkt_alates_date_format}" field="alates" id="c_main_entities_Piiripunkt_alates" z="JulCpHI9KpPaZ2m28eq6xAykNH0="/>
+        <field:input field="avaja" id="c_main_entities_Piiripunkt_avaja" z="50AeffIx5uIqqPlhEBhJ4cu+kA8="/>
+        <field:datetime dateTimePattern="${piiripunkt_avatud_date_format}" field="avatud" id="c_main_entities_Piiripunkt_avatud" z="R9q36SUwJaAcT/rLGjOubePEf9o="/>
+        <field:input field="gpsLatitude" id="c_main_entities_Piiripunkt_gpsLatitude" validationMessageCode="field_invalid_number" z="Uaqqc3MtfBr8aNpDSl+T1751hG4="/>
+        <field:input field="gpsLongituide" id="c_main_entities_Piiripunkt_gpsLongituide" validationMessageCode="field_invalid_number" z="5wJSrH+yjcBT5fHVnlR7o6IG+tA="/>
+        <field:input field="kommentaar" id="c_main_entities_Piiripunkt_kommentaar" z="vBmpaEn92lYy0bcY6o784QA3/1c="/>
+        <field:input field="kood" id="c_main_entities_Piiripunkt_kood" z="ca56ouwundYZZNxg7B8LqiWEGVQ="/>
+        <field:input field="korgusMerepinnast" id="c_main_entities_Piiripunkt_korgusMerepinnast" validationMessageCode="field_invalid_number" z="gQCUsDS9Q79aRwAqdkL7YXnHbuI="/>
+        <field:datetime dateTimePattern="${piiripunkt_kuni_date_format}" field="kuni" id="c_main_entities_Piiripunkt_kuni" z="6BKX6htbrZIN4u/JNyYg0kwB6lY="/>
+        <field:datetime dateTimePattern="${piiripunkt_muudetud_date_format}" field="muudetud" id="c_main_entities_Piiripunkt_muudetud" z="XQtOQrGF/AZn+I9vc1B6/84Fh6Y="/>
+        <field:input field="muutja" id="c_main_entities_Piiripunkt_muutja" z="VVftphs4h2td0oayj555QZc29fI="/>
+        <field:input field="nimetus" id="c_main_entities_Piiripunkt_nimetus" z="zx58SeUqE3qrBtFGCe1Wt3B53SA="/>
+        <field:datetime dateTimePattern="${piiripunkt_suletud_date_format}" field="suletud" id="c_main_entities_Piiripunkt_suletud" z="VhtG91Hm7wHGPvUgQwlSk070Pig="/>
+        <field:input field="sulgeja" id="c_main_entities_Piiripunkt_sulgeja" z="GYEmfWxtEp5ge2FPfMbaTm2bkHI="/>
+        <field:input field="ametPiiripunktis" id="c_main_entities_Piiripunkt_ametPiiripunktis" z="CfJpKCGjNUkzaF4ZUpirWSDDDQk="/>
+        <field:input field="piiriloiguHaldajas" id="c_main_entities_Piiripunkt_piiriloiguHaldajas" z="rf2t49jFdtY9Q0FZbi76YGDAe68="/>
+        <field:input field="piiripunktiAlluvuses" id="c_main_entities_Piiripunkt_piiripunktiAlluvuses" z="Cl3PrV+0Dvy5unq7qg4rfiF/5E4="/>
+        <field:input field="piiripunktiOrgYksuses" id="c_main_entities_Piiripunkt_piiripunktiOrgYksuses" z="buOKvzjEyyjfOTxJcByCjyehtPY="/>
+        <field:input field="vahtkonds" id="c_main_entities_Piiripunkt_vahtkonds" z="GorgHJjVkFDm1xsYzNmEz0Jv3V8="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_main_entities_Piiripunkt" render="${not empty dependencies}" z="HVW0wL/10FmOdsoWntkb2ukfQfA="/>
+</div>

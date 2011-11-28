@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_IntsidendiLiik" object="${intsidendiliik}" path="/intsidendiliiks" z="o5DLWqmrQRGJeC4CAEaKPwMb3xc=">
+        <field:display field="intsidendiLiikId" id="s_main_entities_IntsidendiLiik_intsidendiLiikId" object="${intsidendiliik}" z="JbFm8K3G7rMc+CvqYLBRRjHxync="/>
+        <field:display field="avaja" id="s_main_entities_IntsidendiLiik_avaja" object="${intsidendiliik}" z="arG/u8xbM9kdDPvgGBQDU70+71c="/>
+        <field:display date="true" dateTimePattern="${intsidendiLiik_avatud_date_format}" field="avatud" id="s_main_entities_IntsidendiLiik_avatud" object="${intsidendiliik}" z="V62wEp0nGQRgQJJxJOOJCeA+W2Q="/>
+        <field:display field="kommentaar" id="s_main_entities_IntsidendiLiik_kommentaar" object="${intsidendiliik}" z="MBAuk/FXzfWVBWKGKSW3/g6qCe8="/>
+        <field:display field="kood" id="s_main_entities_IntsidendiLiik_kood" object="${intsidendiliik}" z="u1H3iuSO+SOGIF6OzpjkyrX6Nyk="/>
+        <field:display date="true" dateTimePattern="${intsidendiLiik_muudetud_date_format}" field="muudetud" id="s_main_entities_IntsidendiLiik_muudetud" object="${intsidendiliik}" z="OOD+LLo7pB5S7udwlj7iiX/bwVM="/>
+        <field:display field="muutja" id="s_main_entities_IntsidendiLiik_muutja" object="${intsidendiliik}" z="1w/O5MQSlcdjtIzk63kVKkdxT1o="/>
+        <field:display field="nimetus" id="s_main_entities_IntsidendiLiik_nimetus" object="${intsidendiliik}" z="jkmx70H6EN81MJK+96poDaBZr80="/>
+        <field:display date="true" dateTimePattern="${intsidendiLiik_suletud_date_format}" field="suletud" id="s_main_entities_IntsidendiLiik_suletud" object="${intsidendiliik}" z="tQWySvN9EF03bDA7xOFj//d8epU="/>
+        <field:display field="sulgeja" id="s_main_entities_IntsidendiLiik_sulgeja" object="${intsidendiliik}" z="JxLrTH46P26sTqTR2xoNxfPbqjE="/>
+        <field:display field="intsidents" id="s_main_entities_IntsidendiLiik_intsidents" object="${intsidendiliik}" z="9PDjlJ6cj4lqpq8LN+PL9v7BWrU="/>
+    </page:show>
+</div>

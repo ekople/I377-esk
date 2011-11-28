@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_main_entities_Piiririkkuja" modelAttribute="piiririkkuja" path="/piiririkkujas" versionField="Version" z="o6jSMLiCPGsFBFguK0cxlR6VyWI=">
+        <field:input field="piiririkkujaId" id="c_main_entities_Piiririkkuja_piiririkkujaId" z="ADUGUZKaEIfKBUWO4b4hecGC64A="/>
+        <field:input field="avaja" id="c_main_entities_Piiririkkuja_avaja" z="vpqYrybZdsU0TnMdyYWcTr65yzg="/>
+        <field:datetime dateTimePattern="${piiririkkuja_avatud_date_format}" field="avatud" id="c_main_entities_Piiririkkuja_avatud" z="w9CB93oMOyHVWnJAOuDvFy4qcpQ="/>
+        <field:input field="eesnimi" id="c_main_entities_Piiririkkuja_eesnimi" z="Cy5noWEswoycmI7vdby347c5jd0="/>
+        <field:input field="isikukood" id="c_main_entities_Piiririkkuja_isikukood" z="i+PgpF2g5EV+6LNIDxYAxc8cPig="/>
+        <field:input field="kommentaar" id="c_main_entities_Piiririkkuja_kommentaar" z="AKPxNwZkaYhFfdtUrQlpEga908A="/>
+        <field:datetime dateTimePattern="${piiririkkuja_muudetud_date_format}" field="muudetud" id="c_main_entities_Piiririkkuja_muudetud" z="RMqqkB3IaSF4v9OO7cpGQOtJLBQ="/>
+        <field:input field="muutja" id="c_main_entities_Piiririkkuja_muutja" z="Ncst6ysxdrln7hrnXWMUBPD+zwc="/>
+        <field:input field="perekNimi" id="c_main_entities_Piiririkkuja_perekNimi" z="NmAhKZgTJC723SLfad+fo++0Vqs="/>
+        <field:input field="sugu" id="c_main_entities_Piiririkkuja_sugu" z="gLr7vRwicmIPfMLe17jZzMVNVIo="/>
+        <field:datetime dateTimePattern="${piiririkkuja_suletud_date_format}" field="suletud" id="c_main_entities_Piiririkkuja_suletud" z="/hrMPnduwyVQXlq71SK8OkzIkRA="/>
+        <field:input field="sulgeja" id="c_main_entities_Piiririkkuja_sulgeja" z="3S0dgJmuPrXF5nBkmpFOTd2mz/c="/>
+        <field:datetime dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="c_main_entities_Piiririkkuja_synniaeg" z="aKXINLmZt7s3MFEKtQuqgsEoppA="/>
+        <field:input field="isikIntsidendis" id="c_main_entities_Piiririkkuja_isikIntsidendis" z="ttKpPkQ0Qzx5/poHHvGvTM4hdO4="/>
+        <field:input field="kodakondsuses" id="c_main_entities_Piiririkkuja_kodakondsuses" z="Z0IWELFc0bUOSSFBCiZWWBVdOkI="/>
+        <field:input field="objekt" id="c_main_entities_Piiririkkuja_objekt" z="lzCBUoYO9AlqajDO5G46CUIM/F4="/>
+    </form:update>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Piiriloik" object="${piiriloik}" path="/piiriloiks" z="R6WHtN8yE/8vPUFji+UDEIacq44=">
+        <field:display field="piiriloikId" id="s_main_entities_Piiriloik_piiriloikId" object="${piiriloik}" z="RY+WwCVVXHuNng/jxohanSebC80="/>
+        <field:display field="avaja" id="s_main_entities_Piiriloik_avaja" object="${piiriloik}" z="IG7t9JwY6OggnRcPkPZDF98sHlI="/>
+        <field:display date="true" dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="s_main_entities_Piiriloik_avatud" object="${piiriloik}" z="61unfNLmnK0AdMftQo1rX1sWFKo="/>
+        <field:display field="gpsKoordinaadid" id="s_main_entities_Piiriloik_gpsKoordinaadid" object="${piiriloik}" z="9RM3Kug7UMkRIrG0Sco2oLmqWek="/>
+        <field:display field="kommentaar" id="s_main_entities_Piiriloik_kommentaar" object="${piiriloik}" z="LP95/Rj1XnfuTDLr8NX9a945i64="/>
+        <field:display field="kood" id="s_main_entities_Piiriloik_kood" object="${piiriloik}" z="2fZCsqdNw8a6KhMvlepMWTWZiMg="/>
+        <field:display date="true" dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="s_main_entities_Piiriloik_muudetud" object="${piiriloik}" z="Iz0Vq+OP3OajuniI9E2r7DToR2g="/>
+        <field:display field="muutja" id="s_main_entities_Piiriloik_muutja" object="${piiriloik}" z="KZBejWQy6GtVfCm9TiyRqLS0QQg="/>
+        <field:display field="nimetus" id="s_main_entities_Piiriloik_nimetus" object="${piiriloik}" z="MmtyeGcgL7c3l8haXZax62XQ6hk="/>
+        <field:display date="true" dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="s_main_entities_Piiriloik_suletud" object="${piiriloik}" z="vkAOZfnfiWrY0UYUHodmgnzxUEc="/>
+        <field:display field="sulgeja" id="s_main_entities_Piiriloik_sulgeja" object="${piiriloik}" z="TL/Nu72z1Cuc0qb3rY5HKfEkvoA="/>
+        <field:display field="intsidents" id="s_main_entities_Piiriloik_intsidents" object="${piiriloik}" z="TgF92WoTH5uDLjcUERI6o0CVzYQ="/>
+        <field:display field="piiriloiguHaldajas" id="s_main_entities_Piiriloik_piiriloiguHaldajas" object="${piiriloik}" z="sqXwOK3r6H1q5RPP7GwFO4M1JG0="/>
+        <field:display field="vahtkonndPiiriloiguls" id="s_main_entities_Piiriloik_vahtkonndPiiriloiguls" object="${piiriloik}" z="C5b5clAuAQ2d5D3O2oH+7j3p5o8="/>
+    </page:show>
+</div>

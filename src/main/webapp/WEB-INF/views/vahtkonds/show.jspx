@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Vahtkond" object="${vahtkond}" path="/vahtkonds" z="nicIlCrhCB8K9PNIcuW71nVkllE=">
+        <field:display field="vahtkondId" id="s_main_entities_Vahtkond_vahtkondId" object="${vahtkond}" z="2AhuijAksH6pZ8b5G6WOX6gBkdY="/>
+        <field:display date="true" dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="s_main_entities_Vahtkond_alates" object="${vahtkond}" z="zUtpR9JAHNINu6laEaS8hCRwjzs="/>
+        <field:display field="avaja" id="s_main_entities_Vahtkond_avaja" object="${vahtkond}" z="U72T7ljcHvL76xo5TkQnhcGvWs4="/>
+        <field:display date="true" dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="s_main_entities_Vahtkond_avatud" object="${vahtkond}" z="rCeLlTDE66PnvYvfeJRCI59CdZY="/>
+        <field:display field="kommentaar" id="s_main_entities_Vahtkond_kommentaar" object="${vahtkond}" z="4Zddou2P3nCPYtxp5Hx7b11dBO8="/>
+        <field:display field="kood" id="s_main_entities_Vahtkond_kood" object="${vahtkond}" z="apjirClYVu4ektEURUwF8fuJBQk="/>
+        <field:display date="true" dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="s_main_entities_Vahtkond_kuni" object="${vahtkond}" z="9oU+FuZ4eC9DdNXuo4IuT/eA8ew="/>
+        <field:display date="true" dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="s_main_entities_Vahtkond_muudetud" object="${vahtkond}" z="vHe+HRKjNS9nYpYgH0IAQ1xgMv0="/>
+        <field:display field="muutja" id="s_main_entities_Vahtkond_muutja" object="${vahtkond}" z="6AKJ8Jy49GHo8dTxpy8Cl79R738="/>
+        <field:display field="nimetus" id="s_main_entities_Vahtkond_nimetus" object="${vahtkond}" z="JtiaPlwkQvmoUTIR9MrlNtwUPts="/>
+        <field:display date="true" dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="s_main_entities_Vahtkond_suletud" object="${vahtkond}" z="IkCAFe50ZFrPTOfrXXnySGLQLWQ="/>
+        <field:display field="sulgeja" id="s_main_entities_Vahtkond_sulgeja" object="${vahtkond}" z="is0EVKMJxdmevDTiLR0tuavMHXI="/>
+        <field:display field="piiripunkt" id="s_main_entities_Vahtkond_piiripunkt" object="${vahtkond}" z="nA80iv8CLhStZ/5aYN63GH+BVro="/>
+        <field:display field="vaeosa" id="s_main_entities_Vahtkond_vaeosa" object="${vahtkond}" z="ar17HK2elt16od1A/nDTpSARf1w="/>
+        <field:display field="vahtkondIntsidendis" id="s_main_entities_Vahtkond_vahtkondIntsidendis" object="${vahtkond}" z="fiEV1JjfG3asxVVbklG62bNYzds="/>
+        <field:display field="vahtkonnaLiiges" id="s_main_entities_Vahtkond_vahtkonnaLiiges" object="${vahtkond}" z="jdv/CV3TvfUKwySqXCrZpjB777Y="/>
+        <field:display field="vahtkonndPiiriloiguls" id="s_main_entities_Vahtkond_vahtkonndPiiriloiguls" object="${vahtkond}" z="7Jro7cpFscHzlvvMI/QBgcA9DmM="/>
+    </page:show>
+</div>

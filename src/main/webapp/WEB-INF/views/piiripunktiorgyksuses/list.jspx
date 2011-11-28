@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_PiiripunktiOrgYksus" items="${piiripunktiorgyksuses}" z="6gO49tNwqK998yngMNtyF0J74sw=">
+        <table:table data="${piiripunktiorgyksuses}" id="l_main_entities_PiiripunktiOrgYksus" path="/piiripunktiorgyksuses" z="e2bG0+1/ii44Va2yjfY1DN53NR8=">
+            <table:column id="c_main_entities_PiiripunktiOrgYksus_piiripunktiOrgYksusId" property="piiripunktiOrgYksusId" z="9I+rWUNlSilQzVpvI7FQmJ4jkSo="/>
+            <table:column date="true" dateTimePattern="${piiripunktiOrgYksus_alates_date_format}" id="c_main_entities_PiiripunktiOrgYksus_alates" property="alates" z="R0+avyztu4FEeAcH+RdeVLJlXxI="/>
+            <table:column id="c_main_entities_PiiripunktiOrgYksus_avaja" property="avaja" z="5Io/8s1dKq31aUg5lvUlW8L6pfc="/>
+            <table:column date="true" dateTimePattern="${piiripunktiOrgYksus_avatud_date_format}" id="c_main_entities_PiiripunktiOrgYksus_avatud" property="avatud" z="czm6oHp6mWLzJTC93yLBECXLNi4="/>
+            <table:column id="c_main_entities_PiiripunktiOrgYksus_kommentaar" property="kommentaar" z="KEqIJS0lf50m4lui1TWBBbzHvUI="/>
+            <table:column id="c_main_entities_PiiripunktiOrgYksus_kood" property="kood" z="3e2HRzMoP4iVWq1jqH7SLXaUOQY="/>
+        </table:table>
+    </page:list>
+</div>

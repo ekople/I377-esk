@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_PiirivalvurPiiripunkti" object="${piirivalvurpiiripunkti}" path="/piirivalvurpiiripunktis" z="3dIFv1kxX5LCioZlpMkNeCbtv9U=">
+        <field:display field="piirivalvurPiiripunktisId" id="s_main_entities_PiirivalvurPiiripunkti_piirivalvurPiiripunktisId" object="${piirivalvurpiiripunkti}" z="DiqIkMHsOWHT3+ylWx9k4ZJHtWQ="/>
+        <field:display date="true" dateTimePattern="${piirivalvurPiiripunkti_alates_date_format}" field="alates" id="s_main_entities_PiirivalvurPiiripunkti_alates" object="${piirivalvurpiiripunkti}" z="SbPzFdh2c3mmjoT9rwC3w0xlITI="/>
+        <field:display field="avaja" id="s_main_entities_PiirivalvurPiiripunkti_avaja" object="${piirivalvurpiiripunkti}" z="jVAxgLa8N0RbNDk+qBcqvKF99EM="/>
+        <field:display date="true" dateTimePattern="${piirivalvurPiiripunkti_avatud_date_format}" field="avatud" id="s_main_entities_PiirivalvurPiiripunkti_avatud" object="${piirivalvurpiiripunkti}" z="BNTxBV9ZZRVgCEQ+lKvoMP0slbE="/>
+        <field:display field="kommentaar" id="s_main_entities_PiirivalvurPiiripunkti_kommentaar" object="${piirivalvurpiiripunkti}" z="sIYxCZcBtKKW6r2wtDblpcjS2As="/>
+        <field:display field="koormus" id="s_main_entities_PiirivalvurPiiripunkti_koormus" object="${piirivalvurpiiripunkti}" z="lCGxfdAefq/CRmIttCIJaU+bMMQ="/>
+        <field:display date="true" dateTimePattern="${piirivalvurPiiripunkti_kuni_date_format}" field="kuni" id="s_main_entities_PiirivalvurPiiripunkti_kuni" object="${piirivalvurpiiripunkti}" z="5/0UhuPNwR4wePdi33W9UT/hBjg="/>
+        <field:display date="true" dateTimePattern="${piirivalvurPiiripunkti_muudetud_date_format}" field="muudetud" id="s_main_entities_PiirivalvurPiiripunkti_muudetud" object="${piirivalvurpiiripunkti}" z="pQb956jVs3hgIiNt5317NHo9Utg="/>
+        <field:display field="muutja" id="s_main_entities_PiirivalvurPiiripunkti_muutja" object="${piirivalvurpiiripunkti}" z="+x2JKidr+a8nNFx2dKmO1XT0fpk="/>
+        <field:display date="true" dateTimePattern="${piirivalvurPiiripunkti_suletud_date_format}" field="suletud" id="s_main_entities_PiirivalvurPiiripunkti_suletud" object="${piirivalvurpiiripunkti}" z="M6aXuiz0UuNjDFEX+se/MWg7Nmc="/>
+        <field:display field="sulgeja" id="s_main_entities_PiirivalvurPiiripunkti_sulgeja" object="${piirivalvurpiiripunkti}" z="kzchz55zjMZhb78FbRU8jPEamao="/>
+        <field:display field="ametPiiripunkti" id="s_main_entities_PiirivalvurPiiripunkti_ametPiiripunkti" object="${piirivalvurpiiripunkti}" z="2Gae/1m2fIfC7vfrQ04m6lmNhmk="/>
+        <field:display field="piirivalvur" id="s_main_entities_PiirivalvurPiiripunkti_piirivalvur" object="${piirivalvurpiiripunkti}" z="0roSRftCTnaK+8UhmCaIcH4teNo="/>
+    </page:show>
+</div>

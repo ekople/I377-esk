@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_Auaste" items="${auastes}" z="xUISpKCvMu7CAX6BZfbIp/m0Udk=">
+        <table:table data="${auastes}" id="l_main_entities_Auaste" path="/auastes" z="c6eIB1RtMK0E8GAGBH3TEcYM9mU=">
+            <table:column id="c_main_entities_Auaste_auasteId" property="auasteId" z="zbITIAeiEut8EWD1gxq4ZjevunU="/>
+            <table:column id="c_main_entities_Auaste_avaja" property="avaja" z="dOiLv8vJ5jOfhtBIE0fT61tCb5w="/>
+            <table:column date="true" dateTimePattern="${auaste_avatud_date_format}" id="c_main_entities_Auaste_avatud" property="avatud" z="ggH9tujqw3amHnEh6NRUdyYR5B4="/>
+            <table:column id="c_main_entities_Auaste_kommentaar" property="kommentaar" z="IjFiVURZ8a8trkKM0NvdbEk3Z/0="/>
+            <table:column id="c_main_entities_Auaste_kood" property="kood" z="P4uyoyIVgZ6a+YzEAu4MAmyuYx8="/>
+            <table:column date="true" dateTimePattern="${auaste_muudetud_date_format}" id="c_main_entities_Auaste_muudetud" property="muudetud" z="0sa2h9ep5hl+rFiDnrk8o+qvAac="/>
+        </table:table>
+    </page:list>
+</div>

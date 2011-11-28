@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_SuguluseRolliLiik" object="${suguluserolliliik}" path="/suguluserolliliiks" z="ksjpxE+oXSxz0FPRVszgRsN2D18=">
+        <field:display field="suguluseRolliLiikId" id="s_main_entities_SuguluseRolliLiik_suguluseRolliLiikId" object="${suguluserolliliik}" z="uGXrCduZkY2O5WEAvarGc45Wlq0="/>
+        <field:display field="avaja" id="s_main_entities_SuguluseRolliLiik_avaja" object="${suguluserolliliik}" z="tMV8HC7uPE4D9Gg5fUblueabYyA="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_avatud_date_format}" field="avatud" id="s_main_entities_SuguluseRolliLiik_avatud" object="${suguluserolliliik}" z="LRqcFSCvJ5o06A7FosbGafidljE="/>
+        <field:display field="kommentaar" id="s_main_entities_SuguluseRolliLiik_kommentaar" object="${suguluserolliliik}" z="HIeG2d2WjJIirrTTb1jO1h+wphg="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_muudetud_date_format}" field="muudetud" id="s_main_entities_SuguluseRolliLiik_muudetud" object="${suguluserolliliik}" z="6sdOPH8qy4KJnuck9tAq0J5KeuE="/>
+        <field:display field="muutja" id="s_main_entities_SuguluseRolliLiik_muutja" object="${suguluserolliliik}" z="0mxkq94FALSxOJQU3mRgJ9alx9Y="/>
+        <field:display field="nimetus" id="s_main_entities_SuguluseRolliLiik_nimetus" object="${suguluserolliliik}" z="IqM9R4NANhfHm4/9h6lbJfT8eDo="/>
+        <field:display field="sugulaneVoiMitte" id="s_main_entities_SuguluseRolliLiik_sugulaneVoiMitte" object="${suguluserolliliik}" z="3WHkZRiWczOEihoUcKA94gwBUx4="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_suletud_date_format}" field="suletud" id="s_main_entities_SuguluseRolliLiik_suletud" object="${suguluserolliliik}" z="ZygUdL7shz/B4qLpY20sLf/W5yY="/>
+        <field:display field="sulgeja" id="s_main_entities_SuguluseRolliLiik_sulgeja" object="${suguluserolliliik}" z="Dn2wiRiPf/8eIXFHIiP4Xcdl788="/>
+        <field:display field="seotudKontaktisiks" id="s_main_entities_SuguluseRolliLiik_seotudKontaktisiks" object="${suguluserolliliik}" z="F98pdDsXT1uq7kXcwhpR5s/a4H0="/>
+    </page:show>
+</div>

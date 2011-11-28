@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_main_entities_VahtkonnaLiige" modelAttribute="vahtkonnaLiige" path="/vahtkonnaliiges" render="${empty dependencies}" z="OfS1YZTJ9NCoSNh7iTvTLC+wIVc=">
+        <field:input field="vahtkonnaLiigeId" id="c_main_entities_VahtkonnaLiige_vahtkonnaLiigeId" z="fJ+CWznlulmuhqhQ0nFwXPQ0huA="/>
+        <field:input field="alates" id="c_main_entities_VahtkonnaLiige_alates" z="84z+H6hBw24JK5qHBisgxlbH7X8="/>
+        <field:input field="avaja" id="c_main_entities_VahtkonnaLiige_avaja" z="DymRjKmU1qwLiLs/J2k2eQR/ReU="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_avatud_date_format}" field="avatud" id="c_main_entities_VahtkonnaLiige_avatud" z="+DQeXHMjQG6fzLpTDV5rMtHJTlM="/>
+        <field:input field="kommentaar" id="c_main_entities_VahtkonnaLiige_kommentaar" z="1uSkwhHVqG/ugCvdrWfNAAHGp+g="/>
+        <field:input field="kuni" id="c_main_entities_VahtkonnaLiige_kuni" z="ikk4vlOSD1KcGP3ZqaRucpuyRzo="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_muudetud_date_format}" field="muudetud" id="c_main_entities_VahtkonnaLiige_muudetud" z="R7EZtc0vcADK6PLgioeCNJ18GS8="/>
+        <field:input field="muutja" id="c_main_entities_VahtkonnaLiige_muutja" z="l5m2NXCGYtYor5Awm488Pk20zO4="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_suletud_date_format}" field="suletud" id="c_main_entities_VahtkonnaLiige_suletud" z="02AutZ53UxHEryhkFZUc+hNmjRA="/>
+        <field:input field="sulgeja" id="c_main_entities_VahtkonnaLiige_sulgeja" z="e0zP7BYMsD7XbIM2+Qskjf0e0Tg="/>
+        <field:input field="piirivalvur" id="c_main_entities_VahtkonnaLiige_piirivalvur" z="q+/t8UtfELLWm+UW78U82NxaqfI="/>
+        <field:input field="vahtkond" id="c_main_entities_VahtkonnaLiige_vahtkond" z="SdkEYvLjleWCR3/asvEl3jLWpqE="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_main_entities_VahtkonnaLiige" render="${not empty dependencies}" z="whekkjKjnvf0tv7k4En6VfQe0H0="/>
+</div>

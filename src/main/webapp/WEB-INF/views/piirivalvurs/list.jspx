@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_Piirivalvur" items="${piirivalvurs}" z="3FK7KJ0AP1y4Y6RwwPaZOit97A8=">
+        <table:table data="${piirivalvurs}" id="l_main_entities_Piirivalvur" path="/piirivalvurs" z="N4X1yNvsfoNWMrb4ZCK3Svq3UyU=">
+            <table:column id="c_main_entities_Piirivalvur_piirivalvurId" property="piirivalvurId" z="AOc/hrvwBhZj4Gni0CVUYLXrOWo="/>
+            <table:column id="c_main_entities_Piirivalvur_avaja" property="avaja" z="22f7E+KZ1AcP0jJSpVEUc8QlH3Y="/>
+            <table:column date="true" dateTimePattern="${piirivalvur_avatud_date_format}" id="c_main_entities_Piirivalvur_avatud" property="avatud" z="6tSnDOcZBqha0G23dCLVhhOVrHc="/>
+            <table:column id="c_main_entities_Piirivalvur_eesnimed" property="eesnimed" z="v+0Uw0rmfl/vMGNIbzvU4+8/lhQ="/>
+            <table:column id="c_main_entities_Piirivalvur_isikukood" property="isikukood" z="8xwcfBRYh36KKb/Bwj6GRJ5bUz8="/>
+            <table:column id="c_main_entities_Piirivalvur_kommentaar" property="kommentaar" z="QN6uMwwYsZdXtu/3ZP/4VPkX86U="/>
+        </table:table>
+    </page:list>
+</div>

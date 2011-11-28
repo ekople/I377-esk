@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_SeadusePunkt" items="${seadusepunkts}" z="Ksg8FGYsxhsMMhhedeS0QmmoDrg=">
+        <table:table data="${seadusepunkts}" id="l_main_entities_SeadusePunkt" path="/seadusepunkts" z="uwOqjFV9wqVMxOwb+a9WHHceRhs=">
+            <table:column id="c_main_entities_SeadusePunkt_seadusePunktId" property="seadusePunktId" z="Mdq2fIGN+ZaUc7s7yHsdXSMNOTg="/>
+            <table:column id="c_main_entities_SeadusePunkt_avaja" property="avaja" z="gTZQc1blSZIKdvrXisbLYANQRQI="/>
+            <table:column date="true" dateTimePattern="${seadusePunkt_avatud_date_format}" id="c_main_entities_SeadusePunkt_avatud" property="avatud" z="ppgMX3yV1fvg8p9HKvzB5aadXTs="/>
+            <table:column id="c_main_entities_SeadusePunkt_kehtivAlates" property="kehtivAlates" z="LxL3jV5Lv674QgZJZ1JScgckb3s="/>
+            <table:column id="c_main_entities_SeadusePunkt_kehtivKuni" property="kehtivKuni" z="ZJX7D3dk6GrsdyaplWmcHQYGmUE="/>
+            <table:column id="c_main_entities_SeadusePunkt_kommentaar" property="kommentaar" z="IPCWmlSJ1Ffed1LTWhaDlNtwstM="/>
+        </table:table>
+    </page:list>
+</div>

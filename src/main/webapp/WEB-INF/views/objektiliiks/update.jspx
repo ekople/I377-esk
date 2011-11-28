@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_main_entities_ObjektiLiik" modelAttribute="objektiLiik" path="/objektiliiks" versionField="Version" z="Nqy0yikDVc1hza78vrUPod0wPUc=">
+        <field:input field="objektLiikId" id="c_main_entities_ObjektiLiik_objektLiikId" z="lrQIxxo3vTRDuCwAZft6QAD0kgk="/>
+        <field:input field="avaja" id="c_main_entities_ObjektiLiik_avaja" z="v5oLyHEmgUoAtqXY2kds24+Uj+A="/>
+        <field:datetime dateTimePattern="${objektiLiik_avatud_date_format}" field="avatud" id="c_main_entities_ObjektiLiik_avatud" z="geluL1NYEpGnv9bZRlRDajt3CNM="/>
+        <field:input field="kommentaar" id="c_main_entities_ObjektiLiik_kommentaar" z="yejlLgE9VepwlqsZIgOOlz9zT1M="/>
+        <field:input field="kood" id="c_main_entities_ObjektiLiik_kood" z="J3132tYs97ICPTOxpzCLBOAna7A="/>
+        <field:datetime dateTimePattern="${objektiLiik_muudetud_date_format}" field="muudetud" id="c_main_entities_ObjektiLiik_muudetud" z="uI5djYSz/yinuwVbcZyZGCAnHfw="/>
+        <field:input field="muutja" id="c_main_entities_ObjektiLiik_muutja" z="5plPnrVs9ZBTuJD3VcZAu4xm5fU="/>
+        <field:input field="nimetus" id="c_main_entities_ObjektiLiik_nimetus" z="z3OX42f/dOY8Z+b5uRvsmA8+CPE="/>
+        <field:datetime dateTimePattern="${objektiLiik_suletud_date_format}" field="suletud" id="c_main_entities_ObjektiLiik_suletud" z="JlFL26G98VtbTZcK7KtkEBTo3A4="/>
+        <field:input field="sulgeja" id="c_main_entities_ObjektiLiik_sulgeja" z="teziP4jtRy5dyHEzzcNZ0MCTo7o="/>
+        <field:input field="objekts" id="c_main_entities_ObjektiLiik_objekts" z="K3HSe7p0ry/JgSyXmaBUe5IhqsY="/>
+    </form:update>
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Voodikoht" object="${voodikoht}" path="/voodikohts" z="jjNYmOnwwNAf8oYAv4riWG1/qCo=">
+        <field:display field="voodikohtId" id="s_main_entities_Voodikoht_voodikohtId" object="${voodikoht}" z="Q29HfpphL+1RvW1/4eHeAJcOfqQ="/>
+        <field:display field="avaja" id="s_main_entities_Voodikoht_avaja" object="${voodikoht}" z="XhOBK2Faf3yXyDHutv1WPt9JGZ4="/>
+        <field:display date="true" dateTimePattern="${voodikoht_avatud_date_format}" field="avatud" id="s_main_entities_Voodikoht_avatud" object="${voodikoht}" z="z5oGGRTZA73orhBpWl4zIR44Re0="/>
+        <field:display field="kommentaar" id="s_main_entities_Voodikoht_kommentaar" object="${voodikoht}" z="QmUCdCxZwQ6TqCP+N9YZs6SatQU="/>
+        <field:display field="laius" id="s_main_entities_Voodikoht_laius" object="${voodikoht}" z="jtV0Z6Uyee4+SBkklTvqPmK2Lls="/>
+        <field:display date="true" dateTimePattern="${voodikoht_muudetud_date_format}" field="muudetud" id="s_main_entities_Voodikoht_muudetud" object="${voodikoht}" z="dMiRShUOmLog8yW8TCJsBhK76y4="/>
+        <field:display field="muutja" id="s_main_entities_Voodikoht_muutja" object="${voodikoht}" z="mTiIYhyK+L0Ml75BMAcPVia5vQE="/>
+        <field:display field="number" id="s_main_entities_Voodikoht_number" object="${voodikoht}" z="QY+fxZD9RAjaHW/BmKBUiWBizHo="/>
+        <field:display field="pikkus" id="s_main_entities_Voodikoht_pikkus" object="${voodikoht}" z="rA+68LWjTe33dBDeAUAKFf37j70="/>
+        <field:display date="true" dateTimePattern="${voodikoht_suletud_date_format}" field="suletud" id="s_main_entities_Voodikoht_suletud" object="${voodikoht}" z="eMeXwn3MybyeEx6Ak4xAcH1QNHY="/>
+        <field:display field="sulgeja" id="s_main_entities_Voodikoht_sulgeja" object="${voodikoht}" z="xfqv1/nqC4TtEBo8k4Iz2FWCLwk="/>
+        <field:display field="piirivalvurVodikohals" id="s_main_entities_Voodikoht_piirivalvurVodikohals" object="${voodikoht}" z="tzA/yplyKQ2XFg60p6UoasFsgWA="/>
+        <field:display field="ruumiyksus" id="s_main_entities_Voodikoht_ruumiyksus" object="${voodikoht}" z="Q7ntachAuLuGHdQQdj9NfJKPga8="/>
+    </page:show>
+</div>

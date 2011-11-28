@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_entities_AdminAlluvus" object="${adminalluvus}" path="/adminalluvuses" z="KTbbRlSRvgwNkOrxjDlAXDAxj+Q=">
+        <field:display field="adminAlluvusId" id="s_entities_AdminAlluvus_adminAlluvusId" object="${adminalluvus}" z="I6G5qgHBiSGwB/A9mw+aN02XRhs="/>
+        <field:display field="alates" id="s_entities_AdminAlluvus_alates" object="${adminalluvus}" z="Do7+nqM5NSv4MT/l2D+pW3qdRRE="/>
+        <field:display field="avaja" id="s_entities_AdminAlluvus_avaja" object="${adminalluvus}" z="13i3He7/0uQl8aZ72n4iCt49/Js="/>
+        <field:display date="true" dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="s_entities_AdminAlluvus_avatud" object="${adminalluvus}" z="dGXXe5isxR7SjWjsJsZX3HUEcaQ="/>
+        <field:display field="kommentaar" id="s_entities_AdminAlluvus_kommentaar" object="${adminalluvus}" z="qFbaleo8pyEOxLZkewb8haU6fGc="/>
+        <field:display field="kuni" id="s_entities_AdminAlluvus_kuni" object="${adminalluvus}" z="8x6aDWAwNqnM7uCMZ18MUwkAzSk="/>
+        <field:display date="true" dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="s_entities_AdminAlluvus_muudetud" object="${adminalluvus}" z="skB7O0P9SFUdqmNaiXgTYtfrjZs="/>
+        <field:display field="muutja" id="s_entities_AdminAlluvus_muutja" object="${adminalluvus}" z="5dvWCwLyQBjOflDfTvi9ooEHg+Y="/>
+        <field:display date="true" dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="s_entities_AdminAlluvus_suletud" object="${adminalluvus}" z="yZe8IESxZyNdSQV/LVcS56plfDE="/>
+        <field:display field="sulgeja" id="s_entities_AdminAlluvus_sulgeja" object="${adminalluvus}" z="Oh/jb9g5SM0nya6R3m8dr76+b88="/>
+        <field:display field="riigiAdminYksus1" id="s_entities_AdminAlluvus_riigiAdminYksus1" object="${adminalluvus}" z="WoVo/z9LTS/UBQNRE+RT7fuGJB8="/>
+        <field:display field="riigiAdminYksus2" id="s_entities_AdminAlluvus_riigiAdminYksus2" object="${adminalluvus}" z="Yrx08rtT+Lb+7Jqu9rRjPLckExQ="/>
+    </page:show>
+</div>

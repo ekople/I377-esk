@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Seadus" object="${seadus}" path="/seaduses" z="ghxLyOE6cnr9+dksYgqShRd8GBE=">
+        <field:display field="seaduseId" id="s_main_entities_Seadus_seaduseId" object="${seadus}" z="mpnjGwWVZAGbhhSn1Cebc+Qr8YM="/>
+        <field:display field="avaja" id="s_main_entities_Seadus_avaja" object="${seadus}" z="S2t8PoRgCQmmrBS/um/P+wDbEEs="/>
+        <field:display date="true" dateTimePattern="${seadus_avatud_date_format}" field="avatud" id="s_main_entities_Seadus_avatud" object="${seadus}" z="YBTkJcnaBJkBjrOH8mMNIEL0Rpg="/>
+        <field:display field="kehtivAlates" id="s_main_entities_Seadus_kehtivAlates" object="${seadus}" z="/Vh0wTILHroHMUWwwwr+N058/Hk="/>
+        <field:display field="kehtivKuni" id="s_main_entities_Seadus_kehtivKuni" object="${seadus}" z="bRT3+EDB7UqZCUnZB742UvJq7lE="/>
+        <field:display field="kommentaar" id="s_main_entities_Seadus_kommentaar" object="${seadus}" z="uUDvw6PPIqz45/+YO/MdaIl5lKQ="/>
+        <field:display field="kood" id="s_main_entities_Seadus_kood" object="${seadus}" z="kBkhW4UKoh56yRsykLzfh/zlQl4="/>
+        <field:display date="true" dateTimePattern="${seadus_muudetud_date_format}" field="muudetud" id="s_main_entities_Seadus_muudetud" object="${seadus}" z="cugSVbgCf4a2tvv9RtJsNgzpZqo="/>
+        <field:display field="muutja" id="s_main_entities_Seadus_muutja" object="${seadus}" z="gxEe/3WrfZ6QSSh15LOI3a/JRq0="/>
+        <field:display field="nimetus" id="s_main_entities_Seadus_nimetus" object="${seadus}" z="kXqwqvE6AmMEux+7ywQbzfAZ4sY="/>
+        <field:display date="true" dateTimePattern="${seadus_suletud_date_format}" field="suletud" id="s_main_entities_Seadus_suletud" object="${seadus}" z="IMt4dK3UGiD/nmcQ9F60YvioOVI="/>
+        <field:display field="sulgeja" id="s_main_entities_Seadus_sulgeja" object="${seadus}" z="7QZb/5VD/q/au5li9Ea/qrDl0zU="/>
+        <field:display field="seadusePunkts" id="s_main_entities_Seadus_seadusePunkts" object="${seadus}" z="wpnwvANqY0cf+GWZmt8i/Uhvy98="/>
+    </page:show>
+</div>

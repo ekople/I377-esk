@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_PiiripunktiAlluvus" items="${piiripunktialluvuses}" z="+7dzW5E9y0+jUbvX2w8KTztiwxo=">
+        <table:table data="${piiripunktialluvuses}" id="l_main_entities_PiiripunktiAlluvus" path="/piiripunktialluvuses" z="iQHGCtYVpd4b5axjOq0z0eu5uD8=">
+            <table:column id="c_main_entities_PiiripunktiAlluvus_piiripunktiAlluvusId" property="piiripunktiAlluvusId" z="xha+i7a3El0uy/ro2N0XNLdOhx4="/>
+            <table:column id="c_main_entities_PiiripunktiAlluvus_alates" property="alates" z="bKhrHaxlH4dHfj6GuttNM0g7sv8="/>
+            <table:column id="c_main_entities_PiiripunktiAlluvus_avaja" property="avaja" z="jE86+oLatue/tdbdS/SboOed2zI="/>
+            <table:column date="true" dateTimePattern="${piiripunktiAlluvus_avatud_date_format}" id="c_main_entities_PiiripunktiAlluvus_avatud" property="avatud" z="pn8fcI8axT0c2rjG3037Cgm5Agc="/>
+            <table:column id="c_main_entities_PiiripunktiAlluvus_kommentaar" property="kommentaar" z="ZMW6traoRdRXbrjyIpXf+LCYXnU="/>
+            <table:column id="c_main_entities_PiiripunktiAlluvus_kuni" property="kuni" z="3V1FHRxB1QxAV2f6B0l5/SdKUuw="/>
+        </table:table>
+    </page:list>
+</div>

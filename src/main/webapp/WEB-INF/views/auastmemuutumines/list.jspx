@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_AuastmeMuutumine" items="${auastmemuutumines}" z="Bs4LnGQGAjFZo5n8aZpbBEpvSl4=">
+        <table:table data="${auastmemuutumines}" id="l_main_entities_AuastmeMuutumine" path="/auastmemuutumines" z="e0xXJw8FMMnJ5DknLyUYdeJAtVk=">
+            <table:column id="c_main_entities_AuastmeMuutumine_auastmeMuutumineId" property="auastmeMuutumineId" z="n0ctMWYswIp/s+o/071yKxTqdps="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_alates_date_format}" id="c_main_entities_AuastmeMuutumine_alates" property="alates" z="mTPes3Lzn62+U5vuGcRDqznS9y4="/>
+            <table:column id="c_main_entities_AuastmeMuutumine_avaja" property="avaja" z="ocq/rQ2AJeIQMq6L35gNd+3yAZk="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_avatud_date_format}" id="c_main_entities_AuastmeMuutumine_avatud" property="avatud" z="Pq8IouhJ9hhywatxpHFy9t37fzY="/>
+            <table:column id="c_main_entities_AuastmeMuutumine_kommentaar" property="kommentaar" z="brOULKCt6ARUs79JhljgtRiI+90="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_kuni_date_format}" id="c_main_entities_AuastmeMuutumine_kuni" property="kuni" z="eCRUqB59b7AiM5dd/zmUpv6nHnE="/>
+        </table:table>
+    </page:list>
+</div>

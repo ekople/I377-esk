@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_Amet" items="${amets}" z="5r3lW4f7vdh9LVp0yqdt2H1kGDU=">
+        <table:table data="${amets}" id="l_main_entities_Amet" path="/amets" z="ebSDWm/4cMOIsG2+WJdwNM6yonI=">
+            <table:column id="c_main_entities_Amet_ametId" property="ametId" z="WNQW07nNrrV9Idg0lBRGsLoulHY="/>
+            <table:column id="c_main_entities_Amet_avaja" property="avaja" z="wyJ/Mo0TxjkCl0gx6Qbz9qGAHMg="/>
+            <table:column date="true" dateTimePattern="${amet_avatud_date_format}" id="c_main_entities_Amet_avatud" property="avatud" z="ptdw47js+EmqNPRHHt44yX2oplU="/>
+            <table:column id="c_main_entities_Amet_iscoKood" property="iscoKood" z="ScKoBZLdRkMvDmYbf8Twr/fdfk0="/>
+            <table:column id="c_main_entities_Amet_kommentaar" property="kommentaar" z="2X9iR14/dT2dZS1jhGkyioUvHDE="/>
+            <table:column date="true" dateTimePattern="${amet_muudetud_date_format}" id="c_main_entities_Amet_muudetud" property="muudetud" z="Fl9LFtD4ZqPer7cwpwc7ixLOEz4="/>
+        </table:table>
+    </page:list>
+</div>

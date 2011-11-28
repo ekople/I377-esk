@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_PiiriloiguHaldaja" object="${piiriloiguhaldaja}" path="/piiriloiguhaldajas" z="iNXo82EgzFOlCD2u7LvzNFCeC9w=">
+        <field:display field="piiriloiguHaldajaId" id="s_main_entities_PiiriloiguHaldaja_piiriloiguHaldajaId" object="${piiriloiguhaldaja}" z="IdZn+0J+bVV3G/kQ0aZUgWIIv9o="/>
+        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_alates_date_format}" field="alates" id="s_main_entities_PiiriloiguHaldaja_alates" object="${piiriloiguhaldaja}" z="A+IUcpLfOBtUDBltrjE14EHPrx0="/>
+        <field:display field="avaja" id="s_main_entities_PiiriloiguHaldaja_avaja" object="${piiriloiguhaldaja}" z="FRYN/1vKpu8HuDaC+wzh8ZSI4jE="/>
+        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_avatud_date_format}" field="avatud" id="s_main_entities_PiiriloiguHaldaja_avatud" object="${piiriloiguhaldaja}" z="DuYzf8S6reUZqboo5sytWlqbXRg="/>
+        <field:display field="kommentaar" id="s_main_entities_PiiriloiguHaldaja_kommentaar" object="${piiriloiguhaldaja}" z="ilEY0ZATnZa9swIbxAOgUcZ6U2M="/>
+        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_kuni_date_format}" field="kuni" id="s_main_entities_PiiriloiguHaldaja_kuni" object="${piiriloiguhaldaja}" z="ovM5KfAJ0rCLKYb9JQFJQ//sA6U="/>
+        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_muudetud_date_format}" field="muudetud" id="s_main_entities_PiiriloiguHaldaja_muudetud" object="${piiriloiguhaldaja}" z="Jp0AnQVnpy6MSk++BbjVqwrGS7Q="/>
+        <field:display field="muutja" id="s_main_entities_PiiriloiguHaldaja_muutja" object="${piiriloiguhaldaja}" z="XNTlvNLNWcDYHxjv5/Ep+ZeI+rw="/>
+        <field:display date="true" dateTimePattern="${piiriloiguHaldaja_suletud_date_format}" field="suletud" id="s_main_entities_PiiriloiguHaldaja_suletud" object="${piiriloiguhaldaja}" z="KPGwszwHVeecZIOXQediuzQnu68="/>
+        <field:display field="sulgeja" id="s_main_entities_PiiriloiguHaldaja_sulgeja" object="${piiriloiguhaldaja}" z="FAzskwWh/D98v9V0CSehfd78Ks4="/>
+        <field:display field="piiriloik" id="s_main_entities_PiiriloiguHaldaja_piiriloik" object="${piiriloiguhaldaja}" z="EhbBQMExZYM31y+ywPV/gMP1zMU="/>
+        <field:display field="piiripunkt" id="s_main_entities_PiiriloiguHaldaja_piiripunkt" object="${piiriloiguhaldaja}" z="HhhuOmnavaRRggSui6X+1P8lEI0="/>
+        <field:display field="vaeosa" id="s_main_entities_PiiriloiguHaldaja_vaeosa" object="${piiriloiguhaldaja}" z="i8pd2cGv11ZJnzVVr8OayZDZvZk="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_PiirivalvurVodikohal" items="${piirivalvurvodikohals}" z="+hs+hjOwKAlGn1vwr5rJ9bZej94=">
+        <table:table data="${piirivalvurvodikohals}" id="l_main_entities_PiirivalvurVodikohal" path="/piirivalvurvodikohals" typeIdFieldName="_id" z="TaZvQxgdo1Iz9Dusx6Axqdx4iv0=">
+            <table:column id="c_main_entities_PiirivalvurVodikohal_id" property="id" z="aCnFJSRHhJ7fcmebOkK1/HJQ/wU="/>
+            <table:column date="true" dateTimePattern="${piirivalvurVodikohal_alates_date_format}" id="c_main_entities_PiirivalvurVodikohal_alates" property="alates" z="EU4Y27B/FWf0KB49qZhtbWToJPw="/>
+            <table:column id="c_main_entities_PiirivalvurVodikohal_avaja" property="avaja" z="xYAdNpkvHEwgRqg93TVEAk78sNc="/>
+            <table:column date="true" dateTimePattern="${piirivalvurVodikohal_avatud_date_format}" id="c_main_entities_PiirivalvurVodikohal_avatud" property="avatud" z="4Vu4cmHhiIgWh//YCuQEews0crY="/>
+            <table:column id="c_main_entities_PiirivalvurVodikohal_kommentaar" property="kommentaar" z="dqQlLbZLYestBv7O0+XHlXTx62w="/>
+            <table:column date="true" dateTimePattern="${piirivalvurVodikohal_kuni_date_format}" id="c_main_entities_PiirivalvurVodikohal_kuni" property="kuni" z="QbIugLXszBjMWHmuN0OhDlXJLNQ="/>
+        </table:table>
+    </page:list>
+</div>

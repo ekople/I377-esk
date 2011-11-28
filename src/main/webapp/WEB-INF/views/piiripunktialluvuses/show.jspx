@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_PiiripunktiAlluvus" object="${piiripunktialluvus}" path="/piiripunktialluvuses" z="JM2ZJiINIdoRktWOdD2TTwfTjnA=">
+        <field:display field="piiripunktiAlluvusId" id="s_main_entities_PiiripunktiAlluvus_piiripunktiAlluvusId" object="${piiripunktialluvus}" z="ayye9KlIRJ45pc98BYm0BAq4EqM="/>
+        <field:display field="alates" id="s_main_entities_PiiripunktiAlluvus_alates" object="${piiripunktialluvus}" z="D1uZ6eNbu3sQtAHBGpkQiYjo//8="/>
+        <field:display field="avaja" id="s_main_entities_PiiripunktiAlluvus_avaja" object="${piiripunktialluvus}" z="zdpr654tWZmb2d+Jhf05MFOnUXo="/>
+        <field:display date="true" dateTimePattern="${piiripunktiAlluvus_avatud_date_format}" field="avatud" id="s_main_entities_PiiripunktiAlluvus_avatud" object="${piiripunktialluvus}" z="hnOB6HDEYe6jzKE8ndp92wEoo20="/>
+        <field:display field="kommentaar" id="s_main_entities_PiiripunktiAlluvus_kommentaar" object="${piiripunktialluvus}" z="shqK75k6ztXXAWFuZbtNIP8J5t4="/>
+        <field:display field="kuni" id="s_main_entities_PiiripunktiAlluvus_kuni" object="${piiripunktialluvus}" z="eKUYn62I7iyKA7vc3gCfrZaUSi8="/>
+        <field:display date="true" dateTimePattern="${piiripunktiAlluvus_muudetud_date_format}" field="muudetud" id="s_main_entities_PiiripunktiAlluvus_muudetud" object="${piiripunktialluvus}" z="qHq7Gd5iuanMP5RpijPFVhLyw6Y="/>
+        <field:display field="muutja" id="s_main_entities_PiiripunktiAlluvus_muutja" object="${piiripunktialluvus}" z="Qsw3RlW/ehRy2MJQrYETLuMkz10="/>
+        <field:display date="true" dateTimePattern="${piiripunktiAlluvus_suletud_date_format}" field="suletud" id="s_main_entities_PiiripunktiAlluvus_suletud" object="${piiripunktialluvus}" z="i4qiNCYmwSUxXLo3aGyG8XeC29c="/>
+        <field:display field="sulgeja" id="s_main_entities_PiiripunktiAlluvus_sulgeja" object="${piiripunktialluvus}" z="e4S2dN2tmbWf0ViLY7bP3wVnuN8="/>
+        <field:display field="piiripunkt" id="s_main_entities_PiiripunktiAlluvus_piiripunkt" object="${piiripunktialluvus}" z="M5JlXvy6tAYZlkgNUis7NtMJpvs="/>
+        <field:display field="vaeosa" id="s_main_entities_PiiripunktiAlluvus_vaeosa" object="${piiripunktialluvus}" z="KetZzT9k47ZYUFly159CAmbwVqs="/>
+    </page:show>
+</div>

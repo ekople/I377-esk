@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_main_entities_RiigiAdminYksus" modelAttribute="riigiAdminYksus" path="/riigiadminyksuses" versionField="Version" z="qtP4Ogt7x16a14icYXJNNlGwXKQ=">
+        <field:input field="riigiAdminYksusId" id="c_main_entities_RiigiAdminYksus_riigiAdminYksusId" z="0RviSll4cg1YEY1fhsF/vV7gBZM="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_alates_date_format}" field="alates" id="c_main_entities_RiigiAdminYksus_alates" z="tdMd4YJv9uMisuKc9iPyXxoFApw="/>
+        <field:input field="avaja" id="c_main_entities_RiigiAdminYksus_avaja" z="zwlDqGaeXXHi09aWg6pg3zu+Me4="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_avatud_date_format}" field="avatud" id="c_main_entities_RiigiAdminYksus_avatud" z="yKnolCF/d9bEaB1uJmxDyGhby2E="/>
+        <field:input field="kommentaar" id="c_main_entities_RiigiAdminYksus_kommentaar" z="/xGDH2omyWuQ2QpwfxsnRl9autM="/>
+        <field:input field="kood" id="c_main_entities_RiigiAdminYksus_kood" z="+m90He20/AyvlQV1IA8lXAK4xkg="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_kuni_date_format}" field="kuni" id="c_main_entities_RiigiAdminYksus_kuni" z="hNhgCtCp/7/Q1eLB0xMT2IZHJLg="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_muudetud_date_format}" field="muudetud" id="c_main_entities_RiigiAdminYksus_muudetud" z="y+m/r2Ef4KiuTF6nS2klfpldT+s="/>
+        <field:input field="muutja" id="c_main_entities_RiigiAdminYksus_muutja" z="zoadSF99dPx5D3JSQuPHjftk/fY="/>
+        <field:input field="nimetus" id="c_main_entities_RiigiAdminYksus_nimetus" z="B6F3I/M9E0wUiuTXZFXP9fmM/DU="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_suletud_date_format}" field="suletud" id="c_main_entities_RiigiAdminYksus_suletud" z="Gzo2YAXG+My3qiZLgEeYTZKQAqo="/>
+        <field:input field="sulgeja" id="c_main_entities_RiigiAdminYksus_sulgeja" z="9W7VMarGu34PYzxtk+Im5qluM5I="/>
+        <field:input field="adminAlluvuses1" id="c_main_entities_RiigiAdminYksus_adminAlluvuses1" z="CkuLjHNEPuYiyAS5aC6LXr7WEHQ="/>
+        <field:input field="adminAlluvuses2" id="c_main_entities_RiigiAdminYksus_adminAlluvuses2" z="yhsCJOH+3Qk3ycZ4rRzLXb8N/g0="/>
+        <field:input field="riigiAdminYksuseLiik" id="c_main_entities_RiigiAdminYksus_riigiAdminYksuseLiik" z="BpiRSR7W6y7gZcff1hJmXDg0bn0="/>
+        <field:input field="ruumiyksuses" id="c_main_entities_RiigiAdminYksus_ruumiyksuses" z="civEBKTxmnFkdze5TI72hjTtOFk="/>
+        <field:input field="vaeosas" id="c_main_entities_RiigiAdminYksus_vaeosas" z="D30MkGUc6DNBDeLWSOvWjvVwL10="/>
+    </form:update>
+</div>

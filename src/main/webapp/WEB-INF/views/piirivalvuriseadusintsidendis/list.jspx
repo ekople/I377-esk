@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_PiirivalvuriSeadusIntsidendi" items="${piirivalvuriseadusintsidendis}" z="tXB5tLjwEYwahScXFHThM0xbTzw=">
+        <table:table data="${piirivalvuriseadusintsidendis}" id="l_main_entities_PiirivalvuriSeadusIntsidendi" path="/piirivalvuriseadusintsidendis" z="XBmWaD3g2WbiYVLq1pFeGbAsNSE=">
+            <table:column id="c_main_entities_PiirivalvuriSeadusIntsidendi_piirivalvuriSeadusIntsidendi" property="piirivalvuriSeadusIntsidendi" z="SIYj++452/DpUerPBmMpRDK32fw="/>
+            <table:column date="true" dateTimePattern="${piirivalvuriSeadusIntsidendi_alates_date_format}" id="c_main_entities_PiirivalvuriSeadusIntsidendi_alates" property="alates" z="CV+w/q5/FWEReXkZYShyveIdYhY="/>
+            <table:column id="c_main_entities_PiirivalvuriSeadusIntsidendi_avaja" property="avaja" z="g/q2WPicJAYwumgLD9ohJFapKOc="/>
+            <table:column date="true" dateTimePattern="${piirivalvuriSeadusIntsidendi_avatud_date_format}" id="c_main_entities_PiirivalvuriSeadusIntsidendi_avatud" property="avatud" z="W9GzHH627apcWC66f2eH9rxBGpQ="/>
+            <table:column id="c_main_entities_PiirivalvuriSeadusIntsidendi_kirjeldus" property="kirjeldus" z="Jai/6Y4zOg163ajqJMwPwg0EnIE="/>
+            <table:column id="c_main_entities_PiirivalvuriSeadusIntsidendi_kommentaar" property="kommentaar" z="c6dq9lentERz/bCoNCYbfMcGJ7w="/>
+        </table:table>
+    </page:list>
+</div>

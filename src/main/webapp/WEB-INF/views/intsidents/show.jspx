@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Intsident" object="${intsident}" path="/intsidents" z="uYGbEqR8Hk8oBxrnHFunlWC+WDc=">
+        <field:display field="intsidentId" id="s_main_entities_Intsident_intsidentId" object="${intsident}" z="TuANYZ5K1k+oylM1K407GHe3sBc="/>
+        <field:display field="avaja" id="s_main_entities_Intsident_avaja" object="${intsident}" z="wawB6JUXX4DMF4z+/lJLfDfK8Z8="/>
+        <field:display date="true" dateTimePattern="${intsident_avatud_date_format}" field="avatud" id="s_main_entities_Intsident_avatud" object="${intsident}" z="BN9zuAiqSAv31Srlux5s6rocKy8="/>
+        <field:display field="gpsLatituud" id="s_main_entities_Intsident_gpsLatituud" object="${intsident}" z="lmR0EypQk17halyNntqWZWi/bI4="/>
+        <field:display field="gpsLongituud" id="s_main_entities_Intsident_gpsLongituud" object="${intsident}" z="XMElLDfCvnaTI98yTcz3mA+FzvQ="/>
+        <field:display field="kirjeldus" id="s_main_entities_Intsident_kirjeldus" object="${intsident}" z="TlwecrbYKw0Sz9X5SJj14vwj7Q8="/>
+        <field:display field="kommentaar" id="s_main_entities_Intsident_kommentaar" object="${intsident}" z="ImQolqFE18V12J2NXDAnchaJOvY="/>
+        <field:display field="kood" id="s_main_entities_Intsident_kood" object="${intsident}" z="41ALMprSPE/xqOm0hMcBqlNQzA4="/>
+        <field:display date="true" dateTimePattern="${intsident_muudetud_date_format}" field="muudetud" id="s_main_entities_Intsident_muudetud" object="${intsident}" z="wCvK1TUBgc8jZLwZk6IFXddbrY4="/>
+        <field:display field="muutja" id="s_main_entities_Intsident_muutja" object="${intsident}" z="Ctj4/+H/2ALhPClkZySiZmK2Q2U="/>
+        <field:display field="nimetus" id="s_main_entities_Intsident_nimetus" object="${intsident}" z="YPGRvIMmPQMV031m5+GjKHhqnPk="/>
+        <field:display date="true" dateTimePattern="${intsident_suletud_date_format}" field="suletud" id="s_main_entities_Intsident_suletud" object="${intsident}" z="kvaPvGcdsaephNG4JG4agLkcWqE="/>
+        <field:display field="sulgeja" id="s_main_entities_Intsident_sulgeja" object="${intsident}" z="vnC3Bb48PdAubO+E2dwjKtsD7gg="/>
+        <field:display date="true" dateTimePattern="${intsident_toimumisealgus_date_format}" field="toimumiseAlgus" id="s_main_entities_Intsident_toimumiseAlgus" object="${intsident}" z="+MBXLXdm6nN4Xt0rfFFOldx4kMQ="/>
+        <field:display date="true" dateTimePattern="${intsident_toimumiselopp_date_format}" field="toimumiseLopp" id="s_main_entities_Intsident_toimumiseLopp" object="${intsident}" z="XEWY6VTAqjM9iB/qRmtnnmWt0A0="/>
+        <field:display field="intsidendiLiik" id="s_main_entities_Intsident_intsidendiLiik" object="${intsident}" z="iQw5/XfGQtMjkzisrx04Wg7KDL4="/>
+        <field:display field="piiriloik" id="s_main_entities_Intsident_piiriloik" object="${intsident}" z="oYA/LMXMLjowlwAHUoitzru0S9c="/>
+        <field:display field="isikIntsidendis" id="s_main_entities_Intsident_isikIntsidendis" object="${intsident}" z="F2/BzQ0A/shsLMko+Jpn+65F41g="/>
+        <field:display field="objektIntsidendis" id="s_main_entities_Intsident_objektIntsidendis" object="${intsident}" z="gqEo6IjWIPyN5Pa1Wso+fRV18FY="/>
+        <field:display field="piirivalvurIntsidendis" id="s_main_entities_Intsident_piirivalvurIntsidendis" object="${intsident}" z="MYEuMHO4RqLUB9jE6LX/HnYFVnc="/>
+        <field:display field="vahtkondIntsidendis" id="s_main_entities_Intsident_vahtkondIntsidendis" object="${intsident}" z="p4Jc7+kUO4jd6rk8FhlrnSdLiSI="/>
+    </page:show>
+</div>

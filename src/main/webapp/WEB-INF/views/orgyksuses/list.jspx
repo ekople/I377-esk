@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_OrgYksus" items="${orgyksuses}" z="vbttzBXiMxjQK1ZoB7SdO1WJFd4=">
+        <table:table data="${orgyksuses}" id="l_main_entities_OrgYksus" path="/orgyksuses" z="RpQglhQDblejvwC2DsBApYlpCRw=">
+            <table:column id="c_main_entities_OrgYksus_orgYksusId" property="orgYksusId" z="EHYWC0JU/f3fgUkU9pm6iXP8xv0="/>
+            <table:column date="true" dateTimePattern="${orgYksus_alates_date_format}" id="c_main_entities_OrgYksus_alates" property="alates" z="LVOrSU5OqVRX4tuphgHMvEKEILc="/>
+            <table:column id="c_main_entities_OrgYksus_avaja" property="avaja" z="tV8dwiLeVtUJA1GrHBskAfZlIbk="/>
+            <table:column date="true" dateTimePattern="${orgYksus_avatud_date_format}" id="c_main_entities_OrgYksus_avatud" property="avatud" z="L/37BKZ/YhmnzcmZYShMvXowFoI="/>
+            <table:column id="c_main_entities_OrgYksus_kommentaar" property="kommentaar" z="BxsgJaOx1tHu38ZMukaFj/JCBLk="/>
+            <table:column id="c_main_entities_OrgYksus_kood" property="kood" z="E2gM+WUJpUvnFIAGZHAPZUzKUVo="/>
+        </table:table>
+    </page:list>
+</div>

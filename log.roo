@@ -12,3 +12,13 @@ web mvc all --package ~.web
 web mvc all --package ~.web
 web mvc all --package web
 web mvc all --package main.web
+web mvc all --package main.web
+web mvc all --package web
+web mvc all --package ~.web
+web mvc all --package main
+web mvc all --package main.web
+web mvc all --package ~.web
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 20:09:17
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-28 14:11:16
+web mvc all --package ~.web
+web mvc all --package ~.web

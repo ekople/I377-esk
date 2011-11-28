@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_Intsident" items="${intsidents}" z="N2wFsnHJCt+2QpxoS2Weduh2zCw=">
+        <table:table data="${intsidents}" id="l_main_entities_Intsident" path="/intsidents" z="cqtgNIG/7VY+p83W4HeL2arpLkk=">
+            <table:column id="c_main_entities_Intsident_intsidentId" property="intsidentId" z="s2HL5qhMobujBNVy3CGFUR29kis="/>
+            <table:column id="c_main_entities_Intsident_avaja" property="avaja" z="RKqp6CQPGPbA3Ps5jw0HDc93tgk="/>
+            <table:column date="true" dateTimePattern="${intsident_avatud_date_format}" id="c_main_entities_Intsident_avatud" property="avatud" z="hb1J1bs+/JAsVhIIDkwkMhvcMfk="/>
+            <table:column id="c_main_entities_Intsident_gpsLatituud" property="gpsLatituud" z="5z+z7yVC4BmisSj0q4e323/H3tc="/>
+            <table:column id="c_main_entities_Intsident_gpsLongituud" property="gpsLongituud" z="4ezWL/WGHZul1zE2c9rfBFQK7SE="/>
+            <table:column id="c_main_entities_Intsident_kirjeldus" property="kirjeldus" z="0oNjyxZxatMDF4jAjSM7vffBAPg="/>
+        </table:table>
+    </page:list>
+</div>

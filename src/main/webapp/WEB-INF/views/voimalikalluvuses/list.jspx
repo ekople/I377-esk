@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_VoimalikAlluvus" items="${voimalikalluvuses}" z="IxXHw7K6VN5OIoGY8MSlPoeF+cE=">
+        <table:table data="${voimalikalluvuses}" id="l_main_entities_VoimalikAlluvus" path="/voimalikalluvuses" z="oEl26gVcvW17zUp0g56O7WGSpVU=">
+            <table:column id="c_main_entities_VoimalikAlluvus_voimalikAlluvusId" property="voimalikAlluvusId" z="PTeMAQhPiS53AB3tWTRhRm26xbg="/>
+            <table:column id="c_main_entities_VoimalikAlluvus_avaja" property="avaja" z="HWmwyF7HVkaJWTT3xX9y61ccPak="/>
+            <table:column date="true" dateTimePattern="${voimalikAlluvus_avatud_date_format}" id="c_main_entities_VoimalikAlluvus_avatud" property="avatud" z="g68YU1SFUkbObVBi66mgAs00v7Q="/>
+            <table:column id="c_main_entities_VoimalikAlluvus_kommentaar" property="kommentaar" z="lRPb1x8Jh27/MoYsqrypOLNd8J4="/>
+            <table:column date="true" dateTimePattern="${voimalikAlluvus_muudetud_date_format}" id="c_main_entities_VoimalikAlluvus_muudetud" property="muudetud" z="/ZMn6yqKIrUlaZ/G+qReXBFIM2s="/>
+            <table:column id="c_main_entities_VoimalikAlluvus_muutja" property="muutja" z="6XqrW9e1bynrbnFLU3rdlofWB7c="/>
+        </table:table>
+    </page:list>
+</div>

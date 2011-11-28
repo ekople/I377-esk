@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_main_entities_VahtkondIntsidendi" modelAttribute="vahtkondIntsidendi" path="/vahtkondintsidendis" versionField="Version" z="LK+cTH6ZNRunNLHs7oGEq6jNsvo=">
+        <field:input field="vahtkondIntsidendisId" id="c_main_entities_VahtkondIntsidendi_vahtkondIntsidendisId" z="+gSppjdmXY8dNihu0jVT7ksW85Y="/>
+        <field:datetime dateTimePattern="${vahtkondIntsidendi_alates_date_format}" field="alates" id="c_main_entities_VahtkondIntsidendi_alates" z="jqz7wGJxlW3Y+irrP0ZHsScn58I="/>
+        <field:input field="avaja" id="c_main_entities_VahtkondIntsidendi_avaja" z="PQHnKYP2YyTHTBSAVuy9VbDv8NM="/>
+        <field:datetime dateTimePattern="${vahtkondIntsidendi_avatud_date_format}" field="avatud" id="c_main_entities_VahtkondIntsidendi_avatud" z="jSeLdnfdmlf8aaTinGNyF6oADMo="/>
+        <field:input field="kirjeldus" id="c_main_entities_VahtkondIntsidendi_kirjeldus" z="xSu2z41LFS98Pz310UdCCo9s6rk="/>
+        <field:input field="kommentaar" id="c_main_entities_VahtkondIntsidendi_kommentaar" z="rN0yjRLkh5FlE+soHJAH6Smz1wA="/>
+        <field:datetime dateTimePattern="${vahtkondIntsidendi_kuni_date_format}" field="kuni" id="c_main_entities_VahtkondIntsidendi_kuni" z="b8t+NeHEY643/r5JNqOgBSyADoI="/>
+        <field:datetime dateTimePattern="${vahtkondIntsidendi_muudetud_date_format}" field="muudetud" id="c_main_entities_VahtkondIntsidendi_muudetud" z="ubzd10wXq5BiemyrZhhXzjUFPvw="/>
+        <field:input field="muutja" id="c_main_entities_VahtkondIntsidendi_muutja" z="lPOsisp2i75Sc5HUKyyMgTs7gis="/>
+        <field:datetime dateTimePattern="${vahtkondIntsidendi_suletud_date_format}" field="suletud" id="c_main_entities_VahtkondIntsidendi_suletud" z="+dAfAkr0x5e9SwpTSeV0n8KaPt4="/>
+        <field:input field="sulgeja" id="c_main_entities_VahtkondIntsidendi_sulgeja" z="xVx0M0k3mc7Y8MfxKVt9SxPdrj4="/>
+        <field:input field="piirivalvurIntsidendis" id="c_main_entities_VahtkondIntsidendi_piirivalvurIntsidendis" z="NO1NS4lpHOLrg0Mf8GVv6kIF5oI="/>
+        <field:input field="intsident" id="c_main_entities_VahtkondIntsidendi_intsident" z="OLs6QcGrguxB0OFVDiSiNu3/U0E="/>
+        <field:input field="vahtkond" id="c_main_entities_VahtkondIntsidendi_vahtkond" z="3xNhBk8BluiEBbDcqhgQQGJZUF0="/>
+    </form:update>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_IsikuSeadusIntsidendi" items="${isikuseadusintsidendis}" z="xhPm+ORxoeMTOsTH4N91bMhbkpY=">
+        <table:table data="${isikuseadusintsidendis}" id="l_main_entities_IsikuSeadusIntsidendi" path="/isikuseadusintsidendis" z="n6axsfu2z7zwokpeHEPKab6imoI=">
+            <table:column id="c_main_entities_IsikuSeadusIntsidendi_isikuSeadusIntsidendisId" property="isikuSeadusIntsidendisId" z="ikigWZ4/336zUlzRYypyq6EOzGU="/>
+            <table:column date="true" dateTimePattern="${isikuSeadusIntsidendi_alates_date_format}" id="c_main_entities_IsikuSeadusIntsidendi_alates" property="alates" z="s1R0SFNlyJufNbVMbV4H51kRFjo="/>
+            <table:column id="c_main_entities_IsikuSeadusIntsidendi_avaja" property="avaja" z="NaT+KlDFKi2Zp5gV9otex598sHE="/>
+            <table:column date="true" dateTimePattern="${isikuSeadusIntsidendi_avatud_date_format}" id="c_main_entities_IsikuSeadusIntsidendi_avatud" property="avatud" z="UlNP8CfwVxbzhbF+nzvFmwbBX+o="/>
+            <table:column id="c_main_entities_IsikuSeadusIntsidendi_kirjeldus" property="kirjeldus" z="FfUwjrgNHn9dnvBiptssXj38osw="/>
+            <table:column id="c_main_entities_IsikuSeadusIntsidendi_kommentaar" property="kommentaar" z="UuqpIELg6Uz/Jc4FoSM5G/E92pE="/>
+        </table:table>
+    </page:list>
+</div>

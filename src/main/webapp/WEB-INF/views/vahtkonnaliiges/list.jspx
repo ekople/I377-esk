@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_VahtkonnaLiige" items="${vahtkonnaliiges}" z="kHB61lhmMV0VzcFC6c5d+Nri5mk=">
+        <table:table data="${vahtkonnaliiges}" id="l_main_entities_VahtkonnaLiige" path="/vahtkonnaliiges" z="H8BS6Io20IR+RYx69yG3Ryx7O5w=">
+            <table:column id="c_main_entities_VahtkonnaLiige_vahtkonnaLiigeId" property="vahtkonnaLiigeId" z="bDNSSJ/Z2eygQtkGIB+3x6zDs04="/>
+            <table:column id="c_main_entities_VahtkonnaLiige_alates" property="alates" z="FDgoZG2BIzelIT29SNMFidwDUbM="/>
+            <table:column id="c_main_entities_VahtkonnaLiige_avaja" property="avaja" z="L/66MMFkdu9b46vqYalUicAviCw="/>
+            <table:column date="true" dateTimePattern="${vahtkonnaLiige_avatud_date_format}" id="c_main_entities_VahtkonnaLiige_avatud" property="avatud" z="0M3PHV2GNawkSS9l1i/5ZP92Xi0="/>
+            <table:column id="c_main_entities_VahtkonnaLiige_kommentaar" property="kommentaar" z="qhsi+SVfvqXuz128GiRHvnQQ5Yc="/>
+            <table:column id="c_main_entities_VahtkonnaLiige_kuni" property="kuni" z="aYjunqSlPa3y2NrBABTrFAprDwc="/>
+        </table:table>
+    </page:list>
+</div>

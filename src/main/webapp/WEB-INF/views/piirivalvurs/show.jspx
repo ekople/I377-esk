@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_main_entities_Piirivalvur" object="${piirivalvur}" path="/piirivalvurs" z="hLaUV2YpTEnO3+AcM9YC2SElF4o=">
+        <field:display field="piirivalvurId" id="s_main_entities_Piirivalvur_piirivalvurId" object="${piirivalvur}" z="anKcH9oMP9fKyGqNBVbullKKGhA="/>
+        <field:display field="avaja" id="s_main_entities_Piirivalvur_avaja" object="${piirivalvur}" z="B+K8tRfd9Y9MS1HrzHV1UEpI/To="/>
+        <field:display date="true" dateTimePattern="${piirivalvur_avatud_date_format}" field="avatud" id="s_main_entities_Piirivalvur_avatud" object="${piirivalvur}" z="W4x+Cnw0/umxigmqBjnvqh1qdTA="/>
+        <field:display field="eesnimed" id="s_main_entities_Piirivalvur_eesnimed" object="${piirivalvur}" z="BZf5+T3sfOToWQ9l0Vd8QDq8DTc="/>
+        <field:display field="isikukood" id="s_main_entities_Piirivalvur_isikukood" object="${piirivalvur}" z="OAFFYjnwDIlwQok6PvoZeMLF5cY="/>
+        <field:display field="kommentaar" id="s_main_entities_Piirivalvur_kommentaar" object="${piirivalvur}" z="c8NhHcM8ZdIHKllyArrnngmCJ/U="/>
+        <field:display date="true" dateTimePattern="${piirivalvur_muudetud_date_format}" field="muudetud" id="s_main_entities_Piirivalvur_muudetud" object="${piirivalvur}" z="hyMVb7Jml4zEdjBttcYgtjWNN/s="/>
+        <field:display field="muutja" id="s_main_entities_Piirivalvur_muutja" object="${piirivalvur}" z="6X8AuYfqxxoIT+0SRTXTWM5Lc0g="/>
+        <field:display field="perekonnanimi" id="s_main_entities_Piirivalvur_perekonnanimi" object="${piirivalvur}" z="DU/oBtS8Z+rBV2ROT8DOowH0CwY="/>
+        <field:display field="soduriKood" id="s_main_entities_Piirivalvur_soduriKood" object="${piirivalvur}" z="pkHV+zhMBmyMMdGBRXJfbksV61U="/>
+        <field:display field="sugu" id="s_main_entities_Piirivalvur_sugu" object="${piirivalvur}" z="wUcoGXYCcta5NgtbceOo315IUFE="/>
+        <field:display date="true" dateTimePattern="${piirivalvur_suletud_date_format}" field="suletud" id="s_main_entities_Piirivalvur_suletud" object="${piirivalvur}" z="Dobfto9I7djNob2iH+P8uIGQGcc="/>
+        <field:display field="sulgeja" id="s_main_entities_Piirivalvur_sulgeja" object="${piirivalvur}" z="4DZjeWIx0TVWdVo+9AvFeBPkKws="/>
+        <field:display field="auastmeMuutumines" id="s_main_entities_Piirivalvur_auastmeMuutumines" object="${piirivalvur}" z="wL4mX4MbixBTE4411VTcvRBQKzo="/>
+        <field:display field="piirivalvuriKontakts" id="s_main_entities_Piirivalvur_piirivalvuriKontakts" object="${piirivalvur}" z="Eiy5y/2lpwn9SgefIhqxijHN0uc="/>
+        <field:display field="piirivalvurIntsidendis" id="s_main_entities_Piirivalvur_piirivalvurIntsidendis" object="${piirivalvur}" z="C4SzmsubNi9EDzwsPWr/OcPwV0Y="/>
+        <field:display field="piirivalvurPiiripunktis" id="s_main_entities_Piirivalvur_piirivalvurPiiripunktis" object="${piirivalvur}" z="5rZ4R3O9yEcIfNbGOtaGDPRDpkQ="/>
+        <field:display field="piirivalvurVaeosas" id="s_main_entities_Piirivalvur_piirivalvurVaeosas" object="${piirivalvur}" z="+sXMFd0bEasQ2p2SJuaceJ2fD/Q="/>
+        <field:display field="piirivalvurVodikohals" id="s_main_entities_Piirivalvur_piirivalvurVodikohals" object="${piirivalvur}" z="YJBNCHkFdlcOJZV3QvCpwUWws7Q="/>
+        <field:display field="seotudKontaktisiks" id="s_main_entities_Piirivalvur_seotudKontaktisiks" object="${piirivalvur}" z="RBxk2dXKSz9KkZCxFtYZWFtb1+A="/>
+        <field:display field="vahtkonnaLiiges" id="s_main_entities_Piirivalvur_vahtkonnaLiiges" object="${piirivalvur}" z="ENKI45wtXreS92r0YXQSHftENlY="/>
+    </page:show>
+</div>

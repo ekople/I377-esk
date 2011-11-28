@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_ObjektiLiik" items="${objektiliiks}" z="YYH0JNal07CvlRyOgkl0juXDcPg=">
+        <table:table data="${objektiliiks}" id="l_main_entities_ObjektiLiik" path="/objektiliiks" z="eumfwh4RzAMMuJstusS/hMNIMPY=">
+            <table:column id="c_main_entities_ObjektiLiik_objektLiikId" property="objektLiikId" z="7IGlKdxiiqZn3xheaCAoHPmTDwE="/>
+            <table:column id="c_main_entities_ObjektiLiik_avaja" property="avaja" z="suPg9VTelplY4M/MAp1XCizMDJc="/>
+            <table:column date="true" dateTimePattern="${objektiLiik_avatud_date_format}" id="c_main_entities_ObjektiLiik_avatud" property="avatud" z="G9+0ygrM5yREoCdhUDemaUKLU6I="/>
+            <table:column id="c_main_entities_ObjektiLiik_kommentaar" property="kommentaar" z="kARz7hnF1enLY2LCcM1FKYogLaA="/>
+            <table:column id="c_main_entities_ObjektiLiik_kood" property="kood" z="BWV61YNecabCU5QHzKam1Qc7+sA="/>
+            <table:column date="true" dateTimePattern="${objektiLiik_muudetud_date_format}" id="c_main_entities_ObjektiLiik_muudetud" property="muudetud" z="IcSnhl5ndZywEIpv1+XXgO05fWk="/>
+        </table:table>
+    </page:list>
+</div>

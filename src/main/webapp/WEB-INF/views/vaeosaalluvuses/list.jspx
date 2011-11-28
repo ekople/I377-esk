@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_main_entities_VaeosaAlluvus" items="${vaeosaalluvuses}" z="I/IIs1XnqV5BkPoUo5rxVi21uHo=">
+        <table:table data="${vaeosaalluvuses}" id="l_main_entities_VaeosaAlluvus" path="/vaeosaalluvuses" z="zCnUzahIw2cloZLp3k5CNGjR6Qg=">
+            <table:column id="c_main_entities_VaeosaAlluvus_vaeosaAlluvusId" property="vaeosaAlluvusId" z="6CQAahk5Dd10CkhwLqqVj0Jt/3c="/>
+            <table:column date="true" dateTimePattern="${vaeosaAlluvus_alates_date_format}" id="c_main_entities_VaeosaAlluvus_alates" property="alates" z="P7cGrZqdwAjc+ILazhcmkOy4X2A="/>
+            <table:column id="c_main_entities_VaeosaAlluvus_avaja" property="avaja" z="IolspsPjgI/VjFstS5VeUbZ3mL0="/>
+            <table:column date="true" dateTimePattern="${vaeosaAlluvus_avatud_date_format}" id="c_main_entities_VaeosaAlluvus_avatud" property="avatud" z="h3um7cl6qOmsU2eQyamfiaWZjeU="/>
+            <table:column id="c_main_entities_VaeosaAlluvus_kommentaar" property="kommentaar" z="F+6wJuvMWDcTxCkYUWodLhh5VCI="/>
+            <table:column date="true" dateTimePattern="${vaeosaAlluvus_kuni_date_format}" id="c_main_entities_VaeosaAlluvus_kuni" property="kuni" z="kNzl7SxV72LosQRE77NhxmzFPyg="/>
+        </table:table>
+    </page:list>
+</div>
