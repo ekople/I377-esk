@@ -23,6 +23,7 @@
 <aspect name="main.web.ObjektIntsidendiController_Roo_Controller"/>
 <aspect name="main.entities.Seadus_Roo_Entity"/>
 <aspect name="main.web.VahtkonnaLiigeController_Roo_Controller"/>
+<aspect name="main.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
 <aspect name="main.web.AdminAlluvusController_Roo_Controller"/>
 <aspect name="main.entities.Riik_Roo_ToString"/>
 <aspect name="main.entities.PiiripunktiOrgYksus_Roo_ToString"/>
