@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_ISIKU_SEADUS_INTSIDENDIS" object="${isiku_seadus_intsidendis}" path="/isiku_seadus_intsidendiss" z="N19a1SQYtuxyzC+fJ1I2Puaa7es=">
+        <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_alates_date_format}" field="alates" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_alates" object="${isiku_seadus_intsidendis}" z="KsFC+LWCBY+5ireUNh1JQnm7P7s="/>
+        <field:display field="avaja" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_avaja" object="${isiku_seadus_intsidendis}" z="Fc0k/qGZ+otzQduhW2mFWnSrwdc="/>
+        <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_avatud_date_format}" field="avatud" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_avatud" object="${isiku_seadus_intsidendis}" z="YQz9SdvT3Wghx3lHvgJbfdUKoPU="/>
+        <field:display field="kirjeldus" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_kirjeldus" object="${isiku_seadus_intsidendis}" z="ctmZdeYoENdgMzNcBGrD/7WCunE="/>
+        <field:display field="kommentaar" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_kommentaar" object="${isiku_seadus_intsidendis}" z="zFCEDjts9gMxQZG06CqELhpkuHc="/>
+        <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_kuni_date_format}" field="kuni" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_kuni" object="${isiku_seadus_intsidendis}" z="envrLZPBaLhliMmzXHOAyRRwScI="/>
+        <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_muudetud" object="${isiku_seadus_intsidendis}" z="Qq7gRvjtlQ5uP0sei7umvt/HXRk="/>
+        <field:display field="muutja" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_muutja" object="${isiku_seadus_intsidendis}" z="VLNffRFJ0AapEKnESSmt32GqHS4="/>
+        <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_suletud" object="${isiku_seadus_intsidendis}" z="m18nCa2qgBesyK1olM+LBoXvlKo="/>
+        <field:display field="sulgeja" id="s_org_persistence_ISIKU_SEADUS_INTSIDENDIS_sulgeja" object="${isiku_seadus_intsidendis}" z="BjEFY/A9TeLnT39iJxM8NZwRKgs="/>
+    </page:show>
+</div>

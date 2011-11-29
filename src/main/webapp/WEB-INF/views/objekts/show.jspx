@@ -2,18 +2,14 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_main_entities_Objekt" object="${objekt}" path="/objekts" z="ZJKh7lVDSE0EiK4LuGrM5qCh0pg=">
-        <field:display field="objektId" id="s_main_entities_Objekt_objektId" object="${objekt}" z="LXKR1PbPAS1skyZYDvz3Svw8yjQ="/>
-        <field:display field="avaja" id="s_main_entities_Objekt_avaja" object="${objekt}" z="nPory79QS23GH5JBwDyw3EgDP3Y="/>
-        <field:display date="true" dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="s_main_entities_Objekt_avatud" object="${objekt}" z="MrVstnNGjLcgYfWszC7ZV6o11wo="/>
-        <field:display field="kommentaar" id="s_main_entities_Objekt_kommentaar" object="${objekt}" z="FIOjkpagFSchbuoIHb2fRZlP0k0="/>
-        <field:display date="true" dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="s_main_entities_Objekt_muudetud" object="${objekt}" z="zv0QDU0cUBrYbrJNQyZ+zlYZE4w="/>
-        <field:display field="muutja" id="s_main_entities_Objekt_muutja" object="${objekt}" z="MZXlCbBrOHnz5DHIKkYqM0o6SZ0="/>
-        <field:display field="nimetus" id="s_main_entities_Objekt_nimetus" object="${objekt}" z="BQsF090AX2efhaajHutZnESK1Kk="/>
-        <field:display date="true" dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="s_main_entities_Objekt_suletud" object="${objekt}" z="eiqIyvmzcHN9kq/0Gp+YJ0bJzmc="/>
-        <field:display field="sulgeja" id="s_main_entities_Objekt_sulgeja" object="${objekt}" z="/wEs0E2aS+4SGqye3ghjnWl0FPo="/>
-        <field:display field="objektiLiik" id="s_main_entities_Objekt_objektiLiik" object="${objekt}" z="m4HKna3REsOLscHAY+Og5JbqEKI="/>
-        <field:display field="objektIntsidendis" id="s_main_entities_Objekt_objektIntsidendis" object="${objekt}" z="Q65E8yUCxJcnXjbZ4TJRykU0zq0="/>
-        <field:display field="piiririkkujas" id="s_main_entities_Objekt_piiririkkujas" object="${objekt}" z="Adc7XVZPq/FEEQ00soQ1aFBoZXI="/>
+    <page:show id="ps_org_persistence_OBJEKT" object="${objekt}" path="/objekts" z="J0FcakYhskpFTXkmH3+XZtRgv3M=">
+        <field:display field="avaja" id="s_org_persistence_OBJEKT_avaja" object="${objekt}" z="pMzK9KsjYscQPCvt4lTeN+4mahQ="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_avatud_date_format}" field="avatud" id="s_org_persistence_OBJEKT_avatud" object="${objekt}" z="g39VwNnrHSALSft7/f0a5cn+C0A="/>
+        <field:display field="kommentaar" id="s_org_persistence_OBJEKT_kommentaar" object="${objekt}" z="AtM+eSRm/BikQrinb01gMOJh4yE="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_muudetud_date_format}" field="muudetud" id="s_org_persistence_OBJEKT_muudetud" object="${objekt}" z="PB7xkS/24KIcAldqGar9fKt0EMU="/>
+        <field:display field="muutja" id="s_org_persistence_OBJEKT_muutja" object="${objekt}" z="u4vCfCnbjv1KwFzgRoVWM651Jrc="/>
+        <field:display field="nimetus" id="s_org_persistence_OBJEKT_nimetus" object="${objekt}" z="bk6b2+0cFfpZb2D4jDKOWKNB5C0="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_suletud_date_format}" field="suletud" id="s_org_persistence_OBJEKT_suletud" object="${objekt}" z="suGEJF73y+nnRwtivhu0xs7bREU="/>
+        <field:display field="sulgeja" id="s_org_persistence_OBJEKT_sulgeja" object="${objekt}" z="NwctA75SyX6JEdNbxjdbsANrhiA="/>
     </page:show>
 </div>

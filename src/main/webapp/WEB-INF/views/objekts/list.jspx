@@ -2,14 +2,14 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_main_entities_Objekt" items="${objekts}" z="KrutHyNXSemN1N1hXz/EAtl8yd4=">
-        <table:table data="${objekts}" id="l_main_entities_Objekt" path="/objekts" z="ryOj9iX1OSbH/piEjymMaWeHm5c=">
-            <table:column id="c_main_entities_Objekt_objektId" property="objektId" z="/7YLLTZShfkY/7lI4HP41T0XOPw="/>
-            <table:column id="c_main_entities_Objekt_avaja" property="avaja" z="PnvJN/EDgCsSejvc3HMhqnzhCME="/>
-            <table:column date="true" dateTimePattern="${objekt_avatud_date_format}" id="c_main_entities_Objekt_avatud" property="avatud" z="uTtEM0AuhTCwIhuTCXdCSG1urzE="/>
-            <table:column id="c_main_entities_Objekt_kommentaar" property="kommentaar" z="Q92RX0YSfZZJFuTvWC9umdeyhK8="/>
-            <table:column date="true" dateTimePattern="${objekt_muudetud_date_format}" id="c_main_entities_Objekt_muudetud" property="muudetud" z="+aC23Z/D3vpYMYv0tp9njxdKhvc="/>
-            <table:column id="c_main_entities_Objekt_muutja" property="muutja" z="X0Ol0iCmHKq5agXs9Wzxn5AN3Is="/>
+    <page:list id="pl_org_persistence_OBJEKT" items="${objekts}" z="WT6brMTjbXdNCHueVQTet34uW7I=">
+        <table:table data="${objekts}" id="l_org_persistence_OBJEKT" path="/objekts" typeIdFieldName="objektId" z="8ScDcVogPxgffcTOzMQwqVxBIdo=">
+            <table:column id="c_org_persistence_OBJEKT_avaja" property="avaja" z="batbch4GKIT4989Htb7t5kqdcc8="/>
+            <table:column date="true" dateTimePattern="${OBJEKT_avatud_date_format}" id="c_org_persistence_OBJEKT_avatud" property="avatud" z="LCtcMATETIN7VToggz+OOO8QEY4="/>
+            <table:column id="c_org_persistence_OBJEKT_kommentaar" property="kommentaar" z="+NBcEmgaeMaOZotnKczbrUK+FlA="/>
+            <table:column date="true" dateTimePattern="${OBJEKT_muudetud_date_format}" id="c_org_persistence_OBJEKT_muudetud" property="muudetud" z="d1VcnMq1Y7k7HF71fyjC4gEqUs4="/>
+            <table:column id="c_org_persistence_OBJEKT_muutja" property="muutja" z="6lAL/7TEB2JoBXKmEpKAZOOfvs4="/>
+            <table:column id="c_org_persistence_OBJEKT_nimetus" property="nimetus" z="/3ELGA7vc0vnqF9UboDL2b7NWGI="/>
         </table:table>
     </page:list>
 </div>

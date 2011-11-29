@@ -10,15 +10,10 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import main.entities.AuastmeMuutumine;
-import main.entities.Piirivalvur;
-import main.entities.PiirivalvurIntsidendi;
-import main.entities.PiirivalvurPiiripunkti;
-import main.entities.PiirivalvurVaeosa;
-import main.entities.PiirivalvurVodikohal;
-import main.entities.PiirivalvuriKontakt;
-import main.entities.SeotudKontaktisik;
-import main.entities.VahtkonnaLiige;
+import org.joda.time.format.DateTimeFormat;
+import org.persistence.PIIRIVALVUR;
+import org.persistence.PIIRIVALVUR_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,117 +24,94 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
-privileged aspect PiirivalvurController_Roo_Controller {
+privileged aspect PIIRIVALVURController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.POST)
-    public String PiirivalvurController.create(@Valid Piirivalvur piirivalvur, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String PIIRIVALVURController.create(@Valid PIIRIVALVUR PIIRIVALVUR, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("piirivalvur", piirivalvur);
+            uiModel.addAttribute("PIIRIVALVUR", PIIRIVALVUR);
+            addDateTimeFormatPatterns(uiModel);
             return "piirivalvurs/create";
         }
         uiModel.asMap().clear();
-        piirivalvur.persist();
-        return "redirect:/piirivalvurs/" + encodeUrlPathSegment(piirivalvur.getId().toString(), httpServletRequest);
+        PIIRIVALVUR.persist();
+        return "redirect:/piirivalvurs/" + encodeUrlPathSegment(PIIRIVALVUR.getPiirivalvurId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", method = RequestMethod.GET)
-    public String PiirivalvurController.createForm(Model uiModel) {
-        uiModel.addAttribute("piirivalvur", new Piirivalvur());
+    public String PIIRIVALVURController.createForm(Model uiModel) {
+        uiModel.addAttribute("PIIRIVALVUR", new PIIRIVALVUR());
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvurs/create";
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String PiirivalvurController.show(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("piirivalvur", Piirivalvur.findPiirivalvur(id));
-        uiModel.addAttribute("itemId", id);
+    @RequestMapping(value = "/{piirivalvurId}", method = RequestMethod.GET)
+    public String PIIRIVALVURController.show(@PathVariable("piirivalvurId") Long piirivalvurId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("piirivalvur", PIIRIVALVUR.findPIIRIVALVUR(piirivalvurId));
+        uiModel.addAttribute("itemId", piirivalvurId);
         return "piirivalvurs/show";
     }
     
     @RequestMapping(method = RequestMethod.GET)
-    public String PiirivalvurController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PIIRIVALVURController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
-            uiModel.addAttribute("piirivalvurs", Piirivalvur.findPiirivalvurEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
-            float nrOfPages = (float) Piirivalvur.countPiirivalvurs() / sizeNo;
+            uiModel.addAttribute("piirivalvurs", PIIRIVALVUR.findPIIRIVALVUREntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
+            float nrOfPages = (float) PIIRIVALVUR.countPIIRIVALVURS() / sizeNo;
             uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
         } else {
-            uiModel.addAttribute("piirivalvurs", Piirivalvur.findAllPiirivalvurs());
+            uiModel.addAttribute("piirivalvurs", PIIRIVALVUR.findAllPIIRIVALVURS());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvurs/list";
     }
     
     @RequestMapping(method = RequestMethod.PUT)
-    public String PiirivalvurController.update(@Valid Piirivalvur piirivalvur, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String PIIRIVALVURController.update(@Valid PIIRIVALVUR PIIRIVALVUR, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("piirivalvur", piirivalvur);
+            uiModel.addAttribute("PIIRIVALVUR", PIIRIVALVUR);
+            addDateTimeFormatPatterns(uiModel);
             return "piirivalvurs/update";
         }
         uiModel.asMap().clear();
-        piirivalvur.merge();
-        return "redirect:/piirivalvurs/" + encodeUrlPathSegment(piirivalvur.getId().toString(), httpServletRequest);
+        PIIRIVALVUR.merge();
+        return "redirect:/piirivalvurs/" + encodeUrlPathSegment(PIIRIVALVUR.getPiirivalvurId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvurController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("piirivalvur", Piirivalvur.findPiirivalvur(id));
+    @RequestMapping(value = "/{piirivalvurId}", params = "form", method = RequestMethod.GET)
+    public String PIIRIVALVURController.updateForm(@PathVariable("piirivalvurId") Long piirivalvurId, Model uiModel) {
+        uiModel.addAttribute("PIIRIVALVUR", PIIRIVALVUR.findPIIRIVALVUR(piirivalvurId));
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvurs/update";
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String PiirivalvurController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Piirivalvur.findPiirivalvur(id).remove();
+    @RequestMapping(value = "/{piirivalvurId}", method = RequestMethod.DELETE)
+    public String PIIRIVALVURController.delete(@PathVariable("piirivalvurId") Long piirivalvurId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        PIIRIVALVUR.findPIIRIVALVUR(piirivalvurId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/piirivalvurs";
     }
     
-    @ModelAttribute("auastmemuutumines")
-    public Collection<AuastmeMuutumine> PiirivalvurController.populateAuastmeMuutumines() {
-        return AuastmeMuutumine.findAllAuastmeMuutumines();
-    }
-    
     @ModelAttribute("piirivalvurs")
-    public Collection<Piirivalvur> PiirivalvurController.populatePiirivalvurs() {
-        return Piirivalvur.findAllPiirivalvurs();
+    public Collection<PIIRIVALVUR> PIIRIVALVURController.populatePIIRIVALVURS() {
+        return PIIRIVALVUR.findAllPIIRIVALVURS();
     }
     
-    @ModelAttribute("piirivalvurintsidendis")
-    public Collection<PiirivalvurIntsidendi> PiirivalvurController.populatePiirivalvurIntsidendis() {
-        return PiirivalvurIntsidendi.findAllPiirivalvurIntsidendis();
+    @ModelAttribute("piirivalvur_intsidendiss")
+    public Collection<PIIRIVALVUR_INTSIDENDIS> PIIRIVALVURController.populatePIIRIVALVUR_INTSIDENDISs() {
+        return PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs();
     }
     
-    @ModelAttribute("piirivalvurpiiripunktis")
-    public Collection<PiirivalvurPiiripunkti> PiirivalvurController.populatePiirivalvurPiiripunktis() {
-        return PiirivalvurPiiripunkti.findAllPiirivalvurPiiripunktis();
+    void PIIRIVALVURController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("PIIRIVALVUR_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
-    @ModelAttribute("piirivalvurvaeosas")
-    public Collection<PiirivalvurVaeosa> PiirivalvurController.populatePiirivalvurVaeosas() {
-        return PiirivalvurVaeosa.findAllPiirivalvurVaeosas();
-    }
-    
-    @ModelAttribute("piirivalvurvodikohals")
-    public Collection<PiirivalvurVodikohal> PiirivalvurController.populatePiirivalvurVodikohals() {
-        return PiirivalvurVodikohal.findAllPiirivalvurVodikohals();
-    }
-    
-    @ModelAttribute("piirivalvurikontakts")
-    public Collection<PiirivalvuriKontakt> PiirivalvurController.populatePiirivalvuriKontakts() {
-        return PiirivalvuriKontakt.findAllPiirivalvuriKontakts();
-    }
-    
-    @ModelAttribute("seotudkontaktisiks")
-    public Collection<SeotudKontaktisik> PiirivalvurController.populateSeotudKontaktisiks() {
-        return SeotudKontaktisik.findAllSeotudKontaktisiks();
-    }
-    
-    @ModelAttribute("vahtkonnaliiges")
-    public Collection<VahtkonnaLiige> PiirivalvurController.populateVahtkonnaLiiges() {
-        return VahtkonnaLiige.findAllVahtkonnaLiiges();
-    }
-    
-    String PiirivalvurController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+    String PIIRIVALVURController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
         String enc = httpServletRequest.getCharacterEncoding();
         if (enc == null) {
             enc = WebUtils.DEFAULT_CHARACTER_ENCODING;

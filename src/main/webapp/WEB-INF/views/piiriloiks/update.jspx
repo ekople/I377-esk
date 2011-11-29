@@ -2,20 +2,16 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_main_entities_Piiriloik" modelAttribute="piiriloik" path="/piiriloiks" versionField="Version" z="7t/m7eaOaKCarCxU5G5L37HU95Y=">
-        <field:input field="piiriloikId" id="c_main_entities_Piiriloik_piiriloikId" z="Tb7PT8IpQ9BrrJ3tue65DNTamok="/>
-        <field:input field="avaja" id="c_main_entities_Piiriloik_avaja" z="hs2mNcy3JWHeTX707CZWmtrPrPY="/>
-        <field:datetime dateTimePattern="${piiriloik_avatud_date_format}" field="avatud" id="c_main_entities_Piiriloik_avatud" z="LEKxAA0UMNDm/cZ9fx+w/ifhz9A="/>
-        <field:input field="gpsKoordinaadid" id="c_main_entities_Piiriloik_gpsKoordinaadid" z="LAGLrbwJnFbwoTs8Plvv7XDZL+4="/>
-        <field:input field="kommentaar" id="c_main_entities_Piiriloik_kommentaar" z="s7upU5FsEtw8jFrsjfCqtxcag9w="/>
-        <field:input field="kood" id="c_main_entities_Piiriloik_kood" z="Djycx0bLjO3nZtUxFk8X/uZm8Rs="/>
-        <field:datetime dateTimePattern="${piiriloik_muudetud_date_format}" field="muudetud" id="c_main_entities_Piiriloik_muudetud" z="wu00oo+GVHC0XMR+oOWfYJPVeqo="/>
-        <field:input field="muutja" id="c_main_entities_Piiriloik_muutja" z="+wQp8f8eSkY544+2PwhdxQQtoD0="/>
-        <field:input field="nimetus" id="c_main_entities_Piiriloik_nimetus" z="4przE3QSVYcRyPXRChfmEvb/NSA="/>
-        <field:datetime dateTimePattern="${piiriloik_suletud_date_format}" field="suletud" id="c_main_entities_Piiriloik_suletud" z="MttgUOTU/UdFZ+pFKwVn5h2oPpo="/>
-        <field:input field="sulgeja" id="c_main_entities_Piiriloik_sulgeja" z="g4Lia5R9ThYZI5hUsBeNolSTat4="/>
-        <field:input field="intsidents" id="c_main_entities_Piiriloik_intsidents" z="uNBTQtVuS+FJbaLL5ZlZJgpSA04="/>
-        <field:input field="piiriloiguHaldajas" id="c_main_entities_Piiriloik_piiriloiguHaldajas" z="UXTzXM0nZBiAYhwbc2L2pU6fnd8="/>
-        <field:input field="vahtkonndPiiriloiguls" id="c_main_entities_Piiriloik_vahtkonndPiiriloiguls" z="18NLWEHA/m5amcGV84gnyChlu94="/>
+    <form:update id="fu_org_persistence_PIIRILOIK" idField="piiriloikId" modelAttribute="PIIRILOIK" path="/piiriloiks" versionField="Version" z="ySLsI9CL2BJHg5VYnCvMaySDP+A=">
+        <field:input field="avaja" id="c_org_persistence_PIIRILOIK_avaja" required="true" z="EnyTGIXVLxlyo1Si9FY5v7Elm8w="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_avatud_date_format}" field="avatud" id="c_org_persistence_PIIRILOIK_avatud" required="true" z="EMmsPHwkeR8ftMSqua51BU/WdRg="/>
+        <field:input field="gpsKoordinaadid" id="c_org_persistence_PIIRILOIK_gpsKoordinaadid" z="glcgvK7sRYxcWm8q/Htoy3b6ArI="/>
+        <field:input field="kommentaar" id="c_org_persistence_PIIRILOIK_kommentaar" z="4T4PBF9zp+zHdldbwksuQdCq2m0="/>
+        <field:input field="kood" id="c_org_persistence_PIIRILOIK_kood" z="k+DyaBkmbu7AFO9afsMa0mnTmms="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_muudetud_date_format}" field="muudetud" id="c_org_persistence_PIIRILOIK_muudetud" required="true" z="M3rCZ5blhpmYVy/nIAuWGBcVSuc="/>
+        <field:input field="muutja" id="c_org_persistence_PIIRILOIK_muutja" required="true" z="obXAh9P0mfa0UwwnCXMFm/YmZm0="/>
+        <field:input field="nimetus" id="c_org_persistence_PIIRILOIK_nimetus" z="1fhp3tu1runYNwyDMu/UWvBXxj4="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRILOIK_suletud" required="true" z="TMBag/L80bPcYlPbUdr0xrrq1J4="/>
+        <field:input field="sulgeja" id="c_org_persistence_PIIRILOIK_sulgeja" z="1wMBvOyl2uy8BiyEJ4VrU8danYc="/>
     </form:update>
 </div>

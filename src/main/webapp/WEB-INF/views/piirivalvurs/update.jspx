@@ -2,27 +2,19 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_main_entities_Piirivalvur" modelAttribute="piirivalvur" path="/piirivalvurs" versionField="Version" z="FxQrOFMT2t6gDxSLLBo6VliwKOw=">
-        <field:input field="piirivalvurId" id="c_main_entities_Piirivalvur_piirivalvurId" z="cAWfsPpkIIrGhBAJAcu8ebhjVNk="/>
-        <field:input field="avaja" id="c_main_entities_Piirivalvur_avaja" z="lWjrVoAdcAFv5smyp89vFGCFaRA="/>
-        <field:datetime dateTimePattern="${piirivalvur_avatud_date_format}" field="avatud" id="c_main_entities_Piirivalvur_avatud" z="tGUQnmCF5sZFqo2m5DV3NvFYD8Q="/>
-        <field:input field="eesnimed" id="c_main_entities_Piirivalvur_eesnimed" z="05COvg+VQuHpXewsc5WgRpnEKxI="/>
-        <field:input field="isikukood" id="c_main_entities_Piirivalvur_isikukood" z="Do2Xh6tgKORA8JpiVnlc6BSkzqQ="/>
-        <field:input field="kommentaar" id="c_main_entities_Piirivalvur_kommentaar" z="ppqrZqMcs2lKLE2HGALRimF3oRQ="/>
-        <field:datetime dateTimePattern="${piirivalvur_muudetud_date_format}" field="muudetud" id="c_main_entities_Piirivalvur_muudetud" z="lLBSAmr2WZvGOA29x8txj9wwxo8="/>
-        <field:input field="muutja" id="c_main_entities_Piirivalvur_muutja" z="9VyJJKfSzPN0xSDcvNuCXpIX284="/>
-        <field:input field="perekonnanimi" id="c_main_entities_Piirivalvur_perekonnanimi" z="3JlN8AmbmSjs7yVjby9gn30Gm1o="/>
-        <field:input field="soduriKood" id="c_main_entities_Piirivalvur_soduriKood" z="bBfQROimrsEnl/deTZWWXr7Kwyo="/>
-        <field:input field="sugu" id="c_main_entities_Piirivalvur_sugu" z="IiDrjHHQBM35QfKGxswM5dbYyyc="/>
-        <field:datetime dateTimePattern="${piirivalvur_suletud_date_format}" field="suletud" id="c_main_entities_Piirivalvur_suletud" z="F5z611NeYBhrl9SeC+rNbrtndTc="/>
-        <field:input field="sulgeja" id="c_main_entities_Piirivalvur_sulgeja" z="SfxKxo9WLgZ9pZ4G9A/gpyah6x0="/>
-        <field:input field="auastmeMuutumines" id="c_main_entities_Piirivalvur_auastmeMuutumines" z="TOiCgfVooHIuMOk5i7OE/9W1FO4="/>
-        <field:input field="piirivalvuriKontakts" id="c_main_entities_Piirivalvur_piirivalvuriKontakts" z="lM+LwVE2lRWTQWyd1+T9FrJGwGA="/>
-        <field:input field="piirivalvurIntsidendis" id="c_main_entities_Piirivalvur_piirivalvurIntsidendis" z="qdsuWn+kG8zqedsI/XhPkQAe7GA="/>
-        <field:input field="piirivalvurPiiripunktis" id="c_main_entities_Piirivalvur_piirivalvurPiiripunktis" z="9IzMMqfvN6QFA1ELFELqXtGN01I="/>
-        <field:input field="piirivalvurVaeosas" id="c_main_entities_Piirivalvur_piirivalvurVaeosas" z="T2FoHK7ciCzYM8+7KvcG9qgzIaU="/>
-        <field:input field="piirivalvurVodikohals" id="c_main_entities_Piirivalvur_piirivalvurVodikohals" z="m5UeffhOjBrsb4XDGU+W3wbQybQ="/>
-        <field:input field="seotudKontaktisiks" id="c_main_entities_Piirivalvur_seotudKontaktisiks" z="qPSXHywYqeqhY0YmEpd4c3zxW0w="/>
-        <field:input field="vahtkonnaLiiges" id="c_main_entities_Piirivalvur_vahtkonnaLiiges" z="Bo9CWP3cg2vgNPmP0ThZHv77uMA="/>
+    <form:update id="fu_org_persistence_PIIRIVALVUR" idField="piirivalvurId" modelAttribute="PIIRIVALVUR" path="/piirivalvurs" versionField="Version" z="Ytcgi1hDAjamFcJGOe3XQcvTkAs=">
+        <field:input field="avaja" id="c_org_persistence_PIIRIVALVUR_avaja" required="true" z="WvgR52JJjci3aQJY1T5yFgrjHK4="/>
+        <field:datetime dateTimePattern="${PIIRIVALVUR_avatud_date_format}" field="avatud" id="c_org_persistence_PIIRIVALVUR_avatud" required="true" z="zDOJtvcQCobR0pIfjaFj5o/4qzQ="/>
+        <field:input field="eesnimed" id="c_org_persistence_PIIRIVALVUR_eesnimed" z="NsmuKCwjo+/KTS8y1aPfVv3ZpXo="/>
+        <field:input field="isikukood" id="c_org_persistence_PIIRIVALVUR_isikukood" z="ThQTtv/tTlH+jY7KdRqXvaNtu78="/>
+        <field:input field="kommentaar" id="c_org_persistence_PIIRIVALVUR_kommentaar" z="YQZBAMJ6qeNUaDGmDPUecIV1WH0="/>
+        <field:datetime dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" field="muudetud" id="c_org_persistence_PIIRIVALVUR_muudetud" required="true" z="6oBW3EVJgitjxhnlQ6nOTnPj8OY="/>
+        <field:input field="muutja" id="c_org_persistence_PIIRIVALVUR_muutja" required="true" z="GxvMf6enMle/RekP4xGyZqMUxyE="/>
+        <field:input field="perekonnanimi" id="c_org_persistence_PIIRIVALVUR_perekonnanimi" z="ZrTKLgJP3IC3t1XSWMaUNXnJ5kg="/>
+        <field:input field="soduriKood" id="c_org_persistence_PIIRIVALVUR_soduriKood" z="wZVqHDnKWTDb2gdDgV6o+cUNu+8="/>
+        <field:input field="sugu" id="c_org_persistence_PIIRIVALVUR_sugu" z="96amaK+6FzxPmn0QJzpocf7+tJo="/>
+        <field:datetime dateTimePattern="${PIIRIVALVUR_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRIVALVUR_suletud" required="true" z="iyXxKguGW8IoWb9IqV6cnsItEsE="/>
+        <field:input field="sulgeja" id="c_org_persistence_PIIRIVALVUR_sulgeja" z="v28BjeMScBlT2jq+0nsH8cpw/ac="/>
+        <field:simple field="pIIRIVALVUR_INTSIDENDIS" id="c_org_persistence_PIIRIVALVUR_pIIRIVALVUR_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="9pdJEh9tB+AFTh28lmMzKNAD2QM="/>
     </form:update>
 </div>

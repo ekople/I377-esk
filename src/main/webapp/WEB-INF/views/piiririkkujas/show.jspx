@@ -2,22 +2,18 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_main_entities_Piiririkkuja" object="${piiririkkuja}" path="/piiririkkujas" z="mYZ7WPulD7JWU139cDq8zvLLEiI=">
-        <field:display field="piiririkkujaId" id="s_main_entities_Piiririkkuja_piiririkkujaId" object="${piiririkkuja}" z="g/nF5gMF3b53IbguEQY3/oDPSAk="/>
-        <field:display field="avaja" id="s_main_entities_Piiririkkuja_avaja" object="${piiririkkuja}" z="U6UinmmQe+5FoNYrB+C3waU4uaU="/>
-        <field:display date="true" dateTimePattern="${piiririkkuja_avatud_date_format}" field="avatud" id="s_main_entities_Piiririkkuja_avatud" object="${piiririkkuja}" z="2zYaIPhVQgUVVW4qpkDuYErEAOU="/>
-        <field:display field="eesnimi" id="s_main_entities_Piiririkkuja_eesnimi" object="${piiririkkuja}" z="iZo0Hzr6YwSg8RO09HgWmjg3OMQ="/>
-        <field:display field="isikukood" id="s_main_entities_Piiririkkuja_isikukood" object="${piiririkkuja}" z="aMCgi7sUDpqJ9ohIemR/eKMwtxM="/>
-        <field:display field="kommentaar" id="s_main_entities_Piiririkkuja_kommentaar" object="${piiririkkuja}" z="Jbybpb2CmEeqzrsYJQf4A7jaMH0="/>
-        <field:display date="true" dateTimePattern="${piiririkkuja_muudetud_date_format}" field="muudetud" id="s_main_entities_Piiririkkuja_muudetud" object="${piiririkkuja}" z="3d1TxfIFQ78XHyRQ37GxnOPMaaI="/>
-        <field:display field="muutja" id="s_main_entities_Piiririkkuja_muutja" object="${piiririkkuja}" z="O3xMUe0KsqRFA3fTegCLimUs7Eg="/>
-        <field:display field="perekNimi" id="s_main_entities_Piiririkkuja_perekNimi" object="${piiririkkuja}" z="QCuY8T3nWbM26aDP7kejcQiUTY0="/>
-        <field:display field="sugu" id="s_main_entities_Piiririkkuja_sugu" object="${piiririkkuja}" z="ylY1ccg3yM+XIOdlYjCtJUoc6UM="/>
-        <field:display date="true" dateTimePattern="${piiririkkuja_suletud_date_format}" field="suletud" id="s_main_entities_Piiririkkuja_suletud" object="${piiririkkuja}" z="ePqLayzLrM0wr7KO0k0HQyrvcV0="/>
-        <field:display field="sulgeja" id="s_main_entities_Piiririkkuja_sulgeja" object="${piiririkkuja}" z="JtyCVEpNQ1LrL9pV+tPYyYzyyfc="/>
-        <field:display date="true" dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="s_main_entities_Piiririkkuja_synniaeg" object="${piiririkkuja}" z="bGoxmLXU2M45XjgVkqf5WcA4KGI="/>
-        <field:display field="isikIntsidendis" id="s_main_entities_Piiririkkuja_isikIntsidendis" object="${piiririkkuja}" z="pACWNDIyyD6pBwKMPW5iFPerVpE="/>
-        <field:display field="kodakondsuses" id="s_main_entities_Piiririkkuja_kodakondsuses" object="${piiririkkuja}" z="/8xTg/2nnTw/fzUr+DiC9PPvK8s="/>
-        <field:display field="objekt" id="s_main_entities_Piiririkkuja_objekt" object="${piiririkkuja}" z="FVksVRzXbtEr7divdhDtCQ1LVQg="/>
+    <page:show id="ps_org_persistence_PIIRIRIKKUJA" object="${piiririkkuja}" path="/piiririkkujas" z="78NnMiATaf0hagh/BCod54sElUQ=">
+        <field:display field="avaja" id="s_org_persistence_PIIRIRIKKUJA_avaja" object="${piiririkkuja}" z="pxL/+unJ2HoxBCqk29BYUAQ71wg="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_avatud_date_format}" field="avatud" id="s_org_persistence_PIIRIRIKKUJA_avatud" object="${piiririkkuja}" z="ZWLuaFk8933pT08901awyjLtRtU="/>
+        <field:display field="eesnimi" id="s_org_persistence_PIIRIRIKKUJA_eesnimi" object="${piiririkkuja}" z="u93yU8Ux0pGBRqF4EqS5sT8MI0M="/>
+        <field:display field="isikukood" id="s_org_persistence_PIIRIRIKKUJA_isikukood" object="${piiririkkuja}" z="jvBZiWXZWK6BTM0kCGQF2ilvEMU="/>
+        <field:display field="kommentaar" id="s_org_persistence_PIIRIRIKKUJA_kommentaar" object="${piiririkkuja}" z="Iy6KKlAh6TGI4+4fA3EN/+nnAHw="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" field="muudetud" id="s_org_persistence_PIIRIRIKKUJA_muudetud" object="${piiririkkuja}" z="fihk+oDS2jOcwKLzP4uYrYpbX4Q="/>
+        <field:display field="muutja" id="s_org_persistence_PIIRIRIKKUJA_muutja" object="${piiririkkuja}" z="XvF3w5vgZhao0ZuOsB7v8IBQ9qs="/>
+        <field:display field="perekNimi" id="s_org_persistence_PIIRIRIKKUJA_perekNimi" object="${piiririkkuja}" z="5d+YlZq7xnDnJDyUKoCexotwbdc="/>
+        <field:display field="sugu" id="s_org_persistence_PIIRIRIKKUJA_sugu" object="${piiririkkuja}" z="Ahgf8uZubV3W3yaPIhtjYwiO7wQ="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" field="suletud" id="s_org_persistence_PIIRIRIKKUJA_suletud" object="${piiririkkuja}" z="ntUnIk4Ihu8f7rmcr3D5ieh0NWQ="/>
+        <field:display field="sulgeja" id="s_org_persistence_PIIRIRIKKUJA_sulgeja" object="${piiririkkuja}" z="0vfIY2l5BCmB1j1sZjNSdBbIMCQ="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_synniaeg_date_format}" field="synniaeg" id="s_org_persistence_PIIRIRIKKUJA_synniaeg" object="${piiririkkuja}" z="GzVYm2jqJUhIuheAMRPDSzGPV7g="/>
     </page:show>
 </div>

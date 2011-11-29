@@ -10,10 +10,10 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import main.entities.Objekt;
-import main.entities.ObjektIntsidendi;
-import main.entities.ObjektiLiik;
-import main.entities.Piiririkkuja;
+import org.joda.time.format.DateTimeFormat;
+import org.persistence.OBJEKT;
+import org.persistence.OBJEKT_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,65 +24,71 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
-privileged aspect ObjektController_Roo_Controller {
+privileged aspect OBJEKTController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.POST)
-    public String ObjektController.create(@Valid Objekt objekt, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String OBJEKTController.create(@Valid OBJEKT OBJEKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("objekt", objekt);
+            uiModel.addAttribute("OBJEKT", OBJEKT);
+            addDateTimeFormatPatterns(uiModel);
             return "objekts/create";
         }
         uiModel.asMap().clear();
-        objekt.persist();
-        return "redirect:/objekts/" + encodeUrlPathSegment(objekt.getId().toString(), httpServletRequest);
+        OBJEKT.persist();
+        return "redirect:/objekts/" + encodeUrlPathSegment(OBJEKT.getObjektId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", method = RequestMethod.GET)
-    public String ObjektController.createForm(Model uiModel) {
-        uiModel.addAttribute("objekt", new Objekt());
+    public String OBJEKTController.createForm(Model uiModel) {
+        uiModel.addAttribute("OBJEKT", new OBJEKT());
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/create";
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String ObjektController.show(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("objekt", Objekt.findObjekt(id));
-        uiModel.addAttribute("itemId", id);
+    @RequestMapping(value = "/{objektId}", method = RequestMethod.GET)
+    public String OBJEKTController.show(@PathVariable("objektId") Long objektId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("objekt", OBJEKT.findOBJEKT(objektId));
+        uiModel.addAttribute("itemId", objektId);
         return "objekts/show";
     }
     
     @RequestMapping(method = RequestMethod.GET)
-    public String ObjektController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String OBJEKTController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
-            uiModel.addAttribute("objekts", Objekt.findObjektEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
-            float nrOfPages = (float) Objekt.countObjekts() / sizeNo;
+            uiModel.addAttribute("objekts", OBJEKT.findOBJEKTEntries(page == null ? 0 : (page.intValue() - 1) * sizeNo, sizeNo));
+            float nrOfPages = (float) OBJEKT.countOBJEKTS() / sizeNo;
             uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
         } else {
-            uiModel.addAttribute("objekts", Objekt.findAllObjekts());
+            uiModel.addAttribute("objekts", OBJEKT.findAllOBJEKTS());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/list";
     }
     
     @RequestMapping(method = RequestMethod.PUT)
-    public String ObjektController.update(@Valid Objekt objekt, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String OBJEKTController.update(@Valid OBJEKT OBJEKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("objekt", objekt);
+            uiModel.addAttribute("OBJEKT", OBJEKT);
+            addDateTimeFormatPatterns(uiModel);
             return "objekts/update";
         }
         uiModel.asMap().clear();
-        objekt.merge();
-        return "redirect:/objekts/" + encodeUrlPathSegment(objekt.getId().toString(), httpServletRequest);
+        OBJEKT.merge();
+        return "redirect:/objekts/" + encodeUrlPathSegment(OBJEKT.getObjektId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String ObjektController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("objekt", Objekt.findObjekt(id));
+    @RequestMapping(value = "/{objektId}", params = "form", method = RequestMethod.GET)
+    public String OBJEKTController.updateForm(@PathVariable("objektId") Long objektId, Model uiModel) {
+        uiModel.addAttribute("OBJEKT", OBJEKT.findOBJEKT(objektId));
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/update";
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String ObjektController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Objekt.findObjekt(id).remove();
+    @RequestMapping(value = "/{objektId}", method = RequestMethod.DELETE)
+    public String OBJEKTController.delete(@PathVariable("objektId") Long objektId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        OBJEKT.findOBJEKT(objektId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
@@ -90,26 +96,22 @@ privileged aspect ObjektController_Roo_Controller {
     }
     
     @ModelAttribute("objekts")
-    public Collection<Objekt> ObjektController.populateObjekts() {
-        return Objekt.findAllObjekts();
+    public Collection<OBJEKT> OBJEKTController.populateOBJEKTS() {
+        return OBJEKT.findAllOBJEKTS();
     }
     
-    @ModelAttribute("objektintsidendis")
-    public Collection<ObjektIntsidendi> ObjektController.populateObjektIntsidendis() {
-        return ObjektIntsidendi.findAllObjektIntsidendis();
+    @ModelAttribute("objekt_intsidendiss")
+    public Collection<OBJEKT_INTSIDENDIS> OBJEKTController.populateOBJEKT_INTSIDENDISs() {
+        return OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs();
     }
     
-    @ModelAttribute("objektiliiks")
-    public Collection<ObjektiLiik> ObjektController.populateObjektiLiiks() {
-        return ObjektiLiik.findAllObjektiLiiks();
+    void OBJEKTController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("OBJEKT_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
-    @ModelAttribute("piiririkkujas")
-    public Collection<Piiririkkuja> ObjektController.populatePiiririkkujas() {
-        return Piiririkkuja.findAllPiiririkkujas();
-    }
-    
-    String ObjektController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+    String OBJEKTController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
         String enc = httpServletRequest.getCharacterEncoding();
         if (enc == null) {
             enc = WebUtils.DEFAULT_CHARACTER_ENCODING;

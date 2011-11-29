@@ -2,18 +2,15 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_main_entities_Objekt" modelAttribute="objekt" path="/objekts" versionField="Version" z="Vy+8mCetePOab8EZWJT0A8x73Vc=">
-        <field:input field="objektId" id="c_main_entities_Objekt_objektId" z="5xT5/2K5Ip/bHkZ8vIHnDYxE1uI="/>
-        <field:input field="avaja" id="c_main_entities_Objekt_avaja" z="1TUE/CWpaVu7OlEkULkp1GtzmFI="/>
-        <field:datetime dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="c_main_entities_Objekt_avatud" z="ilZ2B07jAdQWfbU9LzZ4/AiVpMs="/>
-        <field:input field="kommentaar" id="c_main_entities_Objekt_kommentaar" z="QQJGGZpRj1YTjbusmyTIKCtJ7gk="/>
-        <field:datetime dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="c_main_entities_Objekt_muudetud" z="EcrUVdnAFMcezEtSuA86yKHnBnI="/>
-        <field:input field="muutja" id="c_main_entities_Objekt_muutja" z="pGSHHknKJHCtPSTVcZm3SF6Wz+A="/>
-        <field:input field="nimetus" id="c_main_entities_Objekt_nimetus" z="wy3UuYQSdAJbGhjeR6+hWuHAAIY="/>
-        <field:datetime dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="c_main_entities_Objekt_suletud" z="BYCxYsa2a8PGaYPyOM/UJxr6GBw="/>
-        <field:input field="sulgeja" id="c_main_entities_Objekt_sulgeja" z="LMN40NjZ3xjFRdPE/EeMnCNYYTc="/>
-        <field:input field="objektiLiik" id="c_main_entities_Objekt_objektiLiik" z="5UFIoOpcgbEKVppy11dBMX9xH0M="/>
-        <field:input field="objektIntsidendis" id="c_main_entities_Objekt_objektIntsidendis" z="ejomLpObgrhJNwAqwIsixwx4Mtw="/>
-        <field:input field="piiririkkujas" id="c_main_entities_Objekt_piiririkkujas" z="x5EdB5kiYimZAeLQrWyhonxOSfg="/>
+    <form:update id="fu_org_persistence_OBJEKT" idField="objektId" modelAttribute="OBJEKT" path="/objekts" versionField="Version" z="wiNPEu+fhq86dZnSgadCHiMkMlA=">
+        <field:input field="avaja" id="c_org_persistence_OBJEKT_avaja" required="true" z="G9iZAvTP4klxgL/MkVrZdKZsuek="/>
+        <field:datetime dateTimePattern="${OBJEKT_avatud_date_format}" field="avatud" id="c_org_persistence_OBJEKT_avatud" required="true" z="tiX9kH19tunM+Pz28+PYhUiSnJ0="/>
+        <field:input field="kommentaar" id="c_org_persistence_OBJEKT_kommentaar" z="RYU2ixksxNKLmqwcNdrvMZ3x6Ko="/>
+        <field:datetime dateTimePattern="${OBJEKT_muudetud_date_format}" field="muudetud" id="c_org_persistence_OBJEKT_muudetud" required="true" z="+8xpekjE69iutMcinzIQ5kyyf4Y="/>
+        <field:input field="muutja" id="c_org_persistence_OBJEKT_muutja" required="true" z="prMgI5FKKfmr/bE0WCITfF+5/Hc="/>
+        <field:input field="nimetus" id="c_org_persistence_OBJEKT_nimetus" z="AHBiZ/pkJJJYpyEqzixb11wvtMc="/>
+        <field:datetime dateTimePattern="${OBJEKT_suletud_date_format}" field="suletud" id="c_org_persistence_OBJEKT_suletud" required="true" z="w6wvdO5lcw/YXpJK0B6SJcmwnjw="/>
+        <field:input field="sulgeja" id="c_org_persistence_OBJEKT_sulgeja" z="QmyZxKnH7wDO+xTYLTz8CeHbKcs="/>
+        <field:simple field="oBJEKT_INTSIDENDIS" id="c_org_persistence_OBJEKT_oBJEKT_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="O B J E K T_ I N T S I D E N D I S" z="S77xJJDbbAkUVZHjc5bl5/fY2mo="/>
     </form:update>
 </div>

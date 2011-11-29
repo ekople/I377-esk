@@ -2,14 +2,14 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_main_entities_Piiriloik" items="${piiriloiks}" z="nsQCfn0G2z6JPBAuHx5j8nSaIBk=">
-        <table:table data="${piiriloiks}" id="l_main_entities_Piiriloik" path="/piiriloiks" z="I6k5Ugye+Srv0fK3UAHYFeimCRM=">
-            <table:column id="c_main_entities_Piiriloik_piiriloikId" property="piiriloikId" z="YFkdXLt9IbNqsFTd4tKclNFG2PU="/>
-            <table:column id="c_main_entities_Piiriloik_avaja" property="avaja" z="a+TKTednnnGk2jwZd65LRz9sGIU="/>
-            <table:column date="true" dateTimePattern="${piiriloik_avatud_date_format}" id="c_main_entities_Piiriloik_avatud" property="avatud" z="vzyFAUr015w4HfJ9PHcuLiT8tU8="/>
-            <table:column id="c_main_entities_Piiriloik_gpsKoordinaadid" property="gpsKoordinaadid" z="36fn3l49OT0wg+YjpaZDlKBR2VA="/>
-            <table:column id="c_main_entities_Piiriloik_kommentaar" property="kommentaar" z="QjLc23EemLQjOzYRhD4RWyFHOKw="/>
-            <table:column id="c_main_entities_Piiriloik_kood" property="kood" z="1sfpvIG0YAQadZHKd+E8msIaRzM="/>
+    <page:list id="pl_org_persistence_PIIRILOIK" items="${piiriloiks}" z="Gy6kFhPP8xHJKJCWX8M4AZWNzck=">
+        <table:table data="${piiriloiks}" id="l_org_persistence_PIIRILOIK" path="/piiriloiks" typeIdFieldName="piiriloikId" z="fMEdtrRW6KJfN6DDB9aOwM6Ej6Y=">
+            <table:column id="c_org_persistence_PIIRILOIK_avaja" property="avaja" z="11VVZU1KFqGRBTWRP/DsgjirbTs="/>
+            <table:column date="true" dateTimePattern="${PIIRILOIK_avatud_date_format}" id="c_org_persistence_PIIRILOIK_avatud" property="avatud" z="CzbRTv8wgtm0S9tvBQ0+c7x3cXo="/>
+            <table:column id="c_org_persistence_PIIRILOIK_gpsKoordinaadid" property="gpsKoordinaadid" z="qQMHgGoHaYjrHUplKuvzw7qX0lY="/>
+            <table:column id="c_org_persistence_PIIRILOIK_kommentaar" property="kommentaar" z="mqkXKbI27yj+G8HbWa6KmSjr0YI="/>
+            <table:column id="c_org_persistence_PIIRILOIK_kood" property="kood" z="kJEuVA+DLYuH0ME+DrBaDBTrFks="/>
+            <table:column date="true" dateTimePattern="${PIIRILOIK_muudetud_date_format}" id="c_org_persistence_PIIRILOIK_muudetud" property="muudetud" z="x2+/yH/fTrcDba602fbW9D1xQBU="/>
         </table:table>
     </page:list>
 </div>

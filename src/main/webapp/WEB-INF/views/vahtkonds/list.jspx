@@ -2,14 +2,14 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_main_entities_Vahtkond" items="${vahtkonds}" z="uuVDkiw8sXTx4KUdrdjvVEcqh50=">
-        <table:table data="${vahtkonds}" id="l_main_entities_Vahtkond" path="/vahtkonds" z="2z3aOuaG6PkWoJp1qtYCGBl9ZMw=">
-            <table:column id="c_main_entities_Vahtkond_vahtkondId" property="vahtkondId" z="uJfJ9UpIQgWc443KUQ6VUscLFDw="/>
-            <table:column date="true" dateTimePattern="${vahtkond_alates_date_format}" id="c_main_entities_Vahtkond_alates" property="alates" z="7V47740mi4WL6vgWq/8b8Z5jnDk="/>
-            <table:column id="c_main_entities_Vahtkond_avaja" property="avaja" z="2VPZ/38edtixC98PvmCpvSYf32s="/>
-            <table:column date="true" dateTimePattern="${vahtkond_avatud_date_format}" id="c_main_entities_Vahtkond_avatud" property="avatud" z="b4y7JLSIum9WIGjjCfkloCFITRQ="/>
-            <table:column id="c_main_entities_Vahtkond_kommentaar" property="kommentaar" z="Fvre8hP9OTM1YYp/yp/MifVk4lM="/>
-            <table:column id="c_main_entities_Vahtkond_kood" property="kood" z="J/Zb9frlqSH+LZ9Actdy8AyA/xQ="/>
+    <page:list id="pl_org_persistence_VAHTKOND" items="${vahtkonds}" z="jJalgvEDtE7rJNChvrWp0tCdqoY=">
+        <table:table data="${vahtkonds}" id="l_org_persistence_VAHTKOND" path="/vahtkonds" typeIdFieldName="vahtkondId" z="fhmB+13AxHGWMx9nCPAzRUaPYzE=">
+            <table:column date="true" dateTimePattern="${VAHTKOND_alates_date_format}" id="c_org_persistence_VAHTKOND_alates" property="alates" z="GwDq3kFftMskcgPuWSWF6SA9+o4="/>
+            <table:column id="c_org_persistence_VAHTKOND_avaja" property="avaja" z="U+tIxOrAHGjYpnXdh/wdq7v1IEs="/>
+            <table:column date="true" dateTimePattern="${VAHTKOND_avatud_date_format}" id="c_org_persistence_VAHTKOND_avatud" property="avatud" z="hRrzvA6ZNZQLiBqWtSwt4Sizq2k="/>
+            <table:column id="c_org_persistence_VAHTKOND_kommentaar" property="kommentaar" z="R9qljVs2B3D/JYu4ip11Svr+vrU="/>
+            <table:column id="c_org_persistence_VAHTKOND_kood" property="kood" z="Obo15kutptQ/JKHIYw710SMDx8Y="/>
+            <table:column date="true" dateTimePattern="${VAHTKOND_kuni_date_format}" id="c_org_persistence_VAHTKOND_kuni" property="kuni" z="f8OSoiFp9WsyFEviIgeMY8z6n+c="/>
         </table:table>
     </page:list>
 </div>

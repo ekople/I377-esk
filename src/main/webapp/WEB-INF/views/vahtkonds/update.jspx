@@ -2,23 +2,18 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_main_entities_Vahtkond" modelAttribute="vahtkond" path="/vahtkonds" versionField="Version" z="CI02kXsIYXXRIUhXwoM9AFbNFvs=">
-        <field:input field="vahtkondId" id="c_main_entities_Vahtkond_vahtkondId" z="md1Sl64w+gDZqKHtU0Ey8PRB43Q="/>
-        <field:datetime dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="c_main_entities_Vahtkond_alates" z="lgobAFBxlSVdlQ5Jq2kFI6mj9iE="/>
-        <field:input field="avaja" id="c_main_entities_Vahtkond_avaja" z="O1H9oHMzdhq7EnXGpNY4p3C59rw="/>
-        <field:datetime dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="c_main_entities_Vahtkond_avatud" z="3PEybVw+z8ykhcpn8q1af9DtF9c="/>
-        <field:input field="kommentaar" id="c_main_entities_Vahtkond_kommentaar" z="CsHGWAjekjujo24nvRGNpwS6bJ0="/>
-        <field:input field="kood" id="c_main_entities_Vahtkond_kood" z="D6pCjqxoujch9aP9U9Oynivah8Q="/>
-        <field:datetime dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="c_main_entities_Vahtkond_kuni" z="NWyv36Oy+WSkmRRoL11m7HLSTKU="/>
-        <field:datetime dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="c_main_entities_Vahtkond_muudetud" z="3zip0+a+7nAVEgF3QUUPHKJcPRY="/>
-        <field:input field="muutja" id="c_main_entities_Vahtkond_muutja" z="91WEf2s/tEINUFntJEl5rStmGAA="/>
-        <field:input field="nimetus" id="c_main_entities_Vahtkond_nimetus" z="lGjKVP7Tw9PBlFcHIkyloOE3SSg="/>
-        <field:datetime dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="c_main_entities_Vahtkond_suletud" z="u5aSuCSmrAP6rQe70+Da5sg33Qw="/>
-        <field:input field="sulgeja" id="c_main_entities_Vahtkond_sulgeja" z="3rrON2e4o2r58tSrKL2ivkScxTk="/>
-        <field:input field="piiripunkt" id="c_main_entities_Vahtkond_piiripunkt" z="3Xgrwh+qPUmRTI6NaCjnQ278Q4g="/>
-        <field:input field="vaeosa" id="c_main_entities_Vahtkond_vaeosa" z="0E9E7L6I7kLVrCMlV5+BVQO1lhM="/>
-        <field:input field="vahtkondIntsidendis" id="c_main_entities_Vahtkond_vahtkondIntsidendis" z="A4sUcyjywK5KFKsgWvmg6TCwV6Y="/>
-        <field:input field="vahtkonnaLiiges" id="c_main_entities_Vahtkond_vahtkonnaLiiges" z="4Q5yOifjMeLTg7o/sk/luuw8/aM="/>
-        <field:input field="vahtkonndPiiriloiguls" id="c_main_entities_Vahtkond_vahtkonndPiiriloiguls" z="7vcl/PmGTKNwILXvEPled5ls6mc="/>
+    <form:update id="fu_org_persistence_VAHTKOND" idField="vahtkondId" modelAttribute="VAHTKOND" path="/vahtkonds" versionField="Version" z="XDTBnPKx+DWRdsMrv2I5t5bTNZA=">
+        <field:datetime dateTimePattern="${VAHTKOND_alates_date_format}" field="alates" id="c_org_persistence_VAHTKOND_alates" z="Xi6VZcFECaal7UsLijRuEJhIUAw="/>
+        <field:input field="avaja" id="c_org_persistence_VAHTKOND_avaja" required="true" z="Hhf+gvUPshge05YV0dIIcIcF3/0="/>
+        <field:datetime dateTimePattern="${VAHTKOND_avatud_date_format}" field="avatud" id="c_org_persistence_VAHTKOND_avatud" required="true" z="3bOW6X6/YFzqZMYlm472je0KkYo="/>
+        <field:input field="kommentaar" id="c_org_persistence_VAHTKOND_kommentaar" z="lfZStwVZ2/C+WqK0hBYhVzQEDMk="/>
+        <field:input field="kood" id="c_org_persistence_VAHTKOND_kood" z="0ZDyB3zw/SVtB1E7v9nCITN7BJE="/>
+        <field:datetime dateTimePattern="${VAHTKOND_kuni_date_format}" field="kuni" id="c_org_persistence_VAHTKOND_kuni" z="hxQfXSnBCRy/cAtbu9xDz8vTXLA="/>
+        <field:datetime dateTimePattern="${VAHTKOND_muudetud_date_format}" field="muudetud" id="c_org_persistence_VAHTKOND_muudetud" required="true" z="7nesLLgzMIavIEqhAH5C92B4PyM="/>
+        <field:input field="muutja" id="c_org_persistence_VAHTKOND_muutja" required="true" z="xpVaWMS9Y/W4ndIuwL/db0ahisU="/>
+        <field:input field="nimetus" id="c_org_persistence_VAHTKOND_nimetus" z="gmzgX/gWgxGWFJYA2uPc4o21aeQ="/>
+        <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_org_persistence_VAHTKOND_suletud" required="true" z="JYmkmDjURcpFSaAu97TvbNZbOmQ="/>
+        <field:input field="sulgeja" id="c_org_persistence_VAHTKOND_sulgeja" z="8vdy4/aBty3ObSvZtZt0UMLgnk0="/>
+        <field:simple field="vAHTKOND_INTSIDENDIS" id="c_org_persistence_VAHTKOND_vAHTKOND_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="qI8hea07PqHLvWkEYf6hBSFQvds="/>
     </form:update>
 </div>

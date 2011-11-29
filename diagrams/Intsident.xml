@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
+	<entity>
+		<entity-name>org.persistence.INTSIDENDI_LIIK</entity-name>
+		<entity-width>141</entity-width>
+		<entity-height>306</entity-height>
+		<entity-X-Coordinate>560</entity-X-Coordinate>
+		<entity-Y-Coordinate>50</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI</entity-name>
+		<entity-width>251</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>1450</entity-X-Coordinate>
+		<entity-Y-Coordinate>530</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.ISIK_INTSIDENDIS</entity-name>
+		<entity-width>151</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>1038</entity-X-Coordinate>
+		<entity-Y-Coordinate>-8</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.VAHTKOND_INTSIDENDIS</entity-name>
+		<entity-width>171</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>330</entity-X-Coordinate>
+		<entity-Y-Coordinate>50</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.OBJEKT</entity-name>
+		<entity-width>171</entity-width>
+		<entity-height>286</entity-height>
+		<entity-X-Coordinate>800</entity-X-Coordinate>
+		<entity-Y-Coordinate>32</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.PIIRIVALVUR</entity-name>
+		<entity-width>131</entity-width>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>1231</entity-X-Coordinate>
+		<entity-Y-Coordinate>675</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.OBJEKT_INTSIDENDIS</entity-name>
+		<entity-width>201</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>777</entity-X-Coordinate>
+		<entity-Y-Coordinate>350</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.VAHTKOND</entity-name>
+		<entity-width>251</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>90</entity-X-Coordinate>
+		<entity-Y-Coordinate>470</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.PIIRIRIKKUJA</entity-name>
+		<entity-width>171</entity-width>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>1010</entity-X-Coordinate>
+		<entity-Y-Coordinate>357</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.PIIRILOIK</entity-name>
+		<entity-width>211</entity-width>
+		<entity-height>288</entity-height>
+		<entity-X-Coordinate>60</entity-X-Coordinate>
+		<entity-Y-Coordinate>59</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.PIIRIVALVUR_INTSIDENDIS</entity-name>
+		<entity-width>231</entity-width>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>960</entity-X-Coordinate>
+		<entity-Y-Coordinate>702</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.INTSIDENT</entity-name>
+		<entity-width>161</entity-width>
+		<entity-height>526</entity-height>
+		<entity-X-Coordinate>560</entity-X-Coordinate>
+		<entity-Y-Coordinate>430</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.SEADUSE_PUNKT</entity-name>
+		<entity-width>231</entity-width>
+		<entity-height>386</entity-height>
+		<entity-X-Coordinate>1200</entity-X-Coordinate>
+		<entity-Y-Coordinate>220</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>org.persistence.SEADUS</entity-name>
+		<entity-width>211</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>1470</entity-X-Coordinate>
+		<entity-Y-Coordinate>100</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+</entities>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_SEADUS" items="${seadus}" z="BamoWlUMLsOdV0Oq9GI4lQAYoTE=">
+        <table:table data="${seadus}" id="l_org_persistence_SEADUS" path="/seadus" typeIdFieldName="seaduseId" z="oq8zOHsQFEHeEQG+SuSuZFLFPeo=">
+            <table:column id="c_org_persistence_SEADUS_avaja" property="avaja" z="B9LsHpdfOhoKhpq1ffzzX8CuRtU="/>
+            <table:column date="true" dateTimePattern="${SEADUS_avatud_date_format}" id="c_org_persistence_SEADUS_avatud" property="avatud" z="9TlhK/GpjvH7+Dj+tLc6w1o4ILU="/>
+            <table:column id="c_org_persistence_SEADUS_kehtivAlates" property="kehtivAlates" z="+qEi6cL1kYLbovexlkYjpNP954o="/>
+            <table:column id="c_org_persistence_SEADUS_kehtivKuni" property="kehtivKuni" z="HM1hHx/OvnkPgjhCn9T/8RcmKbI="/>
+            <table:column id="c_org_persistence_SEADUS_kommentaar" property="kommentaar" z="7zcDwi5i8VzsQpkcQrqwRYw+wSE="/>
+            <table:column id="c_org_persistence_SEADUS_kood" property="kood" z="zyAKkNnq5/IDX1u68Kt/44L/ZAs="/>
+        </table:table>
+    </page:list>
+</div>

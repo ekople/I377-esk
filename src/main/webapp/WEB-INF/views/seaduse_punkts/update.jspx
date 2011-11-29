@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_persistence_SEADUSE_PUNKT" idField="seadusePunktId" modelAttribute="SEADUSE_PUNKT" path="/seaduse_punkts" versionField="Version" z="rLgFdIlriL8TpKJ4SAF8F2k6Sr4=">
+        <field:input field="avaja" id="c_org_persistence_SEADUSE_PUNKT_avaja" required="true" z="ZwH0ajz/S/nIbI/E7frCTfPAFH0="/>
+        <field:datetime dateTimePattern="${SEADUSE_PUNKT_avatud_date_format}" field="avatud" id="c_org_persistence_SEADUSE_PUNKT_avatud" required="true" z="V8uUxcN5/6/t9ANZHhfKTX9RpfU="/>
+        <field:input field="kehtivAlates" id="c_org_persistence_SEADUSE_PUNKT_kehtivAlates" z="07wmRpgxgoTQk254yxojuyN23sY="/>
+        <field:input field="kehtivKuni" id="c_org_persistence_SEADUSE_PUNKT_kehtivKuni" z="iKsHPzk/uhbYMaRGVqz5arRM2LI="/>
+        <field:input field="kommentaar" id="c_org_persistence_SEADUSE_PUNKT_kommentaar" z="osNBcaegtvo4+Ot8Ar3WGvBDrQc="/>
+        <field:datetime dateTimePattern="${SEADUSE_PUNKT_muudetud_date_format}" field="muudetud" id="c_org_persistence_SEADUSE_PUNKT_muudetud" required="true" z="PCjw7EjTAwmVurUZm3GVsCB4yLE="/>
+        <field:input field="muutja" id="c_org_persistence_SEADUSE_PUNKT_muutja" required="true" z="Q5ZjCQ1ZZ6eiMKVN3O/ishuYidw="/>
+        <field:input field="pais" id="c_org_persistence_SEADUSE_PUNKT_pais" z="EhB3nVjcQuYqFCVg5MRYZ1P08lc="/>
+        <field:input field="paragrahv" id="c_org_persistence_SEADUSE_PUNKT_paragrahv" z="wYuJLlQqc8xIL0BjDe42/cfThfc="/>
+        <field:datetime dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="c_org_persistence_SEADUSE_PUNKT_suletud" required="true" z="x9Tjgz2Y1DmsR/wcOVWZbzwEdS8="/>
+        <field:input field="sulgeja" id="c_org_persistence_SEADUSE_PUNKT_sulgeja" z="ZaBwbujNgC6HUi+Ve3dZn+eIy7I="/>
+        <field:input field="tekst" id="c_org_persistence_SEADUSE_PUNKT_tekst" z="7+IDq0fMvpjVkVgj0+43fK7E2f8="/>
+        <field:simple field="pIIRIVALVURI_SEADUS_INTSIDENDI" id="c_org_persistence_SEADUSE_PUNKT_pIIRIVALVURI_SEADUS_INTSIDENDI" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R I_ S E A D U S_ I N T S I D E N D I" z="fzoCTqW0Msn1fzjcX6BZD40eCmw="/>
+        <field:select field="sEADUS_ID" id="c_org_persistence_SEADUSE_PUNKT_sEADUS_ID" itemValue="seaduseId" items="${seadus}" path="/seadus" z="sGNTZYAfuD0BFb95ae4IPDjhnf4="/>
+    </form:update>
+</div>

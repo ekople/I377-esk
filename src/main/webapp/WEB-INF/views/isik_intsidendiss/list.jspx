@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_ISIK_INTSIDENDIS" items="${isik_intsidendiss}" z="fsP6B/h72dSo2gQdG0F6tTQ4Jek=">
+        <table:table data="${isik_intsidendiss}" id="l_org_persistence_ISIK_INTSIDENDIS" path="/isik_intsidendiss" typeIdFieldName="isikIntsidendisId" z="w4u08DxFDaLSiGBtw641h6bXLQU=">
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_alates_date_format}" id="c_org_persistence_ISIK_INTSIDENDIS_alates" property="alates" z="s0FGrmB5cw4pTZ1BFCm4nlePyfc="/>
+            <table:column id="c_org_persistence_ISIK_INTSIDENDIS_avaja" property="avaja" z="vZs2m8Lv9bb0fO0JqzOdNofGs4E="/>
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_avatud_date_format}" id="c_org_persistence_ISIK_INTSIDENDIS_avatud" property="avatud" z="XiTWvysmZig2W/f1G2Lr/YXyo7s="/>
+            <table:column id="c_org_persistence_ISIK_INTSIDENDIS_kirjeldus" property="kirjeldus" z="NUeTr6bRXy2OhPCSYMhe5eP+rH0="/>
+            <table:column id="c_org_persistence_ISIK_INTSIDENDIS_kommentaar" property="kommentaar" z="TqpJ15lS8GNavqn7OkdM462E8ok="/>
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" id="c_org_persistence_ISIK_INTSIDENDIS_kuni" property="kuni" z="yGysL0oYBDSq3af1hvfnxUKlPbs="/>
+        </table:table>
+    </page:list>
+</div>

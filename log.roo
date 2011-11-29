@@ -1,25 +1,12 @@
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 18:13:29
-project --topLevelPackage main --projectName I377 --java 6
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 18:13:36
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 18:19:09
-persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 18:55:17
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-27 18:56:39
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 04:45:55
+project --topLevelPackage main --projectName Intsident --java 6
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 04:46:00
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 04:46:13
 persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
 web mvc setup
 web mvc all --package ~.web
 web mvc all --package ~.web
-web mvc all --package ~.web
-web mvc all --package web
-web mvc all --package main.web
-web mvc all --package main.web
-web mvc all --package web
-web mvc all --package ~.web
-web mvc all --package main
-web mvc all --package main.web
-web mvc all --package ~.web
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-27 20:09:17
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-28 14:11:16
-web mvc all --package ~.web
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 07:12:41
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 21:56:59
 web mvc all --package ~.web
 web mvc all --package ~.web

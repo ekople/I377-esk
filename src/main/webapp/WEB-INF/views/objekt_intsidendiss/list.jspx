@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_OBJEKT_INTSIDENDIS" items="${objekt_intsidendiss}" z="Vcaw1X6/4kP56PmgzceG6tSXOtE=">
+        <table:table data="${objekt_intsidendiss}" id="l_org_persistence_OBJEKT_INTSIDENDIS" path="/objekt_intsidendiss" typeIdFieldName="objektIntsidendisId" z="m2m6HIwylnTqKyR7I5vYLE6X56g=">
+            <table:column date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_alates_date_format}" id="c_org_persistence_OBJEKT_INTSIDENDIS_alates" property="alates" z="yE1Tt0e/9pxgB+bIuU2Y2uPxoQ4="/>
+            <table:column id="c_org_persistence_OBJEKT_INTSIDENDIS_avaja" property="avaja" z="HsOq6XDbUxHbJfLEDmnhaclBWS8="/>
+            <table:column date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_avatud_date_format}" id="c_org_persistence_OBJEKT_INTSIDENDIS_avatud" property="avatud" z="+6RkfnLMt6OKXTR44/30FYR3OoU="/>
+            <table:column id="c_org_persistence_OBJEKT_INTSIDENDIS_kirjeldus" property="kirjeldus" z="ShF3epWJpcAyGDflwvXamSDPFqI="/>
+            <table:column id="c_org_persistence_OBJEKT_INTSIDENDIS_kommentaar" property="kommentaar" z="3AMDdNTvvcNMWHN1vI7nN198Ilk="/>
+            <table:column date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_kuni_date_format}" id="c_org_persistence_OBJEKT_INTSIDENDIS_kuni" property="kuni" z="JOzV8eI0G0DTJzXB37hp7uluhno="/>
+        </table:table>
+    </page:list>
+</div>

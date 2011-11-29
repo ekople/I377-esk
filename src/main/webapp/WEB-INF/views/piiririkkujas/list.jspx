@@ -2,14 +2,14 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_main_entities_Piiririkkuja" items="${piiririkkujas}" z="IoiTbFFKF70uzRs4wjpCKi+d2To=">
-        <table:table data="${piiririkkujas}" id="l_main_entities_Piiririkkuja" path="/piiririkkujas" z="rR4b4OpYAtjlfukZIRrSK3VlMaA=">
-            <table:column id="c_main_entities_Piiririkkuja_piiririkkujaId" property="piiririkkujaId" z="ehLw+yl6rcwAeAl2wZPU4bTMtB8="/>
-            <table:column id="c_main_entities_Piiririkkuja_avaja" property="avaja" z="4IYjkmyHsN7Kw7j12pfEKIqjnJ8="/>
-            <table:column date="true" dateTimePattern="${piiririkkuja_avatud_date_format}" id="c_main_entities_Piiririkkuja_avatud" property="avatud" z="U7o6E+vedkLyk7SwINiduUgcJJ0="/>
-            <table:column id="c_main_entities_Piiririkkuja_eesnimi" property="eesnimi" z="EUtpMSk0Uq0FZ+mF3ljK4JTX0tc="/>
-            <table:column id="c_main_entities_Piiririkkuja_isikukood" property="isikukood" z="lWRd9pzV7Gn7DkFYv16OKCXN7XI="/>
-            <table:column id="c_main_entities_Piiririkkuja_kommentaar" property="kommentaar" z="WBUXwbb/10vvgtKXNljZllXrSkU="/>
+    <page:list id="pl_org_persistence_PIIRIRIKKUJA" items="${piiririkkujas}" z="jBwvNkxP79AFKbYJHYtS0YOzyWU=">
+        <table:table data="${piiririkkujas}" id="l_org_persistence_PIIRIRIKKUJA" path="/piiririkkujas" typeIdFieldName="piiririkkujaId" z="+t4efK/oQCcSih/ircTncRAz9yA=">
+            <table:column id="c_org_persistence_PIIRIRIKKUJA_avaja" property="avaja" z="AJxZH9yDMjz5Gad/wllZkhJZ2UU="/>
+            <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_avatud_date_format}" id="c_org_persistence_PIIRIRIKKUJA_avatud" property="avatud" z="h3y4VMO5AjRprrL69VVFvZvpnkM="/>
+            <table:column id="c_org_persistence_PIIRIRIKKUJA_eesnimi" property="eesnimi" z="POaEQKVsUFSRq+7N0yrovZGrR3A="/>
+            <table:column id="c_org_persistence_PIIRIRIKKUJA_isikukood" property="isikukood" z="Vr0IXQdL9H6D2lEY6MNisC2d+gU="/>
+            <table:column id="c_org_persistence_PIIRIRIKKUJA_kommentaar" property="kommentaar" z="1rV8NQOOI2otZQWplKoFB0wa0kk="/>
+            <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" id="c_org_persistence_PIIRIRIKKUJA_muudetud" property="muudetud" z="RH9grfnME7ZtEP0XYgzJZjFbHvc="/>
         </table:table>
     </page:list>
 </div>
