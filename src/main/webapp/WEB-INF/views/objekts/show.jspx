@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_OBJEKT" object="${objekt}" path="/objekts" z="J0FcakYhskpFTXkmH3+XZtRgv3M=">
+        <field:display field="avaja" id="s_org_persistence_OBJEKT_avaja" object="${objekt}" z="pMzK9KsjYscQPCvt4lTeN+4mahQ="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_avatud_date_format}" field="avatud" id="s_org_persistence_OBJEKT_avatud" object="${objekt}" z="g39VwNnrHSALSft7/f0a5cn+C0A="/>
+        <field:display field="kommentaar" id="s_org_persistence_OBJEKT_kommentaar" object="${objekt}" z="AtM+eSRm/BikQrinb01gMOJh4yE="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_muudetud_date_format}" field="muudetud" id="s_org_persistence_OBJEKT_muudetud" object="${objekt}" z="PB7xkS/24KIcAldqGar9fKt0EMU="/>
+        <field:display field="muutja" id="s_org_persistence_OBJEKT_muutja" object="${objekt}" z="u4vCfCnbjv1KwFzgRoVWM651Jrc="/>
+        <field:display field="nimetus" id="s_org_persistence_OBJEKT_nimetus" object="${objekt}" z="bk6b2+0cFfpZb2D4jDKOWKNB5C0="/>
+        <field:display date="true" dateTimePattern="${OBJEKT_suletud_date_format}" field="suletud" id="s_org_persistence_OBJEKT_suletud" object="${objekt}" z="suGEJF73y+nnRwtivhu0xs7bREU="/>
+        <field:display field="sulgeja" id="s_org_persistence_OBJEKT_sulgeja" object="${objekt}" z="NwctA75SyX6JEdNbxjdbsANrhiA="/>
+    </page:show>
+</div>

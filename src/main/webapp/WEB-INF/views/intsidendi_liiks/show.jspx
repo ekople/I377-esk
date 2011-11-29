@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_INTSIDENDI_LIIK" object="${intsidendi_liik}" path="/intsidendi_liiks" z="V6rZtlSfIJQJ7Vt0IeioItgegJM=">
+        <field:display field="avaja" id="s_org_persistence_INTSIDENDI_LIIK_avaja" object="${intsidendi_liik}" z="wVkDhbqKi0Xd/WJauS+FQFlIs7E="/>
+        <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_avatud_date_format}" field="avatud" id="s_org_persistence_INTSIDENDI_LIIK_avatud" object="${intsidendi_liik}" z="+geKqM96tnmWZiWMvjqhue14Qno="/>
+        <field:display field="kommentaar" id="s_org_persistence_INTSIDENDI_LIIK_kommentaar" object="${intsidendi_liik}" z="jA1uhIzA5XlBhX6Vkf1zvaVD/D0="/>
+        <field:display field="kood" id="s_org_persistence_INTSIDENDI_LIIK_kood" object="${intsidendi_liik}" z="exYiuveDjbfWKc5bOWKuGXba7hc="/>
+        <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_muudetud_date_format}" field="muudetud" id="s_org_persistence_INTSIDENDI_LIIK_muudetud" object="${intsidendi_liik}" z="+hT3zrv/PBU/JH7IkknozRSdQVw="/>
+        <field:display field="muutja" id="s_org_persistence_INTSIDENDI_LIIK_muutja" object="${intsidendi_liik}" z="XhFyj8OSBq6WRltFfG04vUAyVlY="/>
+        <field:display field="nimetus" id="s_org_persistence_INTSIDENDI_LIIK_nimetus" object="${intsidendi_liik}" z="XBJldDkYKhNr2+10i8UmLdDjq7I="/>
+        <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_suletud_date_format}" field="suletud" id="s_org_persistence_INTSIDENDI_LIIK_suletud" object="${intsidendi_liik}" z="8z8xft9ZuphUJ5ZwpS0LfFjsQTw="/>
+        <field:display field="sulgeja" id="s_org_persistence_INTSIDENDI_LIIK_sulgeja" object="${intsidendi_liik}" z="3D3WEN1QDcsS5ajGegZowi8Yask="/>
+    </page:show>
+</div>

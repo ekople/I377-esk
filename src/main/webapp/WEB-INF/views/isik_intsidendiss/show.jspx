@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_ISIK_INTSIDENDIS" object="${isik_intsidendis}" path="/isik_intsidendiss" z="jhfOlgOU8sLZL3GvHdN0qm4oqaQ=">
+        <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_alates_date_format}" field="alates" id="s_org_persistence_ISIK_INTSIDENDIS_alates" object="${isik_intsidendis}" z="yOs4/MJBsc6EMRWtCuFWU9dsFks="/>
+        <field:display field="avaja" id="s_org_persistence_ISIK_INTSIDENDIS_avaja" object="${isik_intsidendis}" z="CSpu6+iZ65/WNjrWmkOrwry6jEs="/>
+        <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_avatud_date_format}" field="avatud" id="s_org_persistence_ISIK_INTSIDENDIS_avatud" object="${isik_intsidendis}" z="MnHWqDURqu+s7pGrieZGJC1/Qyo="/>
+        <field:display field="kirjeldus" id="s_org_persistence_ISIK_INTSIDENDIS_kirjeldus" object="${isik_intsidendis}" z="+lvH3rK1my2INdNj640GDsOgIg0="/>
+        <field:display field="kommentaar" id="s_org_persistence_ISIK_INTSIDENDIS_kommentaar" object="${isik_intsidendis}" z="goaUDqYVVOuRcahTz6RqKlXrEiY="/>
+        <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" field="kuni" id="s_org_persistence_ISIK_INTSIDENDIS_kuni" object="${isik_intsidendis}" z="sbzf6WlPM036glvhBi0YxOo+W1U="/>
+        <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="s_org_persistence_ISIK_INTSIDENDIS_muudetud" object="${isik_intsidendis}" z="7ckmcWAS+P0KJMZC04UmGXKNM2w="/>
+        <field:display field="muutja" id="s_org_persistence_ISIK_INTSIDENDIS_muutja" object="${isik_intsidendis}" z="6UrwDQ9XFybyo8LkFuJ4HQEPFss="/>
+        <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_org_persistence_ISIK_INTSIDENDIS_suletud" object="${isik_intsidendis}" z="r9w9U2p53tyvc25qlV2HgW8NqG0="/>
+        <field:display field="sulgeja" id="s_org_persistence_ISIK_INTSIDENDIS_sulgeja" object="${isik_intsidendis}" z="wg21ilwQoo31nUDHy621HiX6T0Y="/>
+    </page:show>
+</div>

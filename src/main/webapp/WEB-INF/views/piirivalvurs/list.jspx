@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_PIIRIVALVUR" items="${piirivalvurs}" z="C8NAVeZ5a+50RF6TD4HlVB8guKo=">
+        <table:table data="${piirivalvurs}" id="l_org_persistence_PIIRIVALVUR" path="/piirivalvurs" typeIdFieldName="piirivalvurId" z="pFrt5glbnE99oBq/ITcnUQY2cbU=">
+            <table:column id="c_org_persistence_PIIRIVALVUR_avaja" property="avaja" z="dacFiALtRVATjHQs2K5K5tJ6cbY="/>
+            <table:column date="true" dateTimePattern="${PIIRIVALVUR_avatud_date_format}" id="c_org_persistence_PIIRIVALVUR_avatud" property="avatud" z="9BWRpjgIp85oDsDp8d+cDdx5w7I="/>
+            <table:column id="c_org_persistence_PIIRIVALVUR_eesnimed" property="eesnimed" z="UmFZLfUYkJ3iEMFpoGsK8Xvhrsk="/>
+            <table:column id="c_org_persistence_PIIRIVALVUR_isikukood" property="isikukood" z="P6RFrlxnLrfuyuOvHI4h6LoJ/VI="/>
+            <table:column id="c_org_persistence_PIIRIVALVUR_kommentaar" property="kommentaar" z="5BOHzkmKWF+WviQcZXncyQf98vQ="/>
+            <table:column date="true" dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" id="c_org_persistence_PIIRIVALVUR_muudetud" property="muudetud" z="CzxO3boGREfvedz1eBc7xx5COT0="/>
+        </table:table>
+    </page:list>
+</div>

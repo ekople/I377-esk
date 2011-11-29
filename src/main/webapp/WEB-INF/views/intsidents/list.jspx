@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_INTSIDENT" items="${intsidents}" z="JI9ZTwwH+DKyqErq5q2WjUEFqKM=">
+        <table:table data="${intsidents}" id="l_org_persistence_INTSIDENT" path="/intsidents" typeIdFieldName="intsidentId" z="rYV2JzkCIa0F639g5f/iJfFlXPo=">
+            <table:column id="c_org_persistence_INTSIDENT_intsidentLiikId" property="intsidentLiikId" z="F+qK+JC/QB8ixIs+F6OYbxM0a/k="/>
+            <table:column id="c_org_persistence_INTSIDENT_avaja" property="avaja" z="VQNrK+6OchJS0+gupW1h6MaoSUQ="/>
+            <table:column date="true" dateTimePattern="${INTSIDENT_avatud_date_format}" id="c_org_persistence_INTSIDENT_avatud" property="avatud" z="QZf2YaPuegisChyVQB33YrGyZ8M="/>
+            <table:column id="c_org_persistence_INTSIDENT_gpsLatituud" property="gpsLatituud" z="5BFuCqdrU8rFb9onq0hiKeMItrs="/>
+            <table:column id="c_org_persistence_INTSIDENT_gpsLongituud" property="gpsLongituud" z="GOA8COx33DKR15yCioC4QVJSiNI="/>
+            <table:column id="c_org_persistence_INTSIDENT_kirjeldus" property="kirjeldus" z="tQoMqk+EIEQv9HUAv4++CTGMcEI="/>
+        </table:table>
+    </page:list>
+</div>

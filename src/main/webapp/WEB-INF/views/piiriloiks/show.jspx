@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_PIIRILOIK" object="${piiriloik}" path="/piiriloiks" z="Fn1T7SjRqUVgXmQ2+hqHOLdPUyo=">
+        <field:display field="avaja" id="s_org_persistence_PIIRILOIK_avaja" object="${piiriloik}" z="vrY0COGe14ycBBiRRF5liOZ1nPE="/>
+        <field:display date="true" dateTimePattern="${PIIRILOIK_avatud_date_format}" field="avatud" id="s_org_persistence_PIIRILOIK_avatud" object="${piiriloik}" z="QNjr8kUluWlIEwE/FysZrYbjGpY="/>
+        <field:display field="gpsKoordinaadid" id="s_org_persistence_PIIRILOIK_gpsKoordinaadid" object="${piiriloik}" z="atnpix4fwKsXdUxs8k0nULMEMp8="/>
+        <field:display field="kommentaar" id="s_org_persistence_PIIRILOIK_kommentaar" object="${piiriloik}" z="vDx//pl0QeOZJm3J/feoczOu1Dg="/>
+        <field:display field="kood" id="s_org_persistence_PIIRILOIK_kood" object="${piiriloik}" z="L5vr+g1kWi9rjw6EjbWeoVwL+50="/>
+        <field:display date="true" dateTimePattern="${PIIRILOIK_muudetud_date_format}" field="muudetud" id="s_org_persistence_PIIRILOIK_muudetud" object="${piiriloik}" z="cUtzpTH3FZgPup1TTlR8fsD78/k="/>
+        <field:display field="muutja" id="s_org_persistence_PIIRILOIK_muutja" object="${piiriloik}" z="Ur7H6WC+HudbmGzXE701bqRIia4="/>
+        <field:display field="nimetus" id="s_org_persistence_PIIRILOIK_nimetus" object="${piiriloik}" z="L0YBB59tgTGKDElEq9m4K1eJiXg="/>
+        <field:display date="true" dateTimePattern="${PIIRILOIK_suletud_date_format}" field="suletud" id="s_org_persistence_PIIRILOIK_suletud" object="${piiriloik}" z="1uKW4l2FgiqHdMyZwQMSVmDIVUw="/>
+        <field:display field="sulgeja" id="s_org_persistence_PIIRILOIK_sulgeja" object="${piiriloik}" z="RuQuKm35dfNxrQG5ErJBlT4EdkQ="/>
+    </page:show>
+</div>

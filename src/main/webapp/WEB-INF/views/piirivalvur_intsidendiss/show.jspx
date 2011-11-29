@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_PIIRIVALVUR_INTSIDENDIS" object="${piirivalvur_intsidendis}" path="/piirivalvur_intsidendiss" z="fM0elIsrQMwfyyYUdlTcdO7UdyQ=">
+        <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_alates_date_format}" field="alates" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_alates" object="${piirivalvur_intsidendis}" z="QQ0Ql0TXHyHo29aW7oxypJSD3Co="/>
+        <field:display field="avaja" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_avaja" object="${piirivalvur_intsidendis}" z="53MnjjNVgG+1FvvqS9C1gfeSlr0="/>
+        <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_avatud_date_format}" field="avatud" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_avatud" object="${piirivalvur_intsidendis}" z="Cdr4JK3nuP3IMv4hHATEP3URkmQ="/>
+        <field:display field="kirjeldus" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_kirjeldus" object="${piirivalvur_intsidendis}" z="iueLQK22q9SZeZNNZE8+bE8S2E4="/>
+        <field:display field="kommentaar" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_kommentaar" object="${piirivalvur_intsidendis}" z="Uj4CC/Jy0KAXwdvrvXVEGmEK1KA="/>
+        <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_kuni_date_format}" field="kuni" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_kuni" object="${piirivalvur_intsidendis}" z="XUlyk8Gwj50tjydFAT8HyCenvGM="/>
+        <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_muudetud" object="${piirivalvur_intsidendis}" z="824eqKEksZAH3BVksEUHZzNEZLc="/>
+        <field:display field="muutja" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_muutja" object="${piirivalvur_intsidendis}" z="42KaDMWk/uvxMUVmr8v/CKpl7/0="/>
+        <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_suletud" object="${piirivalvur_intsidendis}" z="M6X57nq0spVD+WgoLM0CQ1Q5WFo="/>
+        <field:display field="sulgeja" id="s_org_persistence_PIIRIVALVUR_INTSIDENDIS_sulgeja" object="${piirivalvur_intsidendis}" z="Mz5/2eVrpj1AS2z3xHrrhQXMvGs="/>
+    </page:show>
+</div>

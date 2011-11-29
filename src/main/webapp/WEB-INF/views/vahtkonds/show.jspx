@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_VAHTKOND" object="${vahtkond}" path="/vahtkonds" z="ecUdpNjUojVecl/yk8UnLrrUM7g=">
+        <field:display date="true" dateTimePattern="${VAHTKOND_alates_date_format}" field="alates" id="s_org_persistence_VAHTKOND_alates" object="${vahtkond}" z="Y27HqAFK850OQfSbPTUG6SaSpeo="/>
+        <field:display field="avaja" id="s_org_persistence_VAHTKOND_avaja" object="${vahtkond}" z="Pv/fxSdBZMU3DTKB/6SAPZz70n0="/>
+        <field:display date="true" dateTimePattern="${VAHTKOND_avatud_date_format}" field="avatud" id="s_org_persistence_VAHTKOND_avatud" object="${vahtkond}" z="AGvlU471ea2BB3Op4Qjvi4zBkNk="/>
+        <field:display field="kommentaar" id="s_org_persistence_VAHTKOND_kommentaar" object="${vahtkond}" z="8hthS0eZe0Qy6ilxjX8AwlxQzA8="/>
+        <field:display field="kood" id="s_org_persistence_VAHTKOND_kood" object="${vahtkond}" z="9B6iMjPe+R+NCHr5WyqlYnrMm3I="/>
+        <field:display date="true" dateTimePattern="${VAHTKOND_kuni_date_format}" field="kuni" id="s_org_persistence_VAHTKOND_kuni" object="${vahtkond}" z="93VyQQ1siVn6qjS2lX7RKokjd8E="/>
+        <field:display date="true" dateTimePattern="${VAHTKOND_muudetud_date_format}" field="muudetud" id="s_org_persistence_VAHTKOND_muudetud" object="${vahtkond}" z="TCQ6P2yXq1wztGx8TuygHnTejag="/>
+        <field:display field="muutja" id="s_org_persistence_VAHTKOND_muutja" object="${vahtkond}" z="n5YzvQf3QNUR82sEmXID4dKgnzo="/>
+        <field:display field="nimetus" id="s_org_persistence_VAHTKOND_nimetus" object="${vahtkond}" z="lGuwfzgRvRCwX7VhPu1slLzZwTk="/>
+        <field:display date="true" dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="s_org_persistence_VAHTKOND_suletud" object="${vahtkond}" z="tba30bt8NtGDxOYVKVAOazSxFeA="/>
+        <field:display field="sulgeja" id="s_org_persistence_VAHTKOND_sulgeja" object="${vahtkond}" z="Bxx/EvcBfYiE6NZhhGbHQJBFQZA="/>
+    </page:show>
+</div>

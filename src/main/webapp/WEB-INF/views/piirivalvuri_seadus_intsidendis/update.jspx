@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI" idField="piirivalvuriSeadusIntsidendi" modelAttribute="PIIRIVALVURI_SEADUS_INTSIDENDI" path="/piirivalvuri_seadus_intsidendis" versionField="Version" z="GUvDdhwpPP6J0mIxifAbKcD9L68=">
+        <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_alates_date_format}" field="alates" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_alates" required="true" z="uB7v1FyJDh5xYSgsavk1t8+Zehk="/>
+        <field:input field="avaja" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_avaja" required="true" z="0OVdOFe/rV0DtNPO2H7EYgP297U="/>
+        <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_avatud_date_format}" field="avatud" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_avatud" required="true" z="7K5tYjQyo1HcMri8jEPRKJLWkyQ="/>
+        <field:input field="kirjeldus" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_kirjeldus" required="true" z="fWSYEiOU3+shjd8YNwQCUYJ8Usc="/>
+        <field:input field="kommentaar" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_kommentaar" z="5v/Zr9ss1NpkEehpUgrWQfiSf7A="/>
+        <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_kuni_date_format}" field="kuni" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_kuni" required="true" z="OgTC8O//ifob6oEHGCk/737eVp0="/>
+        <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_muudetud_date_format}" field="muudetud" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_muudetud" required="true" z="upHoszxEmx2HaLyKxuVWlP7FFqc="/>
+        <field:input field="muutja" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_muutja" required="true" z="hyFSzyL9Zez9ePC05oz2xMPIIxY="/>
+        <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_suletud" required="true" z="ohxFc06bYHVyST7IQQibRLxH5qM="/>
+        <field:input field="sulgeja" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_sulgeja" z="fbhH4uFaQA91U5ONgQDCWrVL/6M="/>
+    </form:update>
+</div>

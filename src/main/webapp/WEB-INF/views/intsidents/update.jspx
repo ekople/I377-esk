@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_persistence_INTSIDENT" idField="intsidentId" modelAttribute="INTSIDENT" path="/intsidents" versionField="Version" z="oORpEDudCZ6t/Y//ik7WicVwFoo=">
+        <field:input field="intsidentLiikId" id="c_org_persistence_INTSIDENT_intsidentLiikId" validationMessageCode="field_invalid_integer" z="q1iA2ACoj4zJ6AuVckssonrrS9c="/>
+        <field:input field="avaja" id="c_org_persistence_INTSIDENT_avaja" required="true" z="iJbQn6sxpffm8dA8WIujpfYrRG0="/>
+        <field:datetime dateTimePattern="${INTSIDENT_avatud_date_format}" field="avatud" id="c_org_persistence_INTSIDENT_avatud" required="true" z="ucmjlu1Y4MVwqZ9JgjXwrEMN7vM="/>
+        <field:input field="gpsLatituud" id="c_org_persistence_INTSIDENT_gpsLatituud" validationMessageCode="field_invalid_number" z="le11Hq1aitfsJkeslY/EvWV9n4k="/>
+        <field:input field="gpsLongituud" id="c_org_persistence_INTSIDENT_gpsLongituud" validationMessageCode="field_invalid_number" z="gGw9f5Sg5xUU410XBeJvztPCN0c="/>
+        <field:input field="kirjeldus" id="c_org_persistence_INTSIDENT_kirjeldus" z="jiiOnpV7BZKqj5if3L+IZ0STlsI="/>
+        <field:input field="kommentaar" id="c_org_persistence_INTSIDENT_kommentaar" z="nIATEZz7nr6PGEU1CwttLS7mjok="/>
+        <field:input field="kood" id="c_org_persistence_INTSIDENT_kood" z="khc+mDkkLQooUJDpR59Kj7lItzs="/>
+        <field:datetime dateTimePattern="${INTSIDENT_muudetud_date_format}" field="muudetud" id="c_org_persistence_INTSIDENT_muudetud" required="true" z="LG8qhpB+RsV1sUuTwyQ4BNW9+TA="/>
+        <field:input field="muutja" id="c_org_persistence_INTSIDENT_muutja" required="true" z="2QUv94pQxQKVqhpn426ipHFh9E4="/>
+        <field:input field="nimetus" id="c_org_persistence_INTSIDENT_nimetus" z="PRK0jNaS0FclTjeTC3Vnnppbhg8="/>
+        <field:datetime dateTimePattern="${INTSIDENT_suletud_date_format}" field="suletud" id="c_org_persistence_INTSIDENT_suletud" required="true" z="32qDEfDaOu4UdLACjYciJ9asvpU="/>
+        <field:input field="sulgeja" id="c_org_persistence_INTSIDENT_sulgeja" z="SNPBLbqavyqRx4NOO14POZ7QLQw="/>
+        <field:datetime dateTimePattern="${INTSIDENT_toimumisealgus_date_format}" field="toimumiseAlgus" id="c_org_persistence_INTSIDENT_toimumiseAlgus" z="8AI3yRpseJYq85z1cd2ujhpcJas="/>
+        <field:datetime dateTimePattern="${INTSIDENT_toimumiselopp_date_format}" field="toimumiseLopp" id="c_org_persistence_INTSIDENT_toimumiseLopp" z="KxJz7LefHihCK+p0qe5ONQKHLE8="/>
+        <field:simple field="oBJEKT_INTSIDENDIS" id="c_org_persistence_INTSIDENT_oBJEKT_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="O B J E K T_ I N T S I D E N D I S" z="Lk8OPCACox/qWsbC3j29v43ZhJs="/>
+        <field:simple field="iSIK_INTSIDENDIS" id="c_org_persistence_INTSIDENT_iSIK_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K_ I N T S I D E N D I S" z="KWTi/gcox/lgK6YOUGPKVs57cSM="/>
+        <field:simple field="pIIRIVALVUR_INTSIDENDIS" id="c_org_persistence_INTSIDENT_pIIRIVALVUR_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="/jgbllxHmmBuyuSW2BnQyCha31I="/>
+        <field:simple field="vAHTKOND_INTSIDENDIS" id="c_org_persistence_INTSIDENT_vAHTKOND_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="XDHzhGpXwXzVAXnlX+yAZk0720I="/>
+    </form:update>
+</div>

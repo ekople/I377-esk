@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_PIIRIRIKKUJA" object="${piiririkkuja}" path="/piiririkkujas" z="78NnMiATaf0hagh/BCod54sElUQ=">
+        <field:display field="avaja" id="s_org_persistence_PIIRIRIKKUJA_avaja" object="${piiririkkuja}" z="pxL/+unJ2HoxBCqk29BYUAQ71wg="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_avatud_date_format}" field="avatud" id="s_org_persistence_PIIRIRIKKUJA_avatud" object="${piiririkkuja}" z="ZWLuaFk8933pT08901awyjLtRtU="/>
+        <field:display field="eesnimi" id="s_org_persistence_PIIRIRIKKUJA_eesnimi" object="${piiririkkuja}" z="u93yU8Ux0pGBRqF4EqS5sT8MI0M="/>
+        <field:display field="isikukood" id="s_org_persistence_PIIRIRIKKUJA_isikukood" object="${piiririkkuja}" z="jvBZiWXZWK6BTM0kCGQF2ilvEMU="/>
+        <field:display field="kommentaar" id="s_org_persistence_PIIRIRIKKUJA_kommentaar" object="${piiririkkuja}" z="Iy6KKlAh6TGI4+4fA3EN/+nnAHw="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" field="muudetud" id="s_org_persistence_PIIRIRIKKUJA_muudetud" object="${piiririkkuja}" z="fihk+oDS2jOcwKLzP4uYrYpbX4Q="/>
+        <field:display field="muutja" id="s_org_persistence_PIIRIRIKKUJA_muutja" object="${piiririkkuja}" z="XvF3w5vgZhao0ZuOsB7v8IBQ9qs="/>
+        <field:display field="perekNimi" id="s_org_persistence_PIIRIRIKKUJA_perekNimi" object="${piiririkkuja}" z="5d+YlZq7xnDnJDyUKoCexotwbdc="/>
+        <field:display field="sugu" id="s_org_persistence_PIIRIRIKKUJA_sugu" object="${piiririkkuja}" z="Ahgf8uZubV3W3yaPIhtjYwiO7wQ="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" field="suletud" id="s_org_persistence_PIIRIRIKKUJA_suletud" object="${piiririkkuja}" z="ntUnIk4Ihu8f7rmcr3D5ieh0NWQ="/>
+        <field:display field="sulgeja" id="s_org_persistence_PIIRIRIKKUJA_sulgeja" object="${piiririkkuja}" z="0vfIY2l5BCmB1j1sZjNSdBbIMCQ="/>
+        <field:display date="true" dateTimePattern="${PIIRIRIKKUJA_synniaeg_date_format}" field="synniaeg" id="s_org_persistence_PIIRIRIKKUJA_synniaeg" object="${piiririkkuja}" z="GzVYm2jqJUhIuheAMRPDSzGPV7g="/>
+    </page:show>
+</div>

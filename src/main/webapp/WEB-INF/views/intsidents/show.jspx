@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_INTSIDENT" object="${intsident}" path="/intsidents" z="enU5wUH+V2Ys98Aa05wZyY9vFWE=">
+        <field:display field="intsidentLiikId" id="s_org_persistence_INTSIDENT_intsidentLiikId" object="${intsident}" z="reeecLWp/1rZwTXp7V1LVl/k8Qc="/>
+        <field:display field="avaja" id="s_org_persistence_INTSIDENT_avaja" object="${intsident}" z="pVtnr8qJHGBbo5+DL+M6fQ8x3dQ="/>
+        <field:display date="true" dateTimePattern="${INTSIDENT_avatud_date_format}" field="avatud" id="s_org_persistence_INTSIDENT_avatud" object="${intsident}" z="dljmRrn2LEmkVSUs9RuouNI2MCo="/>
+        <field:display field="gpsLatituud" id="s_org_persistence_INTSIDENT_gpsLatituud" object="${intsident}" z="9iSjcArZB74NSJqsiYTjyxFL588="/>
+        <field:display field="gpsLongituud" id="s_org_persistence_INTSIDENT_gpsLongituud" object="${intsident}" z="Z/dmTfvgafCp4vEfCgHYso4CkYM="/>
+        <field:display field="kirjeldus" id="s_org_persistence_INTSIDENT_kirjeldus" object="${intsident}" z="1sfcXIc8UD7DGBMjv60B+dckamQ="/>
+        <field:display field="kommentaar" id="s_org_persistence_INTSIDENT_kommentaar" object="${intsident}" z="N6Mryc1er4CQk9zNsh81YCXqPOc="/>
+        <field:display field="kood" id="s_org_persistence_INTSIDENT_kood" object="${intsident}" z="d5PdOPRaSXhBLrvC6YRSMuKNpaY="/>
+        <field:display date="true" dateTimePattern="${INTSIDENT_muudetud_date_format}" field="muudetud" id="s_org_persistence_INTSIDENT_muudetud" object="${intsident}" z="wzENO7Q+5uRJMABsmPlVJ/SqJB4="/>
+        <field:display field="muutja" id="s_org_persistence_INTSIDENT_muutja" object="${intsident}" z="ExQ9FjZGz2ODJrPACtBJUoA8ASg="/>
+        <field:display field="nimetus" id="s_org_persistence_INTSIDENT_nimetus" object="${intsident}" z="OHScbBAgZfy0PJz6phJj7Z5EvMk="/>
+        <field:display date="true" dateTimePattern="${INTSIDENT_suletud_date_format}" field="suletud" id="s_org_persistence_INTSIDENT_suletud" object="${intsident}" z="WCMZouiiO7ptrdKHZrX0fdl+n+A="/>
+        <field:display field="sulgeja" id="s_org_persistence_INTSIDENT_sulgeja" object="${intsident}" z="0X5X2SEl57o+urQgWuujH9eNTyA="/>
+        <field:display date="true" dateTimePattern="${INTSIDENT_toimumisealgus_date_format}" field="toimumiseAlgus" id="s_org_persistence_INTSIDENT_toimumiseAlgus" object="${intsident}" z="opSy4h/o4Fg3v/mkiuvfBBk4sh0="/>
+        <field:display date="true" dateTimePattern="${INTSIDENT_toimumiselopp_date_format}" field="toimumiseLopp" id="s_org_persistence_INTSIDENT_toimumiseLopp" object="${intsident}" z="PbTJq6xA0OePSQgypTFPdmtlBxs="/>
+    </page:show>
+</div>

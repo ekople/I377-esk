@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_persistence_VAHTKOND_INTSIDENDIS" items="${vahtkond_intsidendiss}" z="2H/8hDN+NXhywnTnA367Trcek0Y=">
+        <table:table data="${vahtkond_intsidendiss}" id="l_org_persistence_VAHTKOND_INTSIDENDIS" path="/vahtkond_intsidendiss" typeIdFieldName="vahtkondIntsidendisId" z="0f1UgGQ6R5r46yQJOe7sFkizRJI=">
+            <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_alates_date_format}" id="c_org_persistence_VAHTKOND_INTSIDENDIS_alates" property="alates" z="7NzhRheaWQjR3kEsLchnG2uAibo="/>
+            <table:column id="c_org_persistence_VAHTKOND_INTSIDENDIS_avaja" property="avaja" z="FfhfdYYlO9t+OjScCNIlh0lLN10="/>
+            <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_avatud_date_format}" id="c_org_persistence_VAHTKOND_INTSIDENDIS_avatud" property="avatud" z="rGLQpwmDzYIp3RLMNIlKTtdtQ6M="/>
+            <table:column id="c_org_persistence_VAHTKOND_INTSIDENDIS_kirjeldus" property="kirjeldus" z="AJYR2Hkq7rXeaWHsWW7w7opb0fI="/>
+            <table:column id="c_org_persistence_VAHTKOND_INTSIDENDIS_kommentaar" property="kommentaar" z="vbYGBviVCFg+/7DEt/DqN1SHty0="/>
+            <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_kuni_date_format}" id="c_org_persistence_VAHTKOND_INTSIDENDIS_kuni" property="kuni" z="YX5Bstd+wlk0rFz0OwxHh6c3fQA="/>
+        </table:table>
+    </page:list>
+</div>
