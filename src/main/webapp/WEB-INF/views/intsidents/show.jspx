@@ -18,5 +18,7 @@
         <field:display field="sulgeja" id="s_org_persistence_INTSIDENT_sulgeja" object="${intsident}" z="0X5X2SEl57o+urQgWuujH9eNTyA="/>
         <field:display date="true" dateTimePattern="${INTSIDENT_toimumisealgus_date_format}" field="toimumiseAlgus" id="s_org_persistence_INTSIDENT_toimumiseAlgus" object="${intsident}" z="opSy4h/o4Fg3v/mkiuvfBBk4sh0="/>
         <field:display date="true" dateTimePattern="${INTSIDENT_toimumiselopp_date_format}" field="toimumiseLopp" id="s_org_persistence_INTSIDENT_toimumiseLopp" object="${intsident}" z="PbTJq6xA0OePSQgypTFPdmtlBxs="/>
+        <field:display field="INTSIDENDI_LIIK_ID" id="s_org_persistence_INTSIDENT_iNTSIDENDI_LIIK_ID" object="${intsident}" z="57cxfPUQnIimJfKvIXIfuno7zEU="/>
+        <field:display field="PIIRILOIK_ID" id="s_org_persistence_INTSIDENT_pIIRILOIK_ID" object="${intsident}" z="RRr0fCRD3vEKYXlAyPtGLehnEc0="/>
     </page:show>
 </div>

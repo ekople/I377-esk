@@ -15,5 +15,6 @@
         <field:display date="true" dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="s_org_persistence_SEADUSE_PUNKT_suletud" object="${seaduse_punkt}" z="nzZTZcOdEpMu5IkbTka1QtAe3MI="/>
         <field:display field="sulgeja" id="s_org_persistence_SEADUSE_PUNKT_sulgeja" object="${seaduse_punkt}" z="laL9+0krwQ9fB5bgI7uSilVWrmw="/>
         <field:display field="tekst" id="s_org_persistence_SEADUSE_PUNKT_tekst" object="${seaduse_punkt}" z="jmD0Hj7Qgjf7Y1xwqonFASV2F5s="/>
+        <field:display field="SEADUS_ID" id="s_org_persistence_SEADUSE_PUNKT_sEADUS_ID" object="${seaduse_punkt}" z="dUyM0UcvhvISe4y2XIYsKPklnrA="/>
     </page:show>
 </div>

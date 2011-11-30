@@ -22,5 +22,7 @@
         <field:simple field="iSIK_INTSIDENDIS" id="c_org_persistence_INTSIDENT_iSIK_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K_ I N T S I D E N D I S" z="KWTi/gcox/lgK6YOUGPKVs57cSM="/>
         <field:simple field="pIIRIVALVUR_INTSIDENDIS" id="c_org_persistence_INTSIDENT_pIIRIVALVUR_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="/jgbllxHmmBuyuSW2BnQyCha31I="/>
         <field:simple field="vAHTKOND_INTSIDENDIS" id="c_org_persistence_INTSIDENT_vAHTKOND_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="XDHzhGpXwXzVAXnlX+yAZk0720I="/>
+        <field:select field="iNTSIDENDI_LIIK_ID" id="c_org_persistence_INTSIDENT_iNTSIDENDI_LIIK_ID" itemValue="intsidendiLiikId" items="${intsidendi_liiks}" path="/intsidendi_liiks" z="+T7KKvgLfMZiOj7eYeW795TNuFU="/>
+        <field:select field="pIIRILOIK_ID" id="c_org_persistence_INTSIDENT_pIIRILOIK_ID" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="qfEUIWYXPfT4SAxSC7vgz5vcUbs="/>
     </form:update>
 </div>

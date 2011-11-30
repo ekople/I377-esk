@@ -13,6 +13,8 @@
         <field:input field="muutja" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_muutja" required="true" z="hyFSzyL9Zez9ePC05oz2xMPIIxY="/>
         <field:datetime dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_suletud" required="true" z="ohxFc06bYHVyST7IQQibRLxH5qM="/>
         <field:input field="sulgeja" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_sulgeja" z="fbhH4uFaQA91U5ONgQDCWrVL/6M="/>
+        <field:select field="sEADUSE_PUNKT_ID" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_sEADUSE_PUNKT_ID" itemValue="seadusePunktId" items="${seaduse_punkts}" path="/seaduse_punkts" z="G7Hf26Y+12wbq0X2/YlHTLuCvrQ="/>
+        <field:select field="pIIRIVALVUR_INTSIDENDIS_ID" id="c_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_pIIRIVALVUR_INTSIDENDIS_ID" itemValue="piirivalvurIntsidendisId" items="${piirivalvur_intsidendiss}" path="/piirivalvur_intsidendiss" z="djHW+Cj/EvmlnxvDopIodHEK+8c="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI" render="${not empty dependencies}" z="oJGeRMKP8raa/MrIBXjJQdmdgPk="/>
 </div>

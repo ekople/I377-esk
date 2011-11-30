@@ -10,10 +10,12 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.INTSIDENT;
 import org.persistence.PIIRIVALVUR;
 import org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI;
 import org.persistence.PIIRIVALVUR_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -30,6 +32,7 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
     public String PIIRIVALVUR_INTSIDENDISController.create(@Valid PIIRIVALVUR_INTSIDENDIS PIIRIVALVUR_INTSIDENDIS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS", PIIRIVALVUR_INTSIDENDIS);
+            addDateTimeFormatPatterns(uiModel);
             return "piirivalvur_intsidendiss/create";
         }
         uiModel.asMap().clear();
@@ -40,11 +43,13 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String PIIRIVALVUR_INTSIDENDISController.createForm(Model uiModel) {
         uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS", new PIIRIVALVUR_INTSIDENDIS());
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvur_intsidendiss/create";
     }
     
     @RequestMapping(value = "/{piirivalvurIntsidendisId}", method = RequestMethod.GET)
     public String PIIRIVALVUR_INTSIDENDISController.show(@PathVariable("piirivalvurIntsidendisId") Long piirivalvurIntsidendisId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("piirivalvur_intsidendis", PIIRIVALVUR_INTSIDENDIS.findPIIRIVALVUR_INTSIDENDIS(piirivalvurIntsidendisId));
         uiModel.addAttribute("itemId", piirivalvurIntsidendisId);
         return "piirivalvur_intsidendiss/show";
@@ -60,6 +65,7 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
         } else {
             uiModel.addAttribute("piirivalvur_intsidendiss", PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvur_intsidendiss/list";
     }
     
@@ -67,6 +73,7 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
     public String PIIRIVALVUR_INTSIDENDISController.update(@Valid PIIRIVALVUR_INTSIDENDIS PIIRIVALVUR_INTSIDENDIS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS", PIIRIVALVUR_INTSIDENDIS);
+            addDateTimeFormatPatterns(uiModel);
             return "piirivalvur_intsidendiss/update";
         }
         uiModel.asMap().clear();
@@ -77,6 +84,7 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
     @RequestMapping(value = "/{piirivalvurIntsidendisId}", params = "form", method = RequestMethod.GET)
     public String PIIRIVALVUR_INTSIDENDISController.updateForm(@PathVariable("piirivalvurIntsidendisId") Long piirivalvurIntsidendisId, Model uiModel) {
         uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS", PIIRIVALVUR_INTSIDENDIS.findPIIRIVALVUR_INTSIDENDIS(piirivalvurIntsidendisId));
+        addDateTimeFormatPatterns(uiModel);
         return "piirivalvur_intsidendiss/update";
     }
     
@@ -107,6 +115,14 @@ privileged aspect PIIRIVALVUR_INTSIDENDISController_Roo_Controller {
     @ModelAttribute("piirivalvur_intsidendiss")
     public Collection<PIIRIVALVUR_INTSIDENDIS> PIIRIVALVUR_INTSIDENDISController.populatePIIRIVALVUR_INTSIDENDISs() {
         return PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs();
+    }
+    
+    void PIIRIVALVUR_INTSIDENDISController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIVALVUR_INTSIDENDIS_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String PIIRIVALVUR_INTSIDENDISController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

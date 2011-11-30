@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.persistence.SEADUSE_PUNKT;
@@ -29,14 +30,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	@Column(name="PIIRIVALVURI_SEADUS_INTSIDENDI", unique=true, nullable=false)
 	private Long piirivalvuriSeadusIntsidendi;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date alates;
 
 	@Column(nullable=false, length=32)
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date avatud;
 
@@ -45,18 +46,18 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 
 	private String kommentaar;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date muudetud;
 
 	@Column(nullable=false, length=32)
 	private String muutja;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date suletud;
 

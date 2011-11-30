@@ -14,6 +14,7 @@
         <field:input field="nimetus" id="c_org_persistence_VAHTKOND_nimetus" z="gmzgX/gWgxGWFJYA2uPc4o21aeQ="/>
         <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_org_persistence_VAHTKOND_suletud" required="true" z="JYmkmDjURcpFSaAu97TvbNZbOmQ="/>
         <field:input field="sulgeja" id="c_org_persistence_VAHTKOND_sulgeja" z="8vdy4/aBty3ObSvZtZt0UMLgnk0="/>
+        <field:simple field="vAHTKOND_INTSIDENDIS" id="c_org_persistence_VAHTKOND_vAHTKOND_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="qI8hea07PqHLvWkEYf6hBSFQvds="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_VAHTKOND" render="${not empty dependencies}" z="tZ+1Vt6SN7NcNXbdELFHnP9k+oo="/>
 </div>

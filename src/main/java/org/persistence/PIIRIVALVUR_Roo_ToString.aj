@@ -16,7 +16,7 @@ privileged aspect PIIRIVALVUR_Roo_ToString {
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
-        sb.append("PIIRIVALVUR_INTSIDENDIS: ").append(getPIIRIVALVUR_INTSIDENDIS_ID() == null ? "null" : getPIIRIVALVUR_INTSIDENDIS_ID().size()).append(", ");
+        sb.append("PIIRIVALVUR_INTSIDENDIS: ").append(getPIIRIVALVUR_INTSIDENDIS() == null ? "null" : getPIIRIVALVUR_INTSIDENDIS().size()).append(", ");
         sb.append("Perekonnanimi: ").append(getPerekonnanimi()).append(", ");
         sb.append("PiirivalvurId: ").append(getPiirivalvurId()).append(", ");
         sb.append("SoduriKood: ").append(getSoduriKood()).append(", ");

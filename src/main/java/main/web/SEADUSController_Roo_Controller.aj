@@ -10,8 +10,10 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.SEADUS;
 import org.persistence.SEADUSE_PUNKT;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,6 +30,7 @@ privileged aspect SEADUSController_Roo_Controller {
     public String SEADUSController.create(@Valid SEADUS SEADUS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("SEADUS", SEADUS);
+            addDateTimeFormatPatterns(uiModel);
             return "seadus/create";
         }
         uiModel.asMap().clear();
@@ -38,11 +41,13 @@ privileged aspect SEADUSController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String SEADUSController.createForm(Model uiModel) {
         uiModel.addAttribute("SEADUS", new SEADUS());
+        addDateTimeFormatPatterns(uiModel);
         return "seadus/create";
     }
     
     @RequestMapping(value = "/{seaduseId}", method = RequestMethod.GET)
     public String SEADUSController.show(@PathVariable("seaduseId") Long seaduseId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("seadus", SEADUS.findSEADUS(seaduseId));
         uiModel.addAttribute("itemId", seaduseId);
         return "seadus/show";
@@ -58,6 +63,7 @@ privileged aspect SEADUSController_Roo_Controller {
         } else {
             uiModel.addAttribute("seadus", SEADUS.findAllSEADUS());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "seadus/list";
     }
     
@@ -65,6 +71,7 @@ privileged aspect SEADUSController_Roo_Controller {
     public String SEADUSController.update(@Valid SEADUS SEADUS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("SEADUS", SEADUS);
+            addDateTimeFormatPatterns(uiModel);
             return "seadus/update";
         }
         uiModel.asMap().clear();
@@ -75,6 +82,7 @@ privileged aspect SEADUSController_Roo_Controller {
     @RequestMapping(value = "/{seaduseId}", params = "form", method = RequestMethod.GET)
     public String SEADUSController.updateForm(@PathVariable("seaduseId") Long seaduseId, Model uiModel) {
         uiModel.addAttribute("SEADUS", SEADUS.findSEADUS(seaduseId));
+        addDateTimeFormatPatterns(uiModel);
         return "seadus/update";
     }
     
@@ -95,6 +103,12 @@ privileged aspect SEADUSController_Roo_Controller {
     @ModelAttribute("seaduse_punkts")
     public Collection<SEADUSE_PUNKT> SEADUSController.populateSEADUSE_PUNKTs() {
         return SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
+    }
+    
+    void SEADUSController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("SEADUS_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("SEADUS_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("SEADUS_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String SEADUSController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

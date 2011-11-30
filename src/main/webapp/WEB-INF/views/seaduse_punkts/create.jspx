@@ -16,6 +16,7 @@
         <field:input field="sulgeja" id="c_org_persistence_SEADUSE_PUNKT_sulgeja" z="ZaBwbujNgC6HUi+Ve3dZn+eIy7I="/>
         <field:input field="tekst" id="c_org_persistence_SEADUSE_PUNKT_tekst" z="7+IDq0fMvpjVkVgj0+43fK7E2f8="/>
         <field:simple field="pIIRIVALVURI_SEADUS_INTSIDENDI" id="c_org_persistence_SEADUSE_PUNKT_pIIRIVALVURI_SEADUS_INTSIDENDI" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R I_ S E A D U S_ I N T S I D E N D I" z="fzoCTqW0Msn1fzjcX6BZD40eCmw="/>
+        <field:select field="sEADUS_ID" id="c_org_persistence_SEADUSE_PUNKT_sEADUS_ID" itemValue="seaduseId" items="${seadus}" path="/seadus" z="sGNTZYAfuD0BFb95ae4IPDjhnf4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_SEADUSE_PUNKT" render="${not empty dependencies}" z="qaXIoK8CLZicHS9B7QvJNu1IumQ="/>
 </div>

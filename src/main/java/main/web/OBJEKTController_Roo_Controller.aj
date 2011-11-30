@@ -10,8 +10,10 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.OBJEKT;
 import org.persistence.OBJEKT_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,6 +30,7 @@ privileged aspect OBJEKTController_Roo_Controller {
     public String OBJEKTController.create(@Valid OBJEKT OBJEKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("OBJEKT", OBJEKT);
+            addDateTimeFormatPatterns(uiModel);
             return "objekts/create";
         }
         uiModel.asMap().clear();
@@ -38,11 +41,13 @@ privileged aspect OBJEKTController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String OBJEKTController.createForm(Model uiModel) {
         uiModel.addAttribute("OBJEKT", new OBJEKT());
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/create";
     }
     
     @RequestMapping(value = "/{objektId}", method = RequestMethod.GET)
     public String OBJEKTController.show(@PathVariable("objektId") Long objektId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("objekt", OBJEKT.findOBJEKT(objektId));
         uiModel.addAttribute("itemId", objektId);
         return "objekts/show";
@@ -58,6 +63,7 @@ privileged aspect OBJEKTController_Roo_Controller {
         } else {
             uiModel.addAttribute("objekts", OBJEKT.findAllOBJEKTS());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/list";
     }
     
@@ -65,6 +71,7 @@ privileged aspect OBJEKTController_Roo_Controller {
     public String OBJEKTController.update(@Valid OBJEKT OBJEKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("OBJEKT", OBJEKT);
+            addDateTimeFormatPatterns(uiModel);
             return "objekts/update";
         }
         uiModel.asMap().clear();
@@ -75,6 +82,7 @@ privileged aspect OBJEKTController_Roo_Controller {
     @RequestMapping(value = "/{objektId}", params = "form", method = RequestMethod.GET)
     public String OBJEKTController.updateForm(@PathVariable("objektId") Long objektId, Model uiModel) {
         uiModel.addAttribute("OBJEKT", OBJEKT.findOBJEKT(objektId));
+        addDateTimeFormatPatterns(uiModel);
         return "objekts/update";
     }
     
@@ -95,6 +103,12 @@ privileged aspect OBJEKTController_Roo_Controller {
     @ModelAttribute("objekt_intsidendiss")
     public Collection<OBJEKT_INTSIDENDIS> OBJEKTController.populateOBJEKT_INTSIDENDISs() {
         return OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs();
+    }
+    
+    void OBJEKTController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("OBJEKT_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String OBJEKTController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

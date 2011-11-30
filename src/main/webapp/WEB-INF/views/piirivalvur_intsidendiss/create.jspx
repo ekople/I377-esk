@@ -14,6 +14,8 @@
         <field:datetime dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRIVALVUR_INTSIDENDIS_suletud" required="true" z="Bbllh5Nu0ft83dq6VHqEJyPioc8="/>
         <field:input field="sulgeja" id="c_org_persistence_PIIRIVALVUR_INTSIDENDIS_sulgeja" z="cvwlv4TYwVP1LE80ulzZL3C89Js="/>
         <field:simple field="pIIRIVALVURI_SEADUS_INTSIDENDI" id="c_org_persistence_PIIRIVALVUR_INTSIDENDIS_pIIRIVALVURI_SEADUS_INTSIDENDI" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R I_ S E A D U S_ I N T S I D E N D I" z="9znwkV0jzKWsnetW8Umdnq2HU8E="/>
+        <field:select field="iNTSIDENT_ID" id="c_org_persistence_PIIRIVALVUR_INTSIDENDIS_iNTSIDENT_ID" itemValue="intsidentId" items="${intsidents}" path="/intsidents" z="cAWbgw4HvB5rQjqSX7nbeDE8KzY="/>
+        <field:select field="pIIRIVALVUR_ID" id="c_org_persistence_PIIRIVALVUR_INTSIDENDIS_pIIRIVALVUR_ID" itemValue="piirivalvurId" items="${piirivalvurs}" path="/piirivalvurs" z="IiwfBwvKZI/iYC4nDfGCi4JtJds="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_PIIRIVALVUR_INTSIDENDIS" render="${not empty dependencies}" z="j5Un8LBjYm7Cr7pRX3vUlWqGgbo="/>
 </div>

@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.persistence.PIIRIVALVUR_INTSIDENDIS;
@@ -32,7 +33,7 @@ public class PIIRIVALVUR {
 	@Column(nullable=false, length=32)
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date avatud;
 
@@ -44,7 +45,7 @@ public class PIIRIVALVUR {
 
 	private String kommentaar;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date muudetud;
 
@@ -60,7 +61,7 @@ public class PIIRIVALVUR {
 	@Column(length=1)
 	private String sugu;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date suletud;
 

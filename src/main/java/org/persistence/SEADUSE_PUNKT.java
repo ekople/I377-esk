@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.persistence.SEADUS;
@@ -34,7 +35,7 @@ public class SEADUSE_PUNKT {
 	@Column(nullable=false, length=32)
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date avatud;
 
@@ -47,7 +48,7 @@ public class SEADUSE_PUNKT {
 	@Column(length=18)
 	private String kommentaar;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date muudetud;
 
@@ -60,7 +61,7 @@ public class SEADUSE_PUNKT {
 	@Column(length=18)
 	private String paragrahv;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date suletud;
 

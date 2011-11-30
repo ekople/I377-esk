@@ -10,6 +10,7 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.INTSIDENDI_LIIK;
 import org.persistence.INTSIDENT;
 import org.persistence.ISIK_INTSIDENDIS;
@@ -17,6 +18,7 @@ import org.persistence.OBJEKT_INTSIDENDIS;
 import org.persistence.PIIRILOIK;
 import org.persistence.PIIRIVALVUR_INTSIDENDIS;
 import org.persistence.VAHTKOND_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,6 +35,7 @@ privileged aspect INTSIDENTController_Roo_Controller {
     public String INTSIDENTController.create(@Valid INTSIDENT INTSIDENT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("INTSIDENT", INTSIDENT);
+            addDateTimeFormatPatterns(uiModel);
             return "intsidents/create";
         }
         uiModel.asMap().clear();
@@ -43,11 +46,13 @@ privileged aspect INTSIDENTController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String INTSIDENTController.createForm(Model uiModel) {
         uiModel.addAttribute("INTSIDENT", new INTSIDENT());
+        addDateTimeFormatPatterns(uiModel);
         return "intsidents/create";
     }
     
     @RequestMapping(value = "/{intsidentId}", method = RequestMethod.GET)
     public String INTSIDENTController.show(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("intsident", INTSIDENT.findINTSIDENT(intsidentId));
         uiModel.addAttribute("itemId", intsidentId);
         return "intsidents/show";
@@ -63,6 +68,7 @@ privileged aspect INTSIDENTController_Roo_Controller {
         } else {
             uiModel.addAttribute("intsidents", INTSIDENT.findAllINTSIDENTS());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "intsidents/list";
     }
     
@@ -70,6 +76,7 @@ privileged aspect INTSIDENTController_Roo_Controller {
     public String INTSIDENTController.update(@Valid INTSIDENT INTSIDENT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("INTSIDENT", INTSIDENT);
+            addDateTimeFormatPatterns(uiModel);
             return "intsidents/update";
         }
         uiModel.asMap().clear();
@@ -80,6 +87,7 @@ privileged aspect INTSIDENTController_Roo_Controller {
     @RequestMapping(value = "/{intsidentId}", params = "form", method = RequestMethod.GET)
     public String INTSIDENTController.updateForm(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
         uiModel.addAttribute("INTSIDENT", INTSIDENT.findINTSIDENT(intsidentId));
+        addDateTimeFormatPatterns(uiModel);
         return "intsidents/update";
     }
     
@@ -125,6 +133,14 @@ privileged aspect INTSIDENTController_Roo_Controller {
     @ModelAttribute("vahtkond_intsidendiss")
     public Collection<VAHTKOND_INTSIDENDIS> INTSIDENTController.populateVAHTKOND_INTSIDENDISs() {
         return VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs();
+    }
+    
+    void INTSIDENTController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("INTSIDENT_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_toimumisealgus_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_toimumiselopp_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String INTSIDENTController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

@@ -1,9 +1,12 @@
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 04:45:55
-project --topLevelPackage main --projectName Intsident --java 6
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 04:46:00
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 04:46:13
-persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
-web mvc setup
-web mvc all --package ~.web
-web mvc all --package ~.web
-// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 07:12:41
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 22:58:51
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-29 23:21:03
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-29 23:22:57
+web mvc controller --class ~.web.loginController
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-30 00:32:32
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-30 00:38:54
+web mvc controller --class ~.web.intsidendiRegController
+web mvc controller --class ~.web.intsidendiRedaktorController
+web mvc controller --class ~.web.intsidendiPiirivalvuriRedController
+web mvc controller --class ~.web.intsidendidPiirivalvuriKaupaController
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-11-30 00:55:02
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-11-30 19:59:06

@@ -13,6 +13,5 @@
         <field:input field="nimetus" id="c_org_persistence_PIIRILOIK_nimetus" z="1fhp3tu1runYNwyDMu/UWvBXxj4="/>
         <field:datetime dateTimePattern="${PIIRILOIK_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRILOIK_suletud" required="true" z="TMBag/L80bPcYlPbUdr0xrrq1J4="/>
         <field:input field="sulgeja" id="c_org_persistence_PIIRILOIK_sulgeja" z="1wMBvOyl2uy8BiyEJ4VrU8danYc="/>
-        <field:simple field="iNTSIDENT" id="c_org_persistence_PIIRILOIK_iNTSIDENT" messageCode="entity_reference_not_managed" messageCodeAttribute="I N T S I D E N T" z="afqUkxgjEVCNQvn9Kcs7XHBZOLg="/>
     </form:update>
 </div>

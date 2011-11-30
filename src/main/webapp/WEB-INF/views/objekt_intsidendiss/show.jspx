@@ -13,5 +13,7 @@
         <field:display field="muutja" id="s_org_persistence_OBJEKT_INTSIDENDIS_muutja" object="${objekt_intsidendis}" z="r+0Mmzq73ZfZYk873KBrWCki+Vk="/>
         <field:display date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_org_persistence_OBJEKT_INTSIDENDIS_suletud" object="${objekt_intsidendis}" z="L+WQXRVGb7Eo9z072RHNgnaQr+k="/>
         <field:display field="sulgeja" id="s_org_persistence_OBJEKT_INTSIDENDIS_sulgeja" object="${objekt_intsidendis}" z="qC+6fllBxpNIsrpXQK0GfmaCEr4="/>
+        <field:display field="INTSIDENT_ID" id="s_org_persistence_OBJEKT_INTSIDENDIS_iNTSIDENT_ID" object="${objekt_intsidendis}" z="kmeqf6OYn+8vW8yI4fpNKCCK39Q="/>
+        <field:display field="OBJEKT_ID" id="s_org_persistence_OBJEKT_INTSIDENDIS_oBJEKT_ID" object="${objekt_intsidendis}" z="x0DTXRt2JX8R03WPr87y2KT0IfI="/>
     </page:show>
 </div>

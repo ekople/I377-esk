@@ -13,6 +13,8 @@
         <field:input field="muutja" id="c_org_persistence_VAHTKOND_INTSIDENDIS_muutja" required="true" z="b/xFndTLp7wxFSVl+23CnxKv6TA="/>
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_org_persistence_VAHTKOND_INTSIDENDIS_suletud" required="true" z="HnpJT4dhNio4NwBXoElbCDCKkDU="/>
         <field:input field="sulgeja" id="c_org_persistence_VAHTKOND_INTSIDENDIS_sulgeja" z="Y2J1JuJ8ArdbtPeCmTN6lKBRs5g="/>
+        <field:select field="iNTSIDENT_ID" id="c_org_persistence_VAHTKOND_INTSIDENDIS_iNTSIDENT_ID" itemValue="intsidentId" items="${intsidents}" path="/intsidents" z="fH/kdK1A5CXJS6RMt0pGjcAj43I="/>
+        <field:select field="vAHTKOND_ID" id="c_org_persistence_VAHTKOND_INTSIDENDIS_vAHTKOND_ID" itemValue="vahtkondId" items="${vahtkonds}" path="/vahtkonds" z="tfQZcxnYUJHavQRyvrlrJmaILno="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_VAHTKOND_INTSIDENDIS" render="${not empty dependencies}" z="/iPluwRSwG/cd1qNBcR+WnLuKjU="/>
 </div>

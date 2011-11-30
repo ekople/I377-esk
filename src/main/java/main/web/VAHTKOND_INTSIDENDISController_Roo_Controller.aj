@@ -10,9 +10,11 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.INTSIDENT;
 import org.persistence.VAHTKOND;
 import org.persistence.VAHTKOND_INTSIDENDIS;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,6 +31,7 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     public String VAHTKOND_INTSIDENDISController.create(@Valid VAHTKOND_INTSIDENDIS VAHTKOND_INTSIDENDIS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("VAHTKOND_INTSIDENDIS", VAHTKOND_INTSIDENDIS);
+            addDateTimeFormatPatterns(uiModel);
             return "vahtkond_intsidendiss/create";
         }
         uiModel.asMap().clear();
@@ -39,11 +42,13 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String VAHTKOND_INTSIDENDISController.createForm(Model uiModel) {
         uiModel.addAttribute("VAHTKOND_INTSIDENDIS", new VAHTKOND_INTSIDENDIS());
+        addDateTimeFormatPatterns(uiModel);
         return "vahtkond_intsidendiss/create";
     }
     
     @RequestMapping(value = "/{vahtkondIntsidendisId}", method = RequestMethod.GET)
     public String VAHTKOND_INTSIDENDISController.show(@PathVariable("vahtkondIntsidendisId") Long vahtkondIntsidendisId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("vahtkond_intsidendis", VAHTKOND_INTSIDENDIS.findVAHTKOND_INTSIDENDIS(vahtkondIntsidendisId));
         uiModel.addAttribute("itemId", vahtkondIntsidendisId);
         return "vahtkond_intsidendiss/show";
@@ -59,6 +64,7 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
         } else {
             uiModel.addAttribute("vahtkond_intsidendiss", VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "vahtkond_intsidendiss/list";
     }
     
@@ -66,6 +72,7 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     public String VAHTKOND_INTSIDENDISController.update(@Valid VAHTKOND_INTSIDENDIS VAHTKOND_INTSIDENDIS, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("VAHTKOND_INTSIDENDIS", VAHTKOND_INTSIDENDIS);
+            addDateTimeFormatPatterns(uiModel);
             return "vahtkond_intsidendiss/update";
         }
         uiModel.asMap().clear();
@@ -76,6 +83,7 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     @RequestMapping(value = "/{vahtkondIntsidendisId}", params = "form", method = RequestMethod.GET)
     public String VAHTKOND_INTSIDENDISController.updateForm(@PathVariable("vahtkondIntsidendisId") Long vahtkondIntsidendisId, Model uiModel) {
         uiModel.addAttribute("VAHTKOND_INTSIDENDIS", VAHTKOND_INTSIDENDIS.findVAHTKOND_INTSIDENDIS(vahtkondIntsidendisId));
+        addDateTimeFormatPatterns(uiModel);
         return "vahtkond_intsidendiss/update";
     }
     
@@ -101,6 +109,14 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     @ModelAttribute("vahtkond_intsidendiss")
     public Collection<VAHTKOND_INTSIDENDIS> VAHTKOND_INTSIDENDISController.populateVAHTKOND_INTSIDENDISs() {
         return VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs();
+    }
+    
+    void VAHTKOND_INTSIDENDISController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("VAHTKOND_INTSIDENDIS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_INTSIDENDIS_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_INTSIDENDIS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_INTSIDENDIS_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_INTSIDENDIS_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String VAHTKOND_INTSIDENDISController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

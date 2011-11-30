@@ -25,7 +25,7 @@ privileged aspect INTSIDENT_Roo_ToString {
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("OBJEKT_INTSIDENDIS: ").append(getOBJEKT_INTSIDENDIS() == null ? "null" : getOBJEKT_INTSIDENDIS().size()).append(", ");
         sb.append("PIIRILOIK_ID: ").append(getPIIRILOIK_ID()).append(", ");
-        sb.append("PIIRIVALVUR_INTSIDENDIS: ").append(getPIIRIVALVUR_INTSIDENDIS_ID() == null ? "null" : getPIIRIVALVUR_INTSIDENDIS_ID().size()).append(", ");
+        sb.append("PIIRIVALVUR_INTSIDENDIS: ").append(getPIIRIVALVUR_INTSIDENDIS() == null ? "null" : getPIIRIVALVUR_INTSIDENDIS().size()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("ToimumiseAlgus: ").append(getToimumiseAlgus()).append(", ");

@@ -13,5 +13,7 @@
         <field:input field="muutja" id="c_org_persistence_OBJEKT_INTSIDENDIS_muutja" required="true" z="mceiJQqqXDCpKooHbXWYd8q/ONk="/>
         <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_org_persistence_OBJEKT_INTSIDENDIS_suletud" required="true" z="sT+7GIvY0J+av5EzPRvmEhWU+DU="/>
         <field:input field="sulgeja" id="c_org_persistence_OBJEKT_INTSIDENDIS_sulgeja" z="bV4pkUahc5ODkTIollljpOWbVEc="/>
+        <field:select field="iNTSIDENT_ID" id="c_org_persistence_OBJEKT_INTSIDENDIS_iNTSIDENT_ID" itemValue="intsidentId" items="${intsidents}" path="/intsidents" z="69Z76OkVuGHy0EtFKt3IGNlpz3A="/>
+        <field:select field="oBJEKT_ID" id="c_org_persistence_OBJEKT_INTSIDENDIS_oBJEKT_ID" itemValue="objektId" items="${objekts}" path="/objekts" z="a7BFDz0Eggs92AwJv9KR48T9/Og="/>
     </form:update>
 </div>

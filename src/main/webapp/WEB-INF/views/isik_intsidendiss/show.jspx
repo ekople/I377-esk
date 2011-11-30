@@ -13,5 +13,7 @@
         <field:display field="muutja" id="s_org_persistence_ISIK_INTSIDENDIS_muutja" object="${isik_intsidendis}" z="6UrwDQ9XFybyo8LkFuJ4HQEPFss="/>
         <field:display date="true" dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_org_persistence_ISIK_INTSIDENDIS_suletud" object="${isik_intsidendis}" z="r9w9U2p53tyvc25qlV2HgW8NqG0="/>
         <field:display field="sulgeja" id="s_org_persistence_ISIK_INTSIDENDIS_sulgeja" object="${isik_intsidendis}" z="wg21ilwQoo31nUDHy621HiX6T0Y="/>
+        <field:display field="INTSIDENT_ID" id="s_org_persistence_ISIK_INTSIDENDIS_iNTSIDENT_ID" object="${isik_intsidendis}" z="C+bi2xY+y4sqBYx3Y47KO7dblfE="/>
+        <field:display field="PIIRIRIKKUJA_ID" id="s_org_persistence_ISIK_INTSIDENDIS_pIIRIRIKKUJA_ID" object="${isik_intsidendis}" z="AAoZ/XJAV6P3QWfglFn597hRas8="/>
     </page:show>
 </div>

@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.persistence.VAHTKOND_INTSIDENDIS;
@@ -29,13 +30,13 @@ public class VAHTKOND {
 	@Column(name="VAHTKOND_ID", unique=true, nullable=false)
 	private Long vahtkondId;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	private Date alates;
 
 	@Column(nullable=false, length=32)
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date avatud;
 
@@ -44,10 +45,10 @@ public class VAHTKOND {
 	@Column(length=20)
 	private String kood;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date muudetud;
 
@@ -57,7 +58,7 @@ public class VAHTKOND {
 	@Column(length=60)
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
+    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
 	@Column(nullable=false)
 	private Date suletud;
 

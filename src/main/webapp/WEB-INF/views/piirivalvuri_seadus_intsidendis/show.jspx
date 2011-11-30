@@ -13,5 +13,7 @@
         <field:display field="muutja" id="s_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_muutja" object="${piirivalvuri_seadus_intsidendi}" z="xjUl9Z7zqrqd1v3ui9/2q2Z7hcM="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVURI_SEADUS_INTSIDENDI_suletud_date_format}" field="suletud" id="s_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_suletud" object="${piirivalvuri_seadus_intsidendi}" z="5lIrKRhf+cQAnTAp1J4Gf/JanCQ="/>
         <field:display field="sulgeja" id="s_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_sulgeja" object="${piirivalvuri_seadus_intsidendi}" z="gajpfTfRjL5GVu8tbhdtAGht41Q="/>
+        <field:display field="SEADUSE_PUNKT_ID" id="s_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_sEADUSE_PUNKT_ID" object="${piirivalvuri_seadus_intsidendi}" z="povskRCFYCIVfWJhIr/V+DJva1E="/>
+        <field:display field="PIIRIVALVUR_INTSIDENDIS_ID" id="s_org_persistence_PIIRIVALVURI_SEADUS_INTSIDENDI_pIIRIVALVUR_INTSIDENDIS_ID" object="${piirivalvuri_seadus_intsidendi}" z="cOohPxpUPVimDqu742l90b0+Y5s="/>
     </page:show>
 </div>

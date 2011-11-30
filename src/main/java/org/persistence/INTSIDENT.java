@@ -12,6 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.persistence.INTSIDENDI_LIIK;
@@ -46,6 +47,7 @@ public class INTSIDENT {
 	private String avaja;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	@Column(nullable=false)
 	private Date avatud;
 
@@ -63,6 +65,7 @@ public class INTSIDENT {
 	private String kood;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	@Column(nullable=false)
 	private Date muudetud;
 
@@ -73,6 +76,7 @@ public class INTSIDENT {
 	private String nimetus;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	@Column(nullable=false)
 	private Date suletud;
 
@@ -80,10 +84,12 @@ public class INTSIDENT {
 	private String sulgeja;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	@Column(name="TOIMUMISE_ALGUS")
 	private Date toimumiseAlgus;
 
     @Temporal( TemporalType.DATE)
+    @DateTimeFormat(style="M-")
 	@Column(name="TOIMUMISE_LOPP")
 	private Date toimumiseLopp;
 

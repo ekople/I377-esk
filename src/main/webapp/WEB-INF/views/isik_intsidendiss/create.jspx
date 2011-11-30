@@ -13,6 +13,8 @@
         <field:input field="muutja" id="c_org_persistence_ISIK_INTSIDENDIS_muutja" required="true" z="+6dtOKK62BUwN87MN6rbBmZ1pHY="/>
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_org_persistence_ISIK_INTSIDENDIS_suletud" required="true" z="H9Icwv3krTeDa+pWwNJgvP6cFto="/>
         <field:input field="sulgeja" id="c_org_persistence_ISIK_INTSIDENDIS_sulgeja" z="y2RhJ6KEwB9+qaBblOE6Ds7HQ9Q="/>
+        <field:select field="iNTSIDENT_ID" id="c_org_persistence_ISIK_INTSIDENDIS_iNTSIDENT_ID" itemValue="intsidentId" items="${intsidents}" path="/intsidents" z="+3t0s4FnbaKOe9G8/J+iOCwqphM="/>
+        <field:select field="pIIRIRIKKUJA_ID" id="c_org_persistence_ISIK_INTSIDENDIS_pIIRIRIKKUJA_ID" itemValue="piiririkkujaId" items="${piiririkkujas}" path="/piiririkkujas" z="SXVwS0FeFyktTsW9dOVmGa0YC9g="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_ISIK_INTSIDENDIS" render="${not empty dependencies}" z="0fuZr2zGm3PGVz7aScT2yCQV300="/>
 </div>

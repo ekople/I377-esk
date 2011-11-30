@@ -11,7 +11,7 @@ privileged aspect INTSIDENDI_LIIK_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
-        sb.append("INTSIDENT: ").append(getINTSIDENT_ID() == null ? "null" : getINTSIDENT_ID().size()).append(", ");
+        sb.append("INTSIDENT: ").append(getINTSIDENT() == null ? "null" : getINTSIDENT().size()).append(", ");
         sb.append("IntsidendiLiikId: ").append(getIntsidendiLiikId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kood: ").append(getKood()).append(", ");

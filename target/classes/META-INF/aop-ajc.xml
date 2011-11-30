@@ -1,7 +1,7 @@
 <aspectj>
 <aspects>
-<aspect name="org.persistence.PIIRILOIK_Roo_Configurable"/>
 <aspect name="org.persistence.PIIRIVALVUR_Roo_ToString"/>
+<aspect name="org.persistence.PIIRILOIK_Roo_Configurable"/>
 <aspect name="org.persistence.ISIK_INTSIDENDIS_Roo_ToString"/>
 <aspect name="org.persistence.VAHTKOND_INTSIDENDIS_Roo_Entity"/>
 <aspect name="org.persistence.PIIRIVALVUR_INTSIDENDIS_Roo_Configurable"/>

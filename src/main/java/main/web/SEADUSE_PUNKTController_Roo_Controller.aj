@@ -10,9 +10,11 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI;
 import org.persistence.SEADUS;
 import org.persistence.SEADUSE_PUNKT;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,6 +31,7 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
     public String SEADUSE_PUNKTController.create(@Valid SEADUSE_PUNKT SEADUSE_PUNKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("SEADUSE_PUNKT", SEADUSE_PUNKT);
+            addDateTimeFormatPatterns(uiModel);
             return "seaduse_punkts/create";
         }
         uiModel.asMap().clear();
@@ -39,11 +42,13 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String SEADUSE_PUNKTController.createForm(Model uiModel) {
         uiModel.addAttribute("SEADUSE_PUNKT", new SEADUSE_PUNKT());
+        addDateTimeFormatPatterns(uiModel);
         return "seaduse_punkts/create";
     }
     
     @RequestMapping(value = "/{seadusePunktId}", method = RequestMethod.GET)
     public String SEADUSE_PUNKTController.show(@PathVariable("seadusePunktId") Long seadusePunktId, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("seaduse_punkt", SEADUSE_PUNKT.findSEADUSE_PUNKT(seadusePunktId));
         uiModel.addAttribute("itemId", seadusePunktId);
         return "seaduse_punkts/show";
@@ -59,6 +64,7 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
         } else {
             uiModel.addAttribute("seaduse_punkts", SEADUSE_PUNKT.findAllSEADUSE_PUNKTs());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "seaduse_punkts/list";
     }
     
@@ -66,6 +72,7 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
     public String SEADUSE_PUNKTController.update(@Valid SEADUSE_PUNKT SEADUSE_PUNKT, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("SEADUSE_PUNKT", SEADUSE_PUNKT);
+            addDateTimeFormatPatterns(uiModel);
             return "seaduse_punkts/update";
         }
         uiModel.asMap().clear();
@@ -76,6 +83,7 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
     @RequestMapping(value = "/{seadusePunktId}", params = "form", method = RequestMethod.GET)
     public String SEADUSE_PUNKTController.updateForm(@PathVariable("seadusePunktId") Long seadusePunktId, Model uiModel) {
         uiModel.addAttribute("SEADUSE_PUNKT", SEADUSE_PUNKT.findSEADUSE_PUNKT(seadusePunktId));
+        addDateTimeFormatPatterns(uiModel);
         return "seaduse_punkts/update";
     }
     
@@ -101,6 +109,12 @@ privileged aspect SEADUSE_PUNKTController_Roo_Controller {
     @ModelAttribute("seaduse_punkts")
     public Collection<SEADUSE_PUNKT> SEADUSE_PUNKTController.populateSEADUSE_PUNKTs() {
         return SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
+    }
+    
+    void SEADUSE_PUNKTController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("SEADUSE_PUNKT_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("SEADUSE_PUNKT_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("SEADUSE_PUNKT_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String SEADUSE_PUNKTController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
