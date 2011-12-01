@@ -1,0 +1,7 @@
+.classpath
+.settings
+db.log
+db.properties
+db.script
+log.roo
+target
