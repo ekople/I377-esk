@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div 
+xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+  xmlns:spring="http://www.springframework.org/tags"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+   version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_intsidendidpiirivalvurikaupa_index" htmlEscape="false" var="title"/>
+  <util:panel id="title" title="${title}">
+   <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+    <h3>
+     <!--  <spring:message arguments="${app_name}" code="welcome_titlepane"/> -->    
+    </h3>
+    <table>
+      <tr>
+      	<td>
+      		Alates
+      	</td>
+      	<td>
+      		Kuni
+      	</td>
+      	<td colsan="2">
+      		Piirilõik
+      	</td>
+      </tr>
+      <tr>
+      	<td>
+      		<input path="algus" type="text" name="algus"/>
+      	</td>
+      	<td>
+      		<input path="lopp" type="text" name="lopp"/>
+      	</td>
+      	<td>
+      		
+      	</td>
+      	<td>
+      		
+      	</td>
+      </tr>
+     </table>
+    <c:forEach items="${dataobjekt}" var="d">
+    <table>
+      <tr>
+    		<td><h3>${d.piirivalvur.soduriKood} : ${d.piirivalvur.perekonnanimi}, ${d.piirivalvur.eesnimed}</h3></td>
+      </tr>      
+        <c:forEach items="${d.intsidendid}" var="i">
+          <tr>
+              <!--  <c:forEach items="${i}" var="c">
+              	<td>${c}</td>
+              </c:forEach>-->
+              <td>${i[11]}</td>
+          </tr>
+        </c:forEach>
+      <tr>
+      	<td>
+      		<h3>Intsidentide arv kokku - ${d.intsidenteKokku}</h3>
+      	</td>
+      </tr>
+      </table>
+    </c:forEach>
+  </util:panel>
+</div>

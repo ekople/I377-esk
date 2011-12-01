@@ -63,5 +63,12 @@
             <menu:item id="i_intsidendi_liik_new" messageCode="global_menu_new" url="/intsidendi_liiks?form" z="YXPjKAIo+2kz5N67bwn1bpPuPMc="/>
             <menu:item id="i_intsidendi_liik_list" messageCode="global_menu_list" url="/intsidendi_liiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oyZC1sRav7NbrWFCnpWmCv4NiVU="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__loginindex_id" messageCode="global_generic" url="/login/index" z="+bAgKvV6j5ehIOcfril0sqwLmhU="/>
+            <menu:item id="i_controller__intsidendiregindex_id" messageCode="global_generic" url="/intsidendireg/index" z="E/v2/mPnuP42ydS/57Qy7ccPtmg="/>
+            <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>
+            <menu:item id="i_controller__intsidendipiirivalvuriredindex_id" messageCode="global_generic" url="/intsidendipiirivalvurired/index" z="dmiKK1EoKDadp6jp/qYDsA55FhU="/>
+            <menu:item id="i_controller__intsidendidpiirivalvurikaupaindex_id" messageCode="global_generic" url="/intsidendidpiirivalvurikaupa/index" z="2oK994GGoqrPuEH09+mztXjPMPk="/>
+        </menu:category>
     </menu:menu>
 </div>
