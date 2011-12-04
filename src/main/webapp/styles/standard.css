@@ -371,3 +371,51 @@ fieldset th {
 	height: 11px;
 	width: 16px;
 }
+
+.inciRegFloatLeft25
+{
+	position:relative; 
+	float:left; 
+	width:33%;
+}
+.inciRegFloatLeft75
+{
+	position:relative; 
+	float:left; 
+	width:66%;
+	margin-bottom:2px;
+}
+.inciRegFloatLeft50
+{
+	position:relative; 
+	float:left; 
+	width:48%;
+	margin-left:3px;
+}
+.inciRedFloatRightAuto
+{
+	float:right; 
+	width:auto;
+}
+.inciRedTitle
+{
+	color: black;
+	border: 1px solid gray;
+	background-color: silver;
+	padding: 4px;
+}
+.inciRedItem
+{
+	border-style:solid;
+	border-color:gray;
+	border-width:0 1px 1px 1px;
+	padding: 4px;
+	clear:both;
+}
+.inciListFloatLeft25
+{
+	position:relative; 
+	float:left; 
+	width:24%;
+	padding-left: 5px;
+}

@@ -69,6 +69,8 @@
             <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>
             <menu:item id="i_controller__intsidendipiirivalvuriredindex_id" messageCode="global_generic" url="/intsidendipiirivalvurired/index" z="dmiKK1EoKDadp6jp/qYDsA55FhU="/>
             <menu:item id="i_controller__intsidendidpiirivalvurikaupaindex_id" messageCode="global_generic" url="/intsidendidpiirivalvurikaupa/index" z="2oK994GGoqrPuEH09+mztXjPMPk="/>
+            <menu:item id="i_controller__lisapiirivalvurindex_id" messageCode="global_generic" url="/lisapiirivalvur/index" z="gZrN+E5dWm803Oz/6mg9WHQrwWI="/>
+            <menu:item id="i_controller__lisaseadusindex_id" messageCode="global_generic" url="/lisaseadus/index" z="OJfPOLWU43vFjxDvhgii8kZN8tA="/>
         </menu:category>
     </menu:menu>
 </div>

@@ -1,12 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+<div 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
   <spring:message code="label_intsidendiredaktor_index" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>
-      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
-    </h3>
+     Intsident ${laetudintsident.kood} - ${laetudintsident.pIIRILOIK_ID.nimetus} - ${laetudintsident.nimetus} 
+    <div>
+     <div>
+     <div class="inciRegFloatLeft50">
+     <div class="inciRedTitle"><b>Isikud</b></div>
+     	<!-- forEach algab -->
+     	<c:forEach items="${laetudpiiririkkujad}" var="piiririkkuja">
+     		<div class="inciRedItem">
+     			${piiririkkuja.perekNimi} ${piiririkkuja.eesnimi}
+				<div class="inciRedFloatRightAuto">
+					<button onclick="alert('Not implemented!')">Info</button>
+					<BUTTON onclick="alert('Not implemented!')">Eemalda</BUTTON>
+				</div>
+     		</div>
+     	</c:forEach>
+     <!-- forEach lõppeb -->
+     <div style="clear:both; text-align:right;">
+     	<BUTTON onclick="alert('Not implemented!')">Lisa</BUTTON></div>
+     </div>
+     <div class="inciRegFloatLeft50">
+     <div class="inciRedTitle"><b>Objektid</b></div>
+     <!-- forEach algab -->
+     <c:forEach items="${laetudobjektid}" var="objekt">
+     		<div class="inciRedItem">
+     			${objekt.nimetus}
+				<div class="inciRedFloatRightAuto">
+					<button onclick="alert('Not implemented!')">Info</button>
+					<BUTTON onclick="alert('Not implemented!')">Eemalda</BUTTON>
+				</div>
+     		</div>
+     	</c:forEach>
+     <!-- forEach lõppeb -->
+     <div style="clear:both; text-align:right;">
+     	<BUTTON  onclick="alert('Not implemented!')">Lisa</BUTTON></div>
+     </div>
+     </div>
+    
+     <DIV>
+     <div class="inciRegFloatLeft50">
+     <div class="inciRedTitle"><b>Vahtkonnad</b></div>
+     <!-- forEach algab -->
+     <c:forEach items="${laetudvahtkonnad}" var="vahtkond">
+     	<div class="inciRedItem">
+     		${vahtkond.nimetus}
+			<div class="inciRedFloatRightAuto">
+				<button  onclick="alert('Not implemented!')">Info</button>
+				<BUTTON  onclick="alert('Not implemented!')">Eemalda</BUTTON>
+			</div>
+     	</div>
+     </c:forEach>
+     <!-- forEach lõppeb -->
+     <div style="clear:both; text-align:right;">
+     	<BUTTON onclick="alert('Not implemented!')">Lisa</BUTTON></div>
+     </div>
+     <div class="inciRegFloatLeft50">
+     <div class="inciRedTitle"><b>Piirivalvurid</b></div>
+     <!-- forEach algab -->
+     <c:forEach items="${laetudpiirivalvuriintsidendid}" var="piirivalvuriintsident">
+     	<form method="POST">
+     	<div class="inciRedItem">
+     			${piirivalvuriintsident.pIIRIVALVUR_ID.perekonnanimi}, ${piirivalvuriintsident.pIIRIVALVUR_ID.eesnimed}
+			<div class="inciRedFloatRightAuto">
+				<button type="submit" name="piirivalvurinfo" value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Info</button>
+				<BUTTON type="submit" name="piirivalvureemalda" value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Eemalda</BUTTON>
+			</div>
+     	</div>
+     	</form>
+     </c:forEach>
+     <!-- forEach lõppeb -->
+     <div style="clear:both; text-align:right;"><BUTTON id="lisapiirivalvur">Lisa</BUTTON></div>
+     </div>
+     </DIV>
+     <div style="clear:both; text-align:right;">
+     <c:choose>
+     	<c:when test='${tuldiintsidendireg == 1}'>
+     		<BUTTON id="tagasipealehele">Tagasi</BUTTON>
+     	</c:when>
+     	<c:otherwise>
+     		<BUTTON id="tagasiintsidentidenimekirja">Tagasi</BUTTON>
+     	</c:otherwise>
+     </c:choose>
+     </div>
+    </div>
   </util:panel>
 </div>

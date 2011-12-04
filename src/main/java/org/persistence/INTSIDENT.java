@@ -1,6 +1,7 @@
 package org.persistence;
 
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -144,7 +145,14 @@ public class INTSIDENT {
 	}
 
 	public void setAvaja(String avaja) {
-		this.avaja = avaja;
+		if(avaja == null)
+		{
+			this.avaja ="SYSTEM";
+		}
+		else 
+		{
+			this.avaja = avaja;
+		}
 	}
 
 	public Date getAvatud() {
@@ -152,7 +160,15 @@ public class INTSIDENT {
 	}
 
 	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
+		if(avatud == null)
+		{
+			this.avatud = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.avatud = avatud;
+		}
+		
 	}
 
 	public BigDecimal getGpsLatituud() {
@@ -200,7 +216,14 @@ public class INTSIDENT {
 	}
 
 	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
+		if(muudetud == null)
+		{
+			this.muudetud = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.muudetud = muudetud;
+		}
 	}
 
 	public String getMuutja() {
@@ -208,7 +231,14 @@ public class INTSIDENT {
 	}
 
 	public void setMuutja(String muutja) {
-		this.muutja = muutja;
+		if(muutja == null)
+		{
+			this.muutja ="SYSTEM";
+		}
+		else 
+		{
+			this.muutja = muutja;
+		}
 	}
 
 	public String getNimetus() {
@@ -224,7 +254,16 @@ public class INTSIDENT {
 	}
 
 	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
+		Calendar cal = Calendar.getInstance();
+		cal.set(9999, 11, 31);
+		if(suletud == null)
+		{
+			this.suletud = cal.getTime();
+		}
+		else
+		{
+			this.suletud = suletud;
+		}
 	}
 
 	public String getSulgeja() {
@@ -232,7 +271,14 @@ public class INTSIDENT {
 	}
 
 	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
+		if(sulgeja == null)
+		{
+			this.sulgeja ="SYSTEM";
+		}
+		else 
+		{
+			this.sulgeja = sulgeja;
+		}
 	}
 
 	public Date getToimumiseAlgus() {
@@ -240,7 +286,14 @@ public class INTSIDENT {
 	}
 
 	public void setToimumiseAlgus(Date toimumiseAlgus) {
-		this.toimumiseAlgus = toimumiseAlgus;
+		if(toimumiseAlgus == null)
+		{
+			this.toimumiseAlgus = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.toimumiseAlgus = toimumiseAlgus;
+		}
 	}
 
 	public Date getToimumiseLopp() {
@@ -248,7 +301,14 @@ public class INTSIDENT {
 	}
 
 	public void setToimumiseLopp(Date toimumiseLopp) {
-		this.toimumiseLopp = toimumiseLopp;
+		if(toimumiseLopp == null)
+		{
+			this.toimumiseLopp = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.toimumiseLopp = toimumiseLopp;
+		}
 	}
 
 	public INTSIDENDI_LIIK getINTSIDENDI_LIIK_ID() {

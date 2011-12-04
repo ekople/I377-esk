@@ -1,65 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div 
-xmlns:jsp="http://java.sun.com/JSP/Page"
-  xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
-  xmlns:spring="http://www.springframework.org/tags"
-  xmlns:c="http://java.sun.com/jsp/jstl/core"
-  xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
-   version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
   <spring:message code="label_intsidendidpiirivalvurikaupa_index" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
-   <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
     <h3>
-     <!--  <spring:message arguments="${app_name}" code="welcome_titlepane"/> -->    
+      Intsidendid piirivalvuri kaupa
     </h3>
-    <table>
-      <tr>
-      	<td>
-      		Alates
-      	</td>
-      	<td>
-      		Kuni
-      	</td>
-      	<td colsan="2">
-      		Piirilõik
-      	</td>
-      </tr>
-      <tr>
-      	<td>
-      		<input path="algus" type="text" name="algus"/>
-      	</td>
-      	<td>
-      		<input path="lopp" type="text" name="lopp"/>
-      	</td>
-      	<td>
-      		
-      	</td>
-      	<td>
-      		
-      	</td>
-      </tr>
-     </table>
-    <c:forEach items="${dataobjekt}" var="d">
-    <table>
-      <tr>
-    		<td><h3>${d.piirivalvur.soduriKood} : ${d.piirivalvur.perekonnanimi}, ${d.piirivalvur.eesnimed}</h3></td>
-      </tr>      
-        <c:forEach items="${d.intsidendid}" var="i">
-          <tr>
-              <!--  <c:forEach items="${i}" var="c">
-              	<td>${c}</td>
-              </c:forEach>-->
-              <td>${i[11]}</td>
-          </tr>
-        </c:forEach>
-      <tr>
-      	<td>
-      		<h3>Intsidentide arv kokku - ${d.intsidenteKokku}</h3>
-      	</td>
-      </tr>
-      </table>
-    </c:forEach>
+
+    <div>
+    	<div>
+    		<div>
+    			<div class="inciListFloatLeft25">
+    				Alates:
+    			</div>
+    			<div class="inciListFloatLeft25">
+    				Kuni:
+    			</div>
+    			<div class="inciListFloatLeft25">
+    				Piirilõik:
+    			</div>
+    			<div class="inciListFloatLeft25">
+    			</div>
+    		</div>
+    		<div style="clear:both;">
+    			<div class="inciListFloatLeft25">
+    				<input style="width:100%;" path="algus" type="text" name="algus"/>
+    			</div>
+    			<div class="inciListFloatLeft25">
+    				<input style="width:100%;" path="lopp" type="text" name="lopp"/>
+    			</div>
+    			<div class="inciListFloatLeft25">
+		      		<select id="liikSelect" style="width:100%;">
+           				<c:forEach items="${piiriloik}" var="piiriloik">
+         					<option value="${piiriloik.piiriloikId}">${piiriloik.nimetus}</option>
+       					</c:forEach>
+       				</select>
+    			</div>
+    			<div class="inciListFloatLeft25">
+    				<input type="submit" name="varskenda" value="Värskenda" onclick=""/>
+    			</div>
+    		</div>
+    		<div style="clear:both;"><span/></div>
+    	</div>
+    	<form method="post">
+    	<c:forEach items="${dataobjekt}" var="d">		
+	    	<div>
+	    		<div>
+    				<b>${d.piirivalvur.soduriKood} : ${d.piirivalvur.perekonnanimi}, ${d.piirivalvur.eesnimed}</b>
+	    		</div>
+	    		<c:forEach items="${d.intsidendid}" var="i">
+		    		<div>
+		    		${i[11]}
+		    		</div>
+		    		<div class="inciRedFloatRightAuto"><button type="submit" name="intsidentId" value="${i[0]}">Vaata</button></div>
+		    		<div style="clear:both;"><span/></div>
+		    	</c:forEach>
+	    		<div>
+	    			<b>Intsidentide arv kokku - ${d.intsidenteKokku}</b>
+	    		</div>
+	    	</div>
+		</c:forEach>
+		</form>
+    </div>      
   </util:panel>
 </div>

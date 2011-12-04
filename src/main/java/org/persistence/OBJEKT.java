@@ -24,45 +24,47 @@ import javax.persistence.OneToMany;
 @Table(name = "T_OBJEKT")
 public class OBJEKT {
 
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="OBJEKT_ID", unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "OBJEKT_ID", unique = true, nullable = false)
 	private Long objektId;
 
-	@Column(nullable=false, length=32)
+	@Column(nullable = false, length = 32)
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
-	@Column(nullable=false)
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(style = "M-")
+	@Column(nullable = false)
 	private Date avatud;
 
-	private byte[] kommentaar;
-
-    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
-	@Column(nullable=false)
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(style = "M-")
+	@Column(nullable = false)
 	private Date muudetud;
 
-	@Column(nullable=false, length=32)
+	@Column(nullable = false, length = 32)
 	private String muutja;
 
-	@Column(length=100)
+	@Column(length = 100)
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)   @DateTimeFormat(style="M-") 
-	@Column(nullable=false)
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(style = "M-")
+	@Column(nullable = false)
 	private Date suletud;
 
-	@Column(length=32)
+	@Column(length = 32)
 	private String sulgeja;
 
 	@OneToMany(mappedBy = "oBJEKT_ID")
 	private Collection<OBJEKT_INTSIDENDIS> oBJEKT_INTSIDENDIS;
 
+	private String kommentaar;
+
 	public OBJEKT() {
-    	super();
-    }
-    
+		super();
+	}
+
 	public Long getObjektId() {
 		return this.objektId;
 	}
@@ -85,14 +87,6 @@ public class OBJEKT {
 
 	public void setAvatud(Date avatud) {
 		this.avatud = avatud;
-	}
-
-	public byte[] getKommentaar() {
-		return this.kommentaar;
-	}
-
-	public void setKommentaar(byte[] kommentaar) {
-		this.kommentaar = kommentaar;
 	}
 
 	public Date getMuudetud() {
@@ -136,11 +130,17 @@ public class OBJEKT {
 	}
 
 	public Collection<OBJEKT_INTSIDENDIS> getOBJEKT_INTSIDENDIS() {
-	    return oBJEKT_INTSIDENDIS;
+		return oBJEKT_INTSIDENDIS;
 	}
 
 	public void setOBJEKT_INTSIDENDIS(Collection<OBJEKT_INTSIDENDIS> param) {
-	    this.oBJEKT_INTSIDENDIS = param;
+		this.oBJEKT_INTSIDENDIS = param;
+	}
+
+	public void setKommentaar(String param) {
+	    this.kommentaar = param;
+	}public String getKommentaar() {
+	    return kommentaar;
 	}
 
 }
