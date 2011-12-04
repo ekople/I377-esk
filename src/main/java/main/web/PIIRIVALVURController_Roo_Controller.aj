@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.persistence.PIIRIVALVUR;
 import org.persistence.PIIRIVALVUR_INTSIDENDIS;
+import org.persistence.VAHTKONNA_LIIGE;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -103,6 +104,11 @@ privileged aspect PIIRIVALVURController_Roo_Controller {
     @ModelAttribute("piirivalvur_intsidendiss")
     public Collection<PIIRIVALVUR_INTSIDENDIS> PIIRIVALVURController.populatePIIRIVALVUR_INTSIDENDISs() {
         return PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs();
+    }
+    
+    @ModelAttribute("vahtkonna_liiges")
+    public Collection<VAHTKONNA_LIIGE> PIIRIVALVURController.populateVAHTKONNA_LIIGEs() {
+        return VAHTKONNA_LIIGE.findAllVAHTKONNA_LIIGEs();
     }
     
     void PIIRIVALVURController.addDateTimeFormatPatterns(Model uiModel) {

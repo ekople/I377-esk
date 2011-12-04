@@ -12,86 +12,87 @@
     <h3>
       <spring:message arguments="${app_name}" code="welcome_titlepane"/>
     </h3>
-    	   Intsident ${laetudintsident.kood} - ${laetudintsident.pIIRILOIK_ID.nimetus} - ${laetudintsident.nimetus}
+    	   Intsident ${laetudintsident.kood} - ${laetudintsident.getPIIRILOIK_ID().getNimetus()} - ${laetudintsident.nimetus}
+<FORM method="post">
 
-<div>
-<div>
-<div style="width:500px;height:200px;">
+<div style="width:500px;">
 		<div style="position:relative; float:left; width:50%;">
 	          		<div style="clear:both;"><span></span></div>
 					<div>
 						<div class="inciRegFloatLeft25">Piirivalvur</div>
 						<div class="inciRegFloatLeft75">
-							${laetudpiirivalvurintsidendis.pIIRIVALVUR_ID.perekonnanimi},${laetudpiirivalvurintsidendis.pIIRIVALVUR_ID.eesnimed} 
+							${laetudpiirivalvurintsidendis.getPIIRIVALVUR_ID().getPerekonnanimi()},${laetudpiirivalvurintsidendis.getPIIRIVALVUR_ID().getEesnimed()} 
 						</div>
 					</div>
 					<div style="clear:both;"><span></span></div>
 					<div>	
 						<div class="inciRegFloatLeft25">Sodurikood</div>
 						<div class="inciRegFloatLeft75">
-							${laetudpiirivalvurintsidendis.pIIRIVALVUR_ID.soduriKood}
+							${laetudpiirivalvurintsidendis.getPIIRIVALVUR_ID().getSoduriKood()}
 						</div>
 					</div>
 					<div>	
 						<div class="inciRegFloatLeft25">Sugu</div>
 						<div class="inciRegFloatLeft75">
 							<div class="inciRegFloatLeft50" >
-								${laetudpiirivalvurintsidendis.pIIRIVALVUR_ID.sugu}
+								${laetudpiirivalvurintsidendis.getPIIRIVALVUR_ID().getSugu()}
 							</div>
-							<div class="inciRedFloatRightAuto"><button>Muuda</button>
+							<div class="inciRedFloatRightAuto"><button type="submit" name="vahetaPV">Muuda</button>
 							</div>
 						</div>
 	          		</div>
 	          		<div>
 	          			<div class="inciRegFloatLeft25">Kirjeldus:</div>
 	        			<div class="inciRegFloatLeft75">
-	        				<textarea id="kirjeldus" rows="3" cols="17">
-	        					${laetudpiirivalvurintsidendis.kirjeldus}
+	        				<textarea name="kirjeldus" rows="3" cols="17">
+	        					${laetudpiirivalvurintsidendis.getKirjeldus()}
 	        				</textarea>
 	        			</div>
 	        		</div>
 	          		<div>
 	          			<div class="inciRegFloatLeft25">Kommentaar:</div>
 	        			<div class="inciRegFloatLeft75">
-	        				<textarea id="kirjeldus" rows="3" cols="17">
+	        				<textarea name="kommentaar" rows="3" cols="17">
 	        					${laetudpiirivalvurintsidendis.kommentaar}
 	        				</textarea>
 	        			</div>
 	        		</div>
 		</div>
 
-   		<div style="position: relative;float:right; width:50%; ">
+		
+   		<div style="position: relative;float:left; width:50%; ">
+		
 		<div class="inciRedTitle"><b>Seadus</b></div>
-		<c:forEach items="${laetudpiirivalvurintsidendis.pIIRIVALVURI_SEADUS_INTSIDENDI}" var="seadusintsident">
-		<div class="inciRedItem">
-					
-					${seadusintsident.sEADUSE_PUNKT_ID.sEADUS_ID.nimetus} §${seadusintsident.sEADUSE_PUNKT_ID.paragrahv} lg WTF lõiget?
-    				pIIRIVALVURI_SEADUS_INTSIDENDI
+		<c:forEach items="${laetudSeadused}" var="seadusintsident">
+		<div class="inciRedItem">		
+					${seadusintsident.getSEADUSE_PUNKT_ID().getSEADUS_ID().getNimetus()} § ${seadusintsident.getSEADUSE_PUNKT_ID().getParagrahv()}
 	    			<div class="inciRedFloatRightAuto">
-	    				<button onclick="alert('Not implemented!')">Info</button>
-	    				<BUTTON id="piirivalvuriseadusintsidendieemalda_${seadusintsident.sEADUSE_PUNKT_ID.seadusePunktId}">Eemalda</BUTTON>
+	    				<div><button onclick="alert('Not implemented!')">Info</button>
+	    				<BUTTON type="submit" name="eemaldaSeadus" value="${seadusintsident.getPiirivalvuriSeadusIntsidendi()}">Eemalda</BUTTON>
+	    				</div>
 	    			</div>
 	    			<div style="clear:both;"><SPAN></SPAN></div>
     	</div>
-		</c:forEach>		
+		</c:forEach>
+			
 
-				<div style="clear:both;"></div>
+
 				<div style="clear:both;"><span></span></div>
 				
 				<div style="position:relative; float: right;">
-					<button id="lisaseadus">Lisa</button>
+					<button name="lisaSeadus">Lisa</button>
 				</div>
 		</div>
-		<div style="clear:both;"><span></span></div>
+		 
+		
 		<br/>
 		<br/>
 </div>
-</div>
-</div>
+<div style="clear:both;"><span></span></div>
 <div style="text-align:right;">
-	<button id="salvesta">Salvesta</button>
-	<button id="loobu">Loobu</button>
+	<button name="salvesta">Salvesta</button>
+	<button name="loobu">Loobu</button>
 </div>
-
+</FORM>
   </util:panel>
 </div>

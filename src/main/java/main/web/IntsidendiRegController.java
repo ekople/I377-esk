@@ -1,5 +1,8 @@
 package main.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -8,6 +11,7 @@ import javax.validation.Valid;
 import org.persistence.INTSIDENDI_LIIK;
 import org.persistence.INTSIDENT;
 import org.persistence.PIIRILOIK;
+import org.persistence.SEADUSE_PUNKT;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -77,11 +81,40 @@ public class IntsidendiRegController{
             return "redirect:owner.do?ownerId=" + pet.getOwner().getId();
         }
     } */
-    @RequestMapping
+    @SuppressWarnings("deprecation")
+	@RequestMapping
     public String index(Model uiModel) {
-        uiModel.addAttribute("intsidendi_liik", INTSIDENDI_LIIK.findAllINTSIDENDI_LIIKs());
-        uiModel.addAttribute("piiriloik", PIIRILOIK.findAllPIIRILOIKS());
 
+
+    	List<INTSIDENDI_LIIK> intsliik = INTSIDENDI_LIIK.findAllINTSIDENDI_LIIKs();
+    	List<INTSIDENDI_LIIK> tulemList = new ArrayList<INTSIDENDI_LIIK>();
+    	for(INTSIDENDI_LIIK isin : intsliik)
+        {
+         if(isin.getSuletud().getYear() != 9999 &&
+         		isin.getSuletud().getMonth() != 12 &&
+         		isin.getSuletud().getDate() != 31)
+         { continue; }
+         else
+         { tulemList.add(isin); }
+        }
+    	uiModel.addAttribute("intsidendi_liik", tulemList);
+        
+    	
+    	List<PIIRILOIK> loigud = PIIRILOIK.findAllPIIRILOIKS();
+    	List<PIIRILOIK> tulemList2 = new ArrayList<PIIRILOIK>();
+    	for(PIIRILOIK isin : loigud)
+        {
+         if(isin.getSuletud().getYear() != 9999 &&
+         		isin.getSuletud().getMonth() != 12 &&
+         		isin.getSuletud().getDate() != 31)
+         { continue; }
+         else
+         { tulemList2.add(isin); }
+        }
+    	uiModel.addAttribute("piiriloik", tulemList2);
+        
+        
+        
         return "intsidendireg/index";
     }
 }

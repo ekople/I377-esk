@@ -44,6 +44,17 @@
 	</entity>
 
 	<entity>
+		<entity-name>org.persistence.VAHTKONNA_LIIGE</entity-name>
+		<entity-width>248</entity-width>
+		<entity-height>326</entity-height>
+		<entity-X-Coordinate>289</entity-X-Coordinate>
+		<entity-Y-Coordinate>863</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
 		<entity-name>org.persistence.OBJEKT</entity-name>
 		<entity-width>171</entity-width>
 		<entity-height>286</entity-height>
@@ -57,7 +68,7 @@
 	<entity>
 		<entity-name>org.persistence.PIIRIVALVUR</entity-name>
 		<entity-width>131</entity-width>
-		<entity-height>366</entity-height>
+		<entity-height>386</entity-height>
 		<entity-X-Coordinate>1231</entity-X-Coordinate>
 		<entity-Y-Coordinate>675</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
@@ -79,9 +90,9 @@
 	<entity>
 		<entity-name>org.persistence.VAHTKOND</entity-name>
 		<entity-width>251</entity-width>
-		<entity-height>346</entity-height>
-		<entity-X-Coordinate>90</entity-X-Coordinate>
-		<entity-Y-Coordinate>470</entity-Y-Coordinate>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>60</entity-X-Coordinate>
+		<entity-Y-Coordinate>422</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -134,7 +145,7 @@
 	<entity>
 		<entity-name>org.persistence.SEADUSE_PUNKT</entity-name>
 		<entity-width>231</entity-width>
-		<entity-height>386</entity-height>
+		<entity-height>426</entity-height>
 		<entity-X-Coordinate>1200</entity-X-Coordinate>
 		<entity-Y-Coordinate>220</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>

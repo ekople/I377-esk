@@ -1,6 +1,7 @@
 package main.web;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -34,17 +35,57 @@ public class PiirivalvuriIntsidendid
 	List<INTSIDENT> Intsidendid;
 	int IntsidenteKokku;
 	
-    @SuppressWarnings("unchecked")
 	public static PiirivalvuriIntsidendid leiaPiirivalvurigaSeotudIntsidendid(PIIRIVALVUR piirivalvur) {
-    	Query q = entityManager().createNativeQuery(
-    	    "SELECT * from T_INTSIDENT, T_PIIRIVALVUR_INTSIDENDIS "+
-    	    		"where T_INTSIDENT.INTSIDENT_ID = T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID " +
-    					"and T_PIIRIVALVUR_INTSIDENDIS.pIIRIVALVUR_ID = "+ piirivalvur.getPiirivalvurId());       
-        List<INTSIDENT> resultList =  q.getResultList();
-        if(resultList != null && !resultList.isEmpty())
+        List<INTSIDENT> resultList =  leiaPiirivalvurigaSeotIntsidendid(piirivalvur);
+        if(resultList != null && resultList.size() > 0)
         { return new PiirivalvuriIntsidendid(piirivalvur,resultList,resultList.size()); }      
         else
         { return new PiirivalvuriIntsidendid(piirivalvur,new ArrayList<INTSIDENT>(),0); }
+    }
+    
+	public static PiirivalvuriIntsidendid leiaPiirivalvurigaSeotudIntsidendid(
+			PIIRIVALVUR piirivalvur,Date algus,Date lopp,Long piiriloik) {
+    	if(algus== null && lopp == null && piiriloik == null)
+    	{ return leiaPiirivalvurigaSeotudIntsidendid(piirivalvur); }
+        List<INTSIDENT> resultList =  leiaPiirivalvurigaSeotIntsidendid(piirivalvur);
+        List<INTSIDENT> resultListClone = new ArrayList<INTSIDENT>(resultList);
+        for(INTSIDENT intsident:resultList)
+        {
+        	if(algus != null && lopp != null && intsident.getToimumiseAlgus() != null)
+        	{
+        		if(intsident.getToimumiseAlgus().before(algus) || intsident.getToimumiseAlgus().after(lopp))  
+        		{ 
+        			resultListClone.remove(intsident);
+        			continue;
+        		}
+        	}
+        	else if(algus != null && lopp != null && intsident.getToimumiseAlgus() == null)
+        	{
+        		resultListClone.remove(intsident);
+    			continue;
+        	}
+    		if(piiriloik != null)
+    		{
+    			if(intsident.getPIIRILOIK_ID().getPiiriloikId() != piiriloik)
+    			{ resultListClone.remove(intsident); }
+    		}
+        }
+        if(resultListClone != null && resultListClone.size() > 0)
+        { return new PiirivalvuriIntsidendid(piirivalvur,resultListClone,resultListClone.size()); }      
+        else
+        { return new PiirivalvuriIntsidendid(piirivalvur,new ArrayList<INTSIDENT>(),0); }
+    }
+    
+    @SuppressWarnings("unchecked")
+	private static List<INTSIDENT>leiaPiirivalvurigaSeotIntsidendid(PIIRIVALVUR piirivalvur)
+    {
+    	Query q = entityManager().createNativeQuery(
+        	    "SELECT * from T_INTSIDENT, T_PIIRIVALVUR_INTSIDENDIS "+
+        	    		"where T_INTSIDENT.INTSIDENT_ID = T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID " +
+        					"and T_PIIRIVALVUR_INTSIDENDIS.pIIRIVALVUR_ID = "+ piirivalvur.getPiirivalvurId(),
+        					INTSIDENT.class);       
+            List<INTSIDENT> resultList =  q.getResultList();
+            return resultList;
     }
     
     public static final EntityManager entityManager() {

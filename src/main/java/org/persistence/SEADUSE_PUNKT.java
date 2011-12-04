@@ -19,6 +19,7 @@ import javax.persistence.ManyToOne;
 import org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI;
 import java.util.Collection;
 import javax.persistence.OneToMany;
+import org.persistence.SEADUSE_PUNKT;
 
 
 @Entity
@@ -76,6 +77,12 @@ public class SEADUSE_PUNKT {
 
 	@OneToMany(mappedBy = "sEADUSE_PUNKT_ID")
 	private Collection<PIIRIVALVURI_SEADUS_INTSIDENDI> pIIRIVALVURI_SEADUS_INTSIDENDI;
+
+	@ManyToOne
+	private SEADUSE_PUNKT sEADUSE_PUNKT;
+
+	@OneToMany(mappedBy = "sEADUSE_PUNKT")
+	private Collection<SEADUSE_PUNKT> sEADUSE_PUNKT_1;
 
 	public SEADUSE_PUNKT() {
     	super();
@@ -199,6 +206,22 @@ public class SEADUSE_PUNKT {
 
 	public void setPIIRIVALVURI_SEADUS_INTSIDENDI(Collection<PIIRIVALVURI_SEADUS_INTSIDENDI> param) {
 	    this.pIIRIVALVURI_SEADUS_INTSIDENDI = param;
+	}
+
+	public SEADUSE_PUNKT getSEADUSE_PUNKT() {
+	    return sEADUSE_PUNKT;
+	}
+
+	public void setSEADUSE_PUNKT(SEADUSE_PUNKT param) {
+	    this.sEADUSE_PUNKT = param;
+	}
+
+	public Collection<SEADUSE_PUNKT> getSEADUSE_PUNKT_1() {
+	    return sEADUSE_PUNKT_1;
+	}
+
+	public void setSEADUSE_PUNKT_1(Collection<SEADUSE_PUNKT> param) {
+	    this.sEADUSE_PUNKT_1 = param;
 	}
 
 }

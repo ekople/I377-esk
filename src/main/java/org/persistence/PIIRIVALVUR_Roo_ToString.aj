@@ -23,6 +23,7 @@ privileged aspect PIIRIVALVUR_Roo_ToString {
         sb.append("Sugu: ").append(getSugu()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
+        sb.append("VAHTKONNA_LIIGE: ").append(getVAHTKONNA_LIIGE() == null ? "null" : getVAHTKONNA_LIIGE().size()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

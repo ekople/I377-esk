@@ -12,9 +12,9 @@
     <h3>
       <spring:message arguments="${app_name}" code="welcome_titlepane"/>
     </h3>
-    <div><FORM action="">
+    <div><FORM method="post">
     	<div>
-		<select name="PIIRIVALVUR_ID">
+		<select name="pIIRIVALVUR_ID">
 			<c:forEach items="${piirivalvurid}" var="c">
 				<option value="${c.piirivalvurId}">${c.eesnimed} ${c.perekonnanimi}</option>
 			</c:forEach>

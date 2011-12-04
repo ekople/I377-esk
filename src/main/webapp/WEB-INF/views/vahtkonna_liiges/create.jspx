@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_persistence_VAHTKONNA_LIIGE" modelAttribute="VAHTKONNA_LIIGE" path="/vahtkonna_liiges" render="${empty dependencies}" z="L6r7+7oK4/2A42jKNjuA4sFPa9k=">
+        <field:input field="alates" id="c_org_persistence_VAHTKONNA_LIIGE_alates" required="true" z="FBbUvwUzAnXmTo8phfQ1FGRmAtc="/>
+        <field:input field="kuni" id="c_org_persistence_VAHTKONNA_LIIGE_kuni" required="true" z="zsxpT6CochGoKTXeHbe1Op3eeyk="/>
+        <field:input field="kommentaar" id="c_org_persistence_VAHTKONNA_LIIGE_kommentaar" required="true" z="/bIVP64aGObtbKCyjA9HwIVUiss="/>
+        <field:input field="avaja" id="c_org_persistence_VAHTKONNA_LIIGE_avaja" required="true" z="IuLN307Os7nEU5NIZTqXJ3RB6sw="/>
+        <field:datetime dateTimePattern="${VAHTKONNA_LIIGE_avatud_date_format}" field="avatud" id="c_org_persistence_VAHTKONNA_LIIGE_avatud" required="true" z="Ojz6LSMPho2SETOc7u0IQD3IGMU="/>
+        <field:input field="muutja" id="c_org_persistence_VAHTKONNA_LIIGE_muutja" required="true" z="Jv+Onsb3c1K/nTdmKYogZr0Zb4s="/>
+        <field:datetime dateTimePattern="${VAHTKONNA_LIIGE_muudetud_date_format}" field="muudetud" id="c_org_persistence_VAHTKONNA_LIIGE_muudetud" required="true" z="wk2ne0E9lPc4lv1w99xmpcHls9I="/>
+        <field:input field="sulgeja" id="c_org_persistence_VAHTKONNA_LIIGE_sulgeja" z="8OHs392QevE7lNxivOEUvOq7SDs="/>
+        <field:datetime dateTimePattern="${VAHTKONNA_LIIGE_suletud_date_format}" field="suletud" id="c_org_persistence_VAHTKONNA_LIIGE_suletud" required="true" z="zKpv2fZxjrtwTwU3ODDTXigdiyE="/>
+        <field:select field="vAHTKOND" id="c_org_persistence_VAHTKONNA_LIIGE_vAHTKOND" itemValue="vahtkondId" items="${vahtkonds}" path="/vahtkonds" z="pRFfJCLr8mEQiEjXkD524sAhi/8="/>
+        <field:select field="pIIRIVALVUR" id="c_org_persistence_VAHTKONNA_LIIGE_pIIRIVALVUR" itemValue="piirivalvurId" items="${piirivalvurs}" path="/piirivalvurs" z="V2nV5JK66+JxsbHrnAKmnY3LA5I="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_persistence_VAHTKONNA_LIIGE" render="${not empty dependencies}" z="T4O3jH/rvZdCeys1axudr3LS1AY="/>
+</div>

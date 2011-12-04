@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.persistence.VAHTKOND;
 import org.persistence.VAHTKOND_INTSIDENDIS;
+import org.persistence.VAHTKONNA_LIIGE;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -103,6 +104,11 @@ privileged aspect VAHTKONDController_Roo_Controller {
     @ModelAttribute("vahtkond_intsidendiss")
     public Collection<VAHTKOND_INTSIDENDIS> VAHTKONDController.populateVAHTKOND_INTSIDENDISs() {
         return VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs();
+    }
+    
+    @ModelAttribute("vahtkonna_liiges")
+    public Collection<VAHTKONNA_LIIGE> VAHTKONDController.populateVAHTKONNA_LIIGEs() {
+        return VAHTKONNA_LIIGE.findAllVAHTKONNA_LIIGEs();
     }
     
     void VAHTKONDController.addDateTimeFormatPatterns(Model uiModel) {

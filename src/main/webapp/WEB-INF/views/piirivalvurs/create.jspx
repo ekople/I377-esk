@@ -16,6 +16,7 @@
         <field:datetime dateTimePattern="${PIIRIVALVUR_suletud_date_format}" field="suletud" id="c_org_persistence_PIIRIVALVUR_suletud" required="true" z="iyXxKguGW8IoWb9IqV6cnsItEsE="/>
         <field:input field="sulgeja" id="c_org_persistence_PIIRIVALVUR_sulgeja" z="v28BjeMScBlT2jq+0nsH8cpw/ac="/>
         <field:simple field="pIIRIVALVUR_INTSIDENDIS" id="c_org_persistence_PIIRIVALVUR_pIIRIVALVUR_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="9pdJEh9tB+AFTh28lmMzKNAD2QM="/>
+        <field:simple field="vAHTKONNA_LIIGE" id="c_org_persistence_PIIRIVALVUR_vAHTKONNA_LIIGE" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N N A_ L I I G E" z="5rICa+Wh1vmRJH7zasfuFQ/3PQA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_org_persistence_PIIRIVALVUR" render="${not empty dependencies}" z="vg7+67nPnrS6q21K78xEbLA8l3E="/>
 </div>

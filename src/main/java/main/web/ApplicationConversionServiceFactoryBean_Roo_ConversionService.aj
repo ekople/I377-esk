@@ -19,6 +19,7 @@ import org.persistence.SEADUS;
 import org.persistence.SEADUSE_PUNKT;
 import org.persistence.VAHTKOND;
 import org.persistence.VAHTKOND_INTSIDENDIS;
+import org.persistence.VAHTKONNA_LIIGE;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
 
@@ -40,6 +41,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(new SEADUSE_PUNKTConverter());
         registry.addConverter(new VAHTKONDConverter());
         registry.addConverter(new VAHTKOND_INTSIDENDISConverter());
+        registry.addConverter(new VAHTKONNA_LIIGEConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {
@@ -148,6 +150,13 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     static class main.web.ApplicationConversionServiceFactoryBean.VAHTKOND_INTSIDENDISConverter implements Converter<VAHTKOND_INTSIDENDIS, String> {
         public String convert(VAHTKOND_INTSIDENDIS vAHTKOND_INTSIDENDIS) {
             return new StringBuilder().append(vAHTKOND_INTSIDENDIS.getAlates()).append(" ").append(vAHTKOND_INTSIDENDIS.getAvaja()).append(" ").append(vAHTKOND_INTSIDENDIS.getAvatud()).append(" ").append(vAHTKOND_INTSIDENDIS.getKirjeldus()).toString();
+        }
+        
+    }
+    
+    static class main.web.ApplicationConversionServiceFactoryBean.VAHTKONNA_LIIGEConverter implements Converter<VAHTKONNA_LIIGE, String> {
+        public String convert(VAHTKONNA_LIIGE vAHTKONNA_LIIGE) {
+            return new StringBuilder().append(vAHTKONNA_LIIGE.getAlates()).append(" ").append(vAHTKONNA_LIIGE.getKuni()).append(" ").append(vAHTKONNA_LIIGE.getKommentaar()).append(" ").append(vAHTKONNA_LIIGE.getAvaja()).toString();
         }
         
     }

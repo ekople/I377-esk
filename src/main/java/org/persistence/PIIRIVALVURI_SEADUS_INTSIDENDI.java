@@ -1,5 +1,6 @@
 package org.persistence;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -95,7 +96,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setAvaja(String avaja) {
-		this.avaja = avaja;
+		if(avaja == null)
+		{
+			this.avaja ="SYSTEM";
+		}
+		else 
+		{
+			this.avaja = avaja;
+		}
 	}
 
 	public Date getAvatud() {
@@ -103,7 +111,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setAvatud(Date avatud) {
-		this.avatud = avatud;
+		if(avatud == null)
+		{
+			this.avatud = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.avatud = avatud;
+		}
 	}
 
 	public String getKirjeldus() {
@@ -135,7 +150,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setMuudetud(Date muudetud) {
-		this.muudetud = muudetud;
+		if(muudetud == null)
+		{
+			this.muudetud = Calendar.getInstance().getTime();
+		}
+		else
+		{
+			this.muudetud = muudetud;
+		}
 	}
 
 	public String getMuutja() {
@@ -143,7 +165,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setMuutja(String muutja) {
-		this.muutja = muutja;
+		if(muutja == null)
+		{
+			this.muutja ="SYSTEM";
+		}
+		else 
+		{
+			this.muutja = muutja;
+		}
 	}
 
 	public Date getSuletud() {
@@ -151,7 +180,17 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
+		Calendar cal = Calendar.getInstance();
+		cal.clear();
+		cal.set(9999, 11, 31);
+		if(suletud == null)
+		{
+			this.suletud = cal.getTime();
+		}
+		else
+		{
+			this.suletud = suletud;
+		}
 	}
 
 	public String getSulgeja() {
@@ -159,7 +198,14 @@ public class PIIRIVALVURI_SEADUS_INTSIDENDI {
 	}
 
 	public void setSulgeja(String sulgeja) {
-		this.sulgeja = sulgeja;
+		if(sulgeja == null)
+		{
+			this.sulgeja ="SYSTEM";
+		}
+		else 
+		{
+			this.sulgeja = sulgeja;
+		}
 	}
 
 	public SEADUSE_PUNKT getSEADUSE_PUNKT_ID() {

@@ -12,8 +12,8 @@
     <h3>
       Intsidendid piirivalvuri kaupa
     </h3>
-
     <div>
+    	<form method="post">
     	<div>
     		<div>
     			<div class="inciListFloatLeft25">
@@ -30,41 +30,52 @@
     		</div>
     		<div style="clear:both;">
     			<div class="inciListFloatLeft25">
-    				<input style="width:100%;" path="algus" type="text" name="algus"/>
+    				<input style="width:100%;" type="text" name="algus" value="${alates}"/>
     			</div>
     			<div class="inciListFloatLeft25">
-    				<input style="width:100%;" path="lopp" type="text" name="lopp"/>
+    				<input style="width:100%;" type="text" name="lopp" value="${kuni}"/>
     			</div>
     			<div class="inciListFloatLeft25">
-		      		<select id="liikSelect" style="width:100%;">
+		      		<select id="liikSelect" style="width:100%;" name="piiriloik">
+		      			<option value="">-</option>
            				<c:forEach items="${piiriloik}" var="piiriloik">
-         					<option value="${piiriloik.piiriloikId}">${piiriloik.nimetus}</option>
+           					<c:choose>
+           						<c:when test="${piiriloik.piiriloikId == piiriloikvalik}">
+           							<option selected="selected" value="${piiriloik.piiriloikId}">${piiriloik.nimetus}</option>
+           						</c:when>
+           						<c:otherwise>
+           							<option value="${piiriloik.piiriloikId}">${piiriloik.nimetus}</option>
+           						</c:otherwise> 
+           					</c:choose>       					
        					</c:forEach>
        				</select>
     			</div>
     			<div class="inciListFloatLeft25">
-    				<input type="submit" name="varskenda" value="Värskenda" onclick=""/>
+    				<button type="submit" name="varskenda">Värskenda</button>
     			</div>
     		</div>
     		<div style="clear:both;"><span/></div>
     	</div>
+    	</form>
     	<form method="post">
-    	<c:forEach items="${dataobjekt}" var="d">		
+    	<c:forEach items="${dataobjekt}" var="d">
+    		<c:if test="${d.intsidenteKokku != 0}">
 	    	<div>
-	    		<div>
+	    		<div class="inciRedTitle">
     				<b>${d.piirivalvur.soduriKood} : ${d.piirivalvur.perekonnanimi}, ${d.piirivalvur.eesnimed}</b>
 	    		</div>
 	    		<c:forEach items="${d.intsidendid}" var="i">
 		    		<div>
-		    		${i[11]}
+		    		${i.nimetus}
 		    		</div>
-		    		<div class="inciRedFloatRightAuto"><button type="submit" name="intsidentId" value="${i[0]}">Vaata</button></div>
+		    		<div class="inciRedFloatRightAuto"><button type="submit" name="intsidentId" value="${i.intsidentId}">Vaata</button></div>
 		    		<div style="clear:both;"><span/></div>
 		    	</c:forEach>
 	    		<div>
 	    			<b>Intsidentide arv kokku - ${d.intsidenteKokku}</b>
 	    		</div>
 	    	</div>
+	    	</c:if>
 		</c:forEach>
 		</form>
     </div>      

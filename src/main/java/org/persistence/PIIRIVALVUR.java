@@ -1,5 +1,6 @@
 package org.persistence;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -7,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -14,9 +16,7 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.persistence.PIIRIVALVUR_INTSIDENDIS;
-import java.util.Collection;
-import javax.persistence.OneToMany;
+import org.persistence.VAHTKONNA_LIIGE;
 
 @Entity
 @RooToString
@@ -70,6 +70,9 @@ public class PIIRIVALVUR {
 
 	@OneToMany(mappedBy = "pIIRIVALVUR_ID")
 	private Collection<PIIRIVALVUR_INTSIDENDIS> pIIRIVALVUR_INTSIDENDIS;
+
+	@OneToMany(mappedBy = "pIIRIVALVUR")
+	private Collection<VAHTKONNA_LIIGE> vAHTKONNA_LIIGE;
 
 	public PIIRIVALVUR() {
     	super();
@@ -185,6 +188,14 @@ public class PIIRIVALVUR {
 
 	public void setPIIRIVALVUR_INTSIDENDIS(Collection<PIIRIVALVUR_INTSIDENDIS> param) {
 	    this.pIIRIVALVUR_INTSIDENDIS = param;
+	}
+
+	public Collection<VAHTKONNA_LIIGE> getVAHTKONNA_LIIGE() {
+	    return vAHTKONNA_LIIGE;
+	}
+
+	public void setVAHTKONNA_LIIGE(Collection<VAHTKONNA_LIIGE> param) {
+	    this.vAHTKONNA_LIIGE = param;
 	}
 
 }

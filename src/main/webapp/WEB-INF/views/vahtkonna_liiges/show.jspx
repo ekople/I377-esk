@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_persistence_VAHTKONNA_LIIGE" object="${vahtkonna_liige}" path="/vahtkonna_liiges" z="liKWCYNQXxBVn/jTMlUp1hbwgac=">
+        <field:display field="alates" id="s_org_persistence_VAHTKONNA_LIIGE_alates" object="${vahtkonna_liige}" z="VPwaH7QQ0k6LrQKL7IU2Q5GetL0="/>
+        <field:display field="kuni" id="s_org_persistence_VAHTKONNA_LIIGE_kuni" object="${vahtkonna_liige}" z="htlUAOhGRElPlN35S2OViOx7g/4="/>
+        <field:display field="kommentaar" id="s_org_persistence_VAHTKONNA_LIIGE_kommentaar" object="${vahtkonna_liige}" z="XijACJMKJ709LpvVamINq5PGBcA="/>
+        <field:display field="avaja" id="s_org_persistence_VAHTKONNA_LIIGE_avaja" object="${vahtkonna_liige}" z="B5Qa3qcn7ptzoTOwKV4hRWVTvvs="/>
+        <field:display date="true" dateTimePattern="${VAHTKONNA_LIIGE_avatud_date_format}" field="avatud" id="s_org_persistence_VAHTKONNA_LIIGE_avatud" object="${vahtkonna_liige}" z="SOmVU7EbSPjwfKIQuqv5+VmlbqU="/>
+        <field:display field="muutja" id="s_org_persistence_VAHTKONNA_LIIGE_muutja" object="${vahtkonna_liige}" z="pk3bKVziuSpHweGu6u97c25w2iQ="/>
+        <field:display date="true" dateTimePattern="${VAHTKONNA_LIIGE_muudetud_date_format}" field="muudetud" id="s_org_persistence_VAHTKONNA_LIIGE_muudetud" object="${vahtkonna_liige}" z="A6iCxFC7GzwrVaykT/FTjaAU2EQ="/>
+        <field:display field="sulgeja" id="s_org_persistence_VAHTKONNA_LIIGE_sulgeja" object="${vahtkonna_liige}" z="RM+3GMOBhgU6rpjRJ2hQ+gS9SgA="/>
+        <field:display date="true" dateTimePattern="${VAHTKONNA_LIIGE_suletud_date_format}" field="suletud" id="s_org_persistence_VAHTKONNA_LIIGE_suletud" object="${vahtkonna_liige}" z="9JHpLn7z3ZOf3RMSt+9NSTWNdfA="/>
+        <field:display field="VAHTKOND" id="s_org_persistence_VAHTKONNA_LIIGE_vAHTKOND" object="${vahtkonna_liige}" z="jB6oRLqgpFLPelSIM00rVDrzi2Y="/>
+        <field:display field="PIIRIVALVUR" id="s_org_persistence_VAHTKONNA_LIIGE_pIIRIVALVUR" object="${vahtkonna_liige}" z="XhZxtMb9D/sBGVzhFukpb2JSgT4="/>
+    </page:show>
+</div>

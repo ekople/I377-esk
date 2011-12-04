@@ -17,5 +17,7 @@
         <field:input field="tekst" id="c_org_persistence_SEADUSE_PUNKT_tekst" z="7+IDq0fMvpjVkVgj0+43fK7E2f8="/>
         <field:simple field="pIIRIVALVURI_SEADUS_INTSIDENDI" id="c_org_persistence_SEADUSE_PUNKT_pIIRIVALVURI_SEADUS_INTSIDENDI" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R I_ S E A D U S_ I N T S I D E N D I" z="fzoCTqW0Msn1fzjcX6BZD40eCmw="/>
         <field:select field="sEADUS_ID" id="c_org_persistence_SEADUSE_PUNKT_sEADUS_ID" itemValue="seaduseId" items="${seadus}" path="/seadus" z="sGNTZYAfuD0BFb95ae4IPDjhnf4="/>
+        <field:select field="sEADUSE_PUNKT" id="c_org_persistence_SEADUSE_PUNKT_sEADUSE_PUNKT" itemValue="seadusePunktId" items="${seaduse_punkts}" path="/seaduse_punkts" z="agyoU9IG+HOwuhlbAnn/8f5p+TI="/>
+        <field:simple field="sEADUSE_PUNKT_1" id="c_org_persistence_SEADUSE_PUNKT_sEADUSE_PUNKT_1" messageCode="entity_reference_not_managed" messageCodeAttribute="S E A D U S E_ P U N K T" z="M84sfCJeErxaoskly8djXslHy5g="/>
     </form:update>
 </div>

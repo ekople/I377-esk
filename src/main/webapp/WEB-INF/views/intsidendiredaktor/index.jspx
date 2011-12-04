@@ -9,8 +9,9 @@
   <spring:message code="label_intsidendiredaktor_index" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-     Intsident ${laetudintsident.kood} - ${laetudintsident.pIIRILOIK_ID.nimetus} - ${laetudintsident.nimetus} 
+     Intsident ${laetudintsident.kood} - ${laetudintsident.getPIIRILOIK_ID().getNimetus()} - ${laetudintsident.nimetus} 
     <div>
+    <form method="POST">
      <div>
      <div class="inciRegFloatLeft50">
      <div class="inciRedTitle"><b>Isikud</b></div>
@@ -67,30 +68,31 @@
      <div class="inciRedTitle"><b>Piirivalvurid</b></div>
      <!-- forEach algab -->
      <c:forEach items="${laetudpiirivalvuriintsidendid}" var="piirivalvuriintsident">
-     	<form method="POST">
+
      	<div class="inciRedItem">
-     			${piirivalvuriintsident.pIIRIVALVUR_ID.perekonnanimi}, ${piirivalvuriintsident.pIIRIVALVUR_ID.eesnimed}
+     			${piirivalvuriintsident.getPIIRIVALVUR_ID().perekonnanimi}, ${piirivalvuriintsident.getPIIRIVALVUR_ID().eesnimed}
 			<div class="inciRedFloatRightAuto">
-				<button type="submit" name="piirivalvurinfo" value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Info</button>
-				<BUTTON type="submit" name="piirivalvureemalda" value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Eemalda</BUTTON>
+				<button type="submit" name="infoPV"   value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Info</button>
+				<BUTTON type="submit" name="eemaldaPV" value="${piirivalvuriintsident.piirivalvurIntsidendisId}">Eemalda</BUTTON>
 			</div>
      	</div>
-     	</form>
+     	
      </c:forEach>
      <!-- forEach lõppeb -->
-     <div style="clear:both; text-align:right;"><BUTTON id="lisapiirivalvur">Lisa</BUTTON></div>
+     	<div style="clear:both; text-align:right;"><BUTTON type="submit" name="lisaPV">Lisa</BUTTON></div>
      </div>
      </DIV>
      <div style="clear:both; text-align:right;">
      <c:choose>
      	<c:when test='${tuldiintsidendireg == 1}'>
-     		<BUTTON id="tagasipealehele">Tagasi</BUTTON>
+     		<BUTTON name="tagasipealehele">Tagasi</BUTTON>
      	</c:when>
      	<c:otherwise>
-     		<BUTTON id="tagasiintsidentidenimekirja">Tagasi</BUTTON>
+     		<BUTTON name="tagasiintsidentidenimekirja">Tagasi</BUTTON>
      	</c:otherwise>
      </c:choose>
      </div>
+     </form>
     </div>
   </util:panel>
 </div>

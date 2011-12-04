@@ -255,6 +255,7 @@ public class INTSIDENT {
 
 	public void setSuletud(Date suletud) {
 		Calendar cal = Calendar.getInstance();
+		cal.clear();
 		cal.set(9999, 11, 31);
 		if(suletud == null)
 		{

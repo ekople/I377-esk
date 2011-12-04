@@ -1,5 +1,6 @@
 <aspectj>
 <aspects>
+<aspect name="org.persistence.VAHTKONNA_LIIGE_Roo_ToString"/>
 <aspect name="org.persistence.PIIRILOIK_Roo_Configurable"/>
 <aspect name="org.persistence.PIIRIVALVUR_Roo_ToString"/>
 <aspect name="org.persistence.ISIK_INTSIDENDIS_Roo_ToString"/>
@@ -8,7 +9,9 @@
 <aspect name="main.web.VAHTKOND_INTSIDENDISController_Roo_Controller"/>
 <aspect name="org.persistence.PIIRIRIKKUJA_Roo_Configurable"/>
 <aspect name="org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI_Roo_Entity"/>
+<aspect name="main.web.VAHTKONNA_LIIGEController_Roo_Controller"/>
 <aspect name="org.persistence.ISIK_INTSIDENDIS_Roo_Configurable"/>
+<aspect name="main.web.Redaktor_Roo_JavaBean"/>
 <aspect name="org.persistence.SEADUSE_PUNKT_Roo_Entity"/>
 <aspect name="main.web.PIIRIVALVUR_INTSIDENDISController_Roo_Controller"/>
 <aspect name="org.persistence.INTSIDENT_Roo_ToString"/>
@@ -19,9 +22,10 @@
 <aspect name="org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI_Roo_Configurable"/>
 <aspect name="org.persistence.ISIKU_SEADUS_INTSIDENDIS_Roo_ToString"/>
 <aspect name="org.persistence.VAHTKOND_INTSIDENDIS_Roo_Configurable"/>
-<aspect name="org.persistence.OBJEKT_Roo_Entity"/>
 <aspect name="main.web.SEADUSController_Roo_Controller"/>
+<aspect name="org.persistence.OBJEKT_Roo_Entity"/>
 <aspect name="main.web.PIIRIVALVURController_Roo_Controller"/>
+<aspect name="org.persistence.VAHTKONNA_LIIGE_Roo_Entity"/>
 <aspect name="org.persistence.PIIRILOIK_Roo_ToString"/>
 <aspect name="main.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
 <aspect name="main.web.PiirivalvuriIntsidendid_Roo_JavaBean"/>
@@ -57,6 +61,7 @@
 <aspect name="org.persistence.INTSIDENDI_LIIK_Roo_ToString"/>
 <aspect name="org.persistence.VAHTKOND_Roo_ToString"/>
 <aspect name="org.persistence.PIIRIVALVUR_INTSIDENDIS_Roo_ToString"/>
+<aspect name="org.persistence.VAHTKONNA_LIIGE_Roo_Configurable"/>
 <aspect name="org.persistence.SEADUSE_PUNKT_Roo_ToString"/>
 <aspect name="org.persistence.PIIRIVALVUR_Roo_Entity"/>
 <aspect name="main.web.OBJEKT_INTSIDENDISController_Roo_Controller"/>

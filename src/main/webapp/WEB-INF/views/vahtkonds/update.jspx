@@ -15,5 +15,6 @@
         <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_org_persistence_VAHTKOND_suletud" required="true" z="JYmkmDjURcpFSaAu97TvbNZbOmQ="/>
         <field:input field="sulgeja" id="c_org_persistence_VAHTKOND_sulgeja" z="8vdy4/aBty3ObSvZtZt0UMLgnk0="/>
         <field:simple field="vAHTKOND_INTSIDENDIS" id="c_org_persistence_VAHTKOND_vAHTKOND_INTSIDENDIS" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="qI8hea07PqHLvWkEYf6hBSFQvds="/>
+        <field:simple field="vAHTKONNA_LIIGE" id="c_org_persistence_VAHTKOND_vAHTKONNA_LIIGE" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N N A_ L I I G E" z="WS33jDeqUfUN3ncvIhW/WF8bcxU="/>
     </form:update>
 </div>
