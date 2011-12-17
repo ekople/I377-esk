@@ -11,7 +11,6 @@ import javax.validation.Valid;
 import org.persistence.INTSIDENDI_LIIK;
 import org.persistence.INTSIDENT;
 import org.persistence.PIIRILOIK;
-import org.persistence.SEADUSE_PUNKT;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
