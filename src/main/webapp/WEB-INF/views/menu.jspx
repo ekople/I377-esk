@@ -9,7 +9,7 @@
             <menu:item id="i_controller__intsidendiregindex_id" label="Intsidendi Registreerimine" messageCode="global_generic" url="/intsidendireg/index" z="user-managed"/>
             <!-- <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>  -->
             <!-- <menu:item id="i_controller__intsidendipiirivalvuriredindex_id" messageCode="global_generic" url="/intsidendipiirivalvurired/index" z="dmiKK1EoKDadp6jp/qYDsA55FhU="/>  -->
-            <menu:item id="i_controller__intsidendidpiirivalvurikaupaindex_id" label="Intsidentide vaatamine piirivalvurite kauap" messageCode="global_generic" url="/intsidendidpiirivalvurikaupa/index" z="user-managed"/>
+            <menu:item id="i_controller__intsidendidpiirivalvurikaupaindex_id" label="Intsidentide vaatamine piirivalvurite kaupa" messageCode="global_generic" url="/intsidendidpiirivalvurikaupa/index" z="user-managed"/>
             <!-- <menu:item id="i_controller__lisapiirivalvurindex_id" messageCode="global_generic" url="/lisapiirivalvur/index" z="gZrN+E5dWm803Oz/6mg9WHQrwWI="/>  -->
             <!-- <menu:item id="i_controller__lisaseadusindex_id" messageCode="global_generic" url="/lisaseadus/index" z="OJfPOLWU43vFjxDvhgii8kZN8tA="/>  -->
             <!-- <menu:item id="i_controller__muudasodurintsidendisindex_id" messageCode="global_generic" url="/muudasodurintsidendis/index" z="iBCRrS9y3HbkPHgQeIGhuIde//I="/>  -->
