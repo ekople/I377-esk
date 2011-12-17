@@ -10,7 +10,6 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.persistence.INTSIDENT;
-import org.persistence.PIIRIVALVUR;
 import org.persistence.PIIRIVALVURI_SEADUS_INTSIDENDI;
 
 import org.persistence.PIIRIVALVUR_INTSIDENDIS;
