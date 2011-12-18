@@ -74,11 +74,11 @@ privileged aspect PIIRIVALVUR_Roo_Entity {
     }
     
     public static long PIIRIVALVUR.countPIIRIVALVURS() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRIVALVUR o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRIVALVUR o WHERE o.suletud > CURRENT_DATE", Long.class).getSingleResult();
     }
     
     public static List<PIIRIVALVUR> PIIRIVALVUR.findAllPIIRIVALVURS() {
-        return entityManager().createQuery("SELECT o FROM PIIRIVALVUR o", PIIRIVALVUR.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRIVALVUR o WHERE o.suletud > CURRENT_DATE", PIIRIVALVUR.class).getResultList();
     }
     
     public static PIIRIVALVUR PIIRIVALVUR.findPIIRIVALVUR(Long piirivalvurId) {
@@ -87,7 +87,7 @@ privileged aspect PIIRIVALVUR_Roo_Entity {
     }
     
     public static List<PIIRIVALVUR> PIIRIVALVUR.findPIIRIVALVUREntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM PIIRIVALVUR o", PIIRIVALVUR.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRIVALVUR o WHERE o.suletud > CURRENT_DATE", PIIRIVALVUR.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

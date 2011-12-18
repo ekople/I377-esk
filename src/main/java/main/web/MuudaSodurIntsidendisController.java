@@ -1,6 +1,5 @@
 package main.web;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -87,18 +86,7 @@ public class MuudaSodurIntsidendisController {
     	
     	
     	List<PIIRIVALVUR> piirivalvurid = PIIRIVALVUR.findAllPIIRIVALVURS();
-    	List<PIIRIVALVUR> tulemList = new ArrayList<PIIRIVALVUR>();
-    	for(PIIRIVALVUR isin : piirivalvurid)
-        {
-
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
-         { continue; }
-         else
-         { tulemList.add(isin); }
-        }
-    	uiModel.addAttribute("piirivalvurid", tulemList);
+    	uiModel.addAttribute("piirivalvurid", piirivalvurid);
         return "muudasodurintsidendis/index";
     }
 }

@@ -74,11 +74,11 @@ privileged aspect SEADUSE_PUNKT_Roo_Entity {
     }
     
     public static long SEADUSE_PUNKT.countSEADUSE_PUNKTs() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM SEADUSE_PUNKT o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM SEADUSE_PUNKT o WHERE o.suletud > CURRENT_DATE", Long.class).getSingleResult();
     }
     
     public static List<SEADUSE_PUNKT> SEADUSE_PUNKT.findAllSEADUSE_PUNKTs() {
-        return entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o", SEADUSE_PUNKT.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o WHERE o.suletud > CURRENT_DATE", SEADUSE_PUNKT.class).getResultList();
     }
     
     public static SEADUSE_PUNKT SEADUSE_PUNKT.findSEADUSE_PUNKT(Long seadusePunktId) {
@@ -87,7 +87,7 @@ privileged aspect SEADUSE_PUNKT_Roo_Entity {
     }
     
     public static List<SEADUSE_PUNKT> SEADUSE_PUNKT.findSEADUSE_PUNKTEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o", SEADUSE_PUNKT.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o WHERE o.suletud > CURRENT_DATE", SEADUSE_PUNKT.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }
