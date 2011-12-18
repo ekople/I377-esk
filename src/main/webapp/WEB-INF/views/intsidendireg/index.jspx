@@ -66,13 +66,13 @@
 	            <div style="clear:both;">
 	            	<div class="inciRegFloatLeft25">Algus</div>
 	            	<DIV class="inciRegFloatLeft75">
-	    				<input path="algus" type="text" name="toimumise_algus" style="width:100%" />
+	    				<input type="text" name="toimumiseAlgus" style="width:100%" />
 	            	</DIV>
 	            </div>
 	            <div style="clear:both;">
 	            	<div class="inciRegFloatLeft25">Lõpp</div>
 	            	<DIV class="inciRegFloatLeft75">
-	            		<input path="lopp" type="text" name="toimumise_lopp" style="width:100%" />
+	            		<input type="text" name="toimumiseLopp" style="width:100%" />
 	            	</DIV>
 	            </div>
 	        </div>

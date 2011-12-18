@@ -85,12 +85,12 @@ public class INTSIDENT {
 	private String sulgeja;
 
     @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
 	@Column(name="TOIMUMISE_ALGUS")
 	private Date toimumiseAlgus;
 
     @Temporal( TemporalType.DATE)
-    @DateTimeFormat(style="M-")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
 	@Column(name="TOIMUMISE_LOPP")
 	private Date toimumiseLopp;
 
