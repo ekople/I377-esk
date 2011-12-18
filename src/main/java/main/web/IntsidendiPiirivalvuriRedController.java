@@ -68,8 +68,8 @@ public class IntsidendiPiirivalvuriRedController {
     	uus.setAvaja(SecurityContextHolder.getContext().getAuthentication().getName());
     	uus.setAvatud(hetk.getTime());
     	uus.setINTSIDENT_ID(vana.getINTSIDENT_ID());
-    	uus.setKirjeldus(pvIntsidendis.getKirjeldus());
-    	uus.setKommentaar(pvIntsidendis.getKommentaar());
+    	uus.setKirjeldus(pvIntsidendis.getKirjeldus().trim());
+    	uus.setKommentaar(pvIntsidendis.getKommentaar().trim());
     	uus.setKuni(vana.getKuni());
     	uus.setMuudetud(hetk.getTime());
     	uus.setMuutja(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -86,8 +86,10 @@ public class IntsidendiPiirivalvuriRedController {
     	vana.setSuletud(hetk.getTime());
     	vana.setSulgeja(SecurityContextHolder.getContext().getAuthentication().getName());
     	vana.persist();
+    	vana.flush();
 
     	uus.persist();
+    	uus.flush();
         return new ModelAndView("redirect:/intsidendiredaktor/index");
     }
     
