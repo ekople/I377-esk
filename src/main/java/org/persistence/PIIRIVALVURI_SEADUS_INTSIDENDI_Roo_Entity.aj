@@ -74,11 +74,11 @@ privileged aspect PIIRIVALVURI_SEADUS_INTSIDENDI_Roo_Entity {
     }
     
     public static long PIIRIVALVURI_SEADUS_INTSIDENDI.countPIIRIVALVURI_SEADUS_INTSIDENDIs() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRIVALVURI_SEADUS_INTSIDENDI o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRIVALVURI_SEADUS_INTSIDENDI o WHERE o.suletud > CURRENT_DATE", Long.class).getSingleResult();
     }
     
     public static List<PIIRIVALVURI_SEADUS_INTSIDENDI> PIIRIVALVURI_SEADUS_INTSIDENDI.findAllPIIRIVALVURI_SEADUS_INTSIDENDIs() {
-        return entityManager().createQuery("SELECT o FROM PIIRIVALVURI_SEADUS_INTSIDENDI o", PIIRIVALVURI_SEADUS_INTSIDENDI.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRIVALVURI_SEADUS_INTSIDENDI o WHERE o.suletud > CURRENT_DATE", PIIRIVALVURI_SEADUS_INTSIDENDI.class).getResultList();
     }
     
     public static PIIRIVALVURI_SEADUS_INTSIDENDI PIIRIVALVURI_SEADUS_INTSIDENDI.findPIIRIVALVURI_SEADUS_INTSIDENDI(Long piirivalvuriSeadusIntsidendi) {
@@ -87,7 +87,7 @@ privileged aspect PIIRIVALVURI_SEADUS_INTSIDENDI_Roo_Entity {
     }
     
     public static List<PIIRIVALVURI_SEADUS_INTSIDENDI> PIIRIVALVURI_SEADUS_INTSIDENDI.findPIIRIVALVURI_SEADUS_INTSIDENDIEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM PIIRIVALVURI_SEADUS_INTSIDENDI o", PIIRIVALVURI_SEADUS_INTSIDENDI.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRIVALVURI_SEADUS_INTSIDENDI o WHERE o.suletud > CURRENT_DATE", PIIRIVALVURI_SEADUS_INTSIDENDI.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }
