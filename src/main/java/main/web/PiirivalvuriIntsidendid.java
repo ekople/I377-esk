@@ -81,8 +81,10 @@ public class PiirivalvuriIntsidendid
     {
     	Query q = entityManager().createNativeQuery(
         	    "SELECT * from T_INTSIDENT, T_PIIRIVALVUR_INTSIDENDIS "+
-        	    		"where T_INTSIDENT.INTSIDENT_ID = T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID " +
-        					"and T_PIIRIVALVUR_INTSIDENDIS.pIIRIVALVUR_ID = "+ piirivalvur.getPiirivalvurId(),
+        	    		"where T_INTSIDENT.suletud > CURRENT_DATE "+
+        	    		"and T_INTSIDENT.INTSIDENT_ID = T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID " +
+        	    		"and T_PIIRIVALVUR_INTSIDENDIS.suletud > CURRENT_DATE "+
+        					"and T_PIIRIVALVUR_INTSIDENDIS.pIIRIVALVUR_ID = "+ piirivalvur.getPiirivalvurId().toString(),
         					INTSIDENT.class);       
             List<INTSIDENT> resultList =  q.getResultList();
             return resultList;

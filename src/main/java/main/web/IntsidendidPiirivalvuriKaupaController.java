@@ -92,9 +92,7 @@ public class IntsidendidPiirivalvuriKaupaController {
     	List<PIIRIVALVUR> tulemList = new ArrayList<PIIRIVALVUR>();
     	for(PIIRIVALVUR isin : valvurid)
         {
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
+         if(isin.getSuletud().before(new Date()))
          { continue; }
          else
          { tulemList.add(isin); }
@@ -111,9 +109,7 @@ public class IntsidendidPiirivalvuriKaupaController {
     	List<PIIRILOIK> tulemList = new ArrayList<PIIRILOIK>();
     	for(PIIRILOIK isin : loigud)
         {
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
+         if(isin.getSuletud().before(new Date()))
          { continue; }
          else
          { tulemList.add(isin); }
