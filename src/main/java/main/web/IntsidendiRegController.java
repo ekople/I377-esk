@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.persistence.INTSIDENDI_LIIK;
 import org.persistence.INTSIDENT;
 import org.persistence.PIIRILOIK;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -47,10 +48,10 @@ public class IntsidendiRegController{
         }
         uiModel.asMap().clear();
         //TODO EDIT LOG_ON INFO
-        intsident.setAvaja(null);
+        intsident.setAvaja(SecurityContextHolder.getContext().getAuthentication().getName());
         intsident.setAvatud(null);
         intsident.setMuudetud(null);
-        intsident.setMuutja(null);
+        intsident.setMuutja(SecurityContextHolder.getContext().getAuthentication().getName());
         intsident.setSuletud(null);
         intsident.persist();
         HttpSession session = httpServletRequest.getSession();
