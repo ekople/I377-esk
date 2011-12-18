@@ -39,7 +39,7 @@ public class IntsidendigaSeotudElem {
     public static List<PIIRIRIKKUJA>GetIntsidendigaSeotudAktivPiiririkkujad(INTSIDENT intsident)
        {
         Query query = entityManager().createNativeQuery(
-                "SELECT * from T_ISIK_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_ISIK_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), ISIK_INTSIDENDIS.class);       
+                "SELECT * from T_ISIK_INTSIDENDIS WHERE suletud > CURRENT_DATE and T_ISIK_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), ISIK_INTSIDENDIS.class);       
            List<ISIK_INTSIDENDIS> isikudIntsidendis = query.getResultList();
            if(isikudIntsidendis == null || isikudIntsidendis.isEmpty())
            { return null; }
@@ -58,7 +58,7 @@ public class IntsidendigaSeotudElem {
 	public static List<VAHTKOND>GetIntsidendigaSeotudAktivVahtkonnad(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_VAHTKOND_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_VAHTKOND_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), VAHTKOND_INTSIDENDIS.class);       
+        	    "SELECT * from T_VAHTKOND_INTSIDENDIS WHERE suletud > CURRENT_DATE and T_VAHTKOND_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), VAHTKOND_INTSIDENDIS.class);       
         List<VAHTKOND_INTSIDENDIS> vahtkonnnadIntsidendis =  query.getResultList();
         if(vahtkonnnadIntsidendis == null || vahtkonnnadIntsidendis.isEmpty())
         { return null; }
@@ -77,7 +77,7 @@ public class IntsidendigaSeotudElem {
 	public static List<OBJEKT>GetIntsidendigaSeotudAktivObjektid(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_OBJEKT_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_OBJEKT_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), OBJEKT_INTSIDENDIS.class);       
+        	    "SELECT * from T_OBJEKT_INTSIDENDIS WHERE suletud > CURRENT_DATE and T_OBJEKT_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), OBJEKT_INTSIDENDIS.class);       
         List<OBJEKT_INTSIDENDIS> objektidIntsidendis =  query.getResultList();
         if(objektidIntsidendis == null || objektidIntsidendis.isEmpty())
         { return null; }
@@ -96,7 +96,7 @@ public class IntsidendigaSeotudElem {
 	public static List<PIIRIVALVUR_INTSIDENDIS>GetIntsidendigaSeotudAktivPiirivalvuriIntsidendid(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_PIIRIVALVUR_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), PIIRIVALVUR_INTSIDENDIS.class);       
+        	    "SELECT * from T_PIIRIVALVUR_INTSIDENDIS WHERE suletud > CURRENT_DATE and T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), PIIRIVALVUR_INTSIDENDIS.class);       
 		List<PIIRIVALVUR_INTSIDENDIS> piirivalvuridIntsidendis =  query.getResultList();
         if(piirivalvuridIntsidendis == null || piirivalvuridIntsidendis.isEmpty())
         { return null; }
