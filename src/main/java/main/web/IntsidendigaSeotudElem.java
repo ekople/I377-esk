@@ -39,20 +39,14 @@ public class IntsidendigaSeotudElem {
     public static List<PIIRIRIKKUJA>GetIntsidendigaSeotudAktivPiiririkkujad(INTSIDENT intsident)
        {
         Query query = entityManager().createNativeQuery(
-                "SELECT * from T_ISIK_INTSIDENDIS where T_ISIK_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), ISIK_INTSIDENDIS.class);       
+                "SELECT * from T_ISIK_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_ISIK_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), ISIK_INTSIDENDIS.class);       
            List<ISIK_INTSIDENDIS> isikudIntsidendis = query.getResultList();
            if(isikudIntsidendis == null || isikudIntsidendis.isEmpty())
            { return null; }
-     //Calendar cal = Calendar.getInstance();
-     //cal.set(9999, 11, 31); 
-     //FUCKING TIMEZONE SHIT
+
      List<PIIRIRIKKUJA> tulemList = new ArrayList<PIIRIRIKKUJA>();
            for(ISIK_INTSIDENDIS isin : isikudIntsidendis)
            {
-            if(isin.getSuletud().getYear() != 9999 && //don't judge me :(
-            		isin.getSuletud().getMonth() != 12 &&
-            		isin.getSuletud().getDate() != 31)
-            { continue; }
             PIIRIRIKKUJA rikkuja = isin.getPIIRIRIKKUJA_ID();
             if(rikkuja != null)
             { tulemList.add(rikkuja); }
@@ -64,7 +58,7 @@ public class IntsidendigaSeotudElem {
 	public static List<VAHTKOND>GetIntsidendigaSeotudAktivVahtkonnad(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_VAHTKOND_INTSIDENDIS where T_VAHTKOND_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), VAHTKOND_INTSIDENDIS.class);       
+        	    "SELECT * from T_VAHTKOND_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_VAHTKOND_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), VAHTKOND_INTSIDENDIS.class);       
         List<VAHTKOND_INTSIDENDIS> vahtkonnnadIntsidendis =  query.getResultList();
         if(vahtkonnnadIntsidendis == null || vahtkonnnadIntsidendis.isEmpty())
         { return null; }
@@ -72,10 +66,6 @@ public class IntsidendigaSeotudElem {
 		List<VAHTKOND> tulemList = new ArrayList<VAHTKOND>();
         for(VAHTKOND_INTSIDENDIS vahin : vahtkonnnadIntsidendis)
         {
-        	if(vahin.getSuletud().getYear() != 9999 && //don't judge me :(
-            		vahin.getSuletud().getMonth() != 12 &&
-            		vahin.getSuletud().getDate() != 31)
-        	{ continue; }
         	VAHTKOND vahtkond = vahin.getVAHTKOND_ID();
         	if(vahtkond != null)
         	{ tulemList.add(vahtkond); }
@@ -87,7 +77,7 @@ public class IntsidendigaSeotudElem {
 	public static List<OBJEKT>GetIntsidendigaSeotudAktivObjektid(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_OBJEKT_INTSIDENDIS where T_OBJEKT_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), OBJEKT_INTSIDENDIS.class);       
+        	    "SELECT * from T_OBJEKT_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_OBJEKT_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), OBJEKT_INTSIDENDIS.class);       
         List<OBJEKT_INTSIDENDIS> objektidIntsidendis =  query.getResultList();
         if(objektidIntsidendis == null || objektidIntsidendis.isEmpty())
         { return null; }
@@ -95,10 +85,6 @@ public class IntsidendigaSeotudElem {
 		List<OBJEKT> tulemList = new ArrayList<OBJEKT>();
         for(OBJEKT_INTSIDENDIS obin : objektidIntsidendis)
         {
-        	if(obin.getSuletud().getYear() != 9999 && //don't judge me :(
-            		obin.getSuletud().getMonth() != 12 &&
-            		obin.getSuletud().getDate() != 31)
-        	{ continue; }
         	OBJEKT objekt = obin.getOBJEKT_ID();
         	if(objekt != null)
         	{ tulemList.add(objekt); }
@@ -110,20 +96,11 @@ public class IntsidendigaSeotudElem {
 	public static List<PIIRIVALVUR_INTSIDENDIS>GetIntsidendigaSeotudAktivPiirivalvuriIntsidendid(INTSIDENT intsident)
     {
     	Query query = entityManager().createNativeQuery(
-        	    "SELECT * from T_PIIRIVALVUR_INTSIDENDIS where T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), PIIRIVALVUR_INTSIDENDIS.class);       
+        	    "SELECT * from T_PIIRIVALVUR_INTSIDENDIS WHERE o.suletud > CURRENT_DATE and T_PIIRIVALVUR_INTSIDENDIS.iNTSIDENT_ID = " + intsident.getIntsidentId(), PIIRIVALVUR_INTSIDENDIS.class);       
 		List<PIIRIVALVUR_INTSIDENDIS> piirivalvuridIntsidendis =  query.getResultList();
         if(piirivalvuridIntsidendis == null || piirivalvuridIntsidendis.isEmpty())
         { return null; }
- 
-		List<PIIRIVALVUR_INTSIDENDIS> tulemList = new ArrayList<PIIRIVALVUR_INTSIDENDIS>();
-        for(PIIRIVALVUR_INTSIDENDIS piin : piirivalvuridIntsidendis)
-        {
-        	if(piin.getSuletud().getYear() != 9999 && //don't judge me :(
-            		piin.getSuletud().getMonth() != 12 &&
-            		piin.getSuletud().getDate() != 31)
-        	{ continue; }
-        	tulemList.add(piin);
-        }
-    	return tulemList;
+
+    	return piirivalvuridIntsidendis;
     }
 }

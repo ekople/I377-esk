@@ -1,6 +1,5 @@
 package main.web;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -93,7 +92,7 @@ public class IntsidendiPiirivalvuriRedController {
     }
     
     
-    @SuppressWarnings("deprecation")
+
 	@RequestMapping
     public String index(Model uiModel, HttpServletRequest request)
     {
@@ -107,20 +106,7 @@ public class IntsidendiPiirivalvuriRedController {
     	uiModel.addAttribute("laetudpiirivalvurintsidendis", intsidendis);
     	
     	List<PIIRIVALVURI_SEADUS_INTSIDENDI> seadused = PIIRIVALVURI_SEADUS_INTSIDENDI.findAllPIIRIVALVURI_SEADUS_INTSIDENDIs();
-    	List<PIIRIVALVURI_SEADUS_INTSIDENDI> tulemList = new ArrayList<PIIRIVALVURI_SEADUS_INTSIDENDI>();
-    	for(PIIRIVALVURI_SEADUS_INTSIDENDI isin : seadused)
-        {
-
-         if(isin.getPIIRIVALVUR_INTSIDENDIS_ID().getPiirivalvurIntsidendisId() != pnIntsidendisID)
-         { continue; }
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
-         { continue; }
-         else
-         { tulemList.add(isin); }
-        }
-    	uiModel.addAttribute("laetudSeadused", tulemList);
+    	uiModel.addAttribute("laetudSeadused", seadused);
     	
         return "intsidendipiirivalvurired/index";
     }

@@ -1,6 +1,5 @@
 package main.web;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -56,23 +55,12 @@ public class LisaSeadusController {
         return new ModelAndView("redirect:/intsidendipiirivalvurired/index");
     } 
 
-    @SuppressWarnings("deprecation")
 	@RequestMapping
     public String index(Model uiModel) {
         
     	
     	List<SEADUSE_PUNKT> seadused = SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
-    	List<SEADUSE_PUNKT> tulemList = new ArrayList<SEADUSE_PUNKT>();
-    	for(SEADUSE_PUNKT isin : seadused)
-        {
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
-         { continue; }
-         else
-         { tulemList.add(isin); }
-        }
-    	uiModel.addAttribute("seadused", tulemList);
+    	uiModel.addAttribute("seadused", seadused);
     	
         return "lisaseadus/index";
     }

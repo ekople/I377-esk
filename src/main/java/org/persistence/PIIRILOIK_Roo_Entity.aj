@@ -74,11 +74,11 @@ privileged aspect PIIRILOIK_Roo_Entity {
     }
     
     public static long PIIRILOIK.countPIIRILOIKS() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRILOIK o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM PIIRILOIK o WHERE o.suletud > CURRENT_DATE", Long.class).getSingleResult();
     }
     
     public static List<PIIRILOIK> PIIRILOIK.findAllPIIRILOIKS() {
-        return entityManager().createQuery("SELECT o FROM PIIRILOIK o", PIIRILOIK.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRILOIK o WHERE o.suletud > CURRENT_DATE", PIIRILOIK.class).getResultList();
     }
     
     public static PIIRILOIK PIIRILOIK.findPIIRILOIK(Long piiriloikId) {
@@ -87,7 +87,7 @@ privileged aspect PIIRILOIK_Roo_Entity {
     }
     
     public static List<PIIRILOIK> PIIRILOIK.findPIIRILOIKEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM PIIRILOIK o", PIIRILOIK.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM PIIRILOIK o WHERE o.suletud > CURRENT_DATE", PIIRILOIK.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

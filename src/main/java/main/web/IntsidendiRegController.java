@@ -1,6 +1,5 @@
 package main.web;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -80,37 +79,16 @@ public class IntsidendiRegController{
             return "redirect:owner.do?ownerId=" + pet.getOwner().getId();
         }
     } */
-    @SuppressWarnings("deprecation")
+
 	@RequestMapping
     public String index(Model uiModel) {
 
 
     	List<INTSIDENDI_LIIK> intsliik = INTSIDENDI_LIIK.findAllINTSIDENDI_LIIKs();
-    	List<INTSIDENDI_LIIK> tulemList = new ArrayList<INTSIDENDI_LIIK>();
-    	for(INTSIDENDI_LIIK isin : intsliik)
-        {
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
-         { continue; }
-         else
-         { tulemList.add(isin); }
-        }
-    	uiModel.addAttribute("intsidendi_liik", tulemList);
+    	uiModel.addAttribute("intsidendi_liik", intsliik);
         
-    	
     	List<PIIRILOIK> loigud = PIIRILOIK.findAllPIIRILOIKS();
-    	List<PIIRILOIK> tulemList2 = new ArrayList<PIIRILOIK>();
-    	for(PIIRILOIK isin : loigud)
-        {
-         if(isin.getSuletud().getYear() != 9999 &&
-         		isin.getSuletud().getMonth() != 12 &&
-         		isin.getSuletud().getDate() != 31)
-         { continue; }
-         else
-         { tulemList2.add(isin); }
-        }
-    	uiModel.addAttribute("piiriloik", tulemList2);
+    	uiModel.addAttribute("piiriloik", loigud);
         
         
         

@@ -74,11 +74,11 @@ privileged aspect INTSIDENDI_LIIK_Roo_Entity {
     }
     
     public static long INTSIDENDI_LIIK.countINTSIDENDI_LIIKs() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM INTSIDENDI_LIIK o", Long.class).getSingleResult();
+        return entityManager().createQuery("SELECT COUNT(o) FROM INTSIDENDI_LIIK o WHERE o.suletud > CURRENT_DATE", Long.class).getSingleResult();
     }
     
     public static List<INTSIDENDI_LIIK> INTSIDENDI_LIIK.findAllINTSIDENDI_LIIKs() {
-        return entityManager().createQuery("SELECT o FROM INTSIDENDI_LIIK o", INTSIDENDI_LIIK.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM INTSIDENDI_LIIK o WHERE o.suletud > CURRENT_DATE", INTSIDENDI_LIIK.class).getResultList();
     }
     
     public static INTSIDENDI_LIIK INTSIDENDI_LIIK.findINTSIDENDI_LIIK(Long intsidendiLiikId) {
@@ -87,7 +87,7 @@ privileged aspect INTSIDENDI_LIIK_Roo_Entity {
     }
     
     public static List<INTSIDENDI_LIIK> INTSIDENDI_LIIK.findINTSIDENDI_LIIKEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM INTSIDENDI_LIIK o", INTSIDENDI_LIIK.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery("SELECT o FROM INTSIDENDI_LIIK o WHERE o.suletud > CURRENT_DATE", INTSIDENDI_LIIK.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }
